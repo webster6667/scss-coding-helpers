@@ -1,0 +1,15 @@
+@import "mixin-wrapper";
+
+.relative-wrapper {
+  position: relative;
+  height: 500px;
+  background-color: silver;
+}
+
+.transform {
+  background-color: blue;
+  width: 100px;
+  height: 100px;
+
+  @include transform-center(y)
+}

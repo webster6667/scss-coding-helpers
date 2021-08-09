@@ -1,0 +1,113 @@
+/// Mixin that aligns inside a relative block, using absolute coordinates and negative margins
+///
+/// @group center-inside-relative
+/// @name absolute-center
+///
+/// @param {y|x|both} $axis [both] - centering axis
+/// @param {number} $firstSize [0] - with or height
+/// @param {number} $height [0] - block height
+///
+/// @example
+/// $blockWidth: 300px;
+/// $blockHeight: 200px;
+///
+/// .my-class {
+///   width: $blockWidth;
+///   height: $blockHeight;
+///
+///   //centring for x and y inside relative block
+///   &_relative-center-both {
+///     @include absolute-center(both, $blockWidth, $blockHeight);
+///   }
+///
+///   //centring for y inside relative block
+///   &_relative-center-y {
+///     @include absolute-center(y, $blockHeight);
+///   }
+///
+///   //centring for x inside relative block
+///   &_relative-center-x {
+///     @include absolute-center(x, $blockWidth);
+///   }
+///
+/// }
+///
+@mixin absolute-center($axis: both, $firstSize: 0, $height: 0) {
+
+  @if ($axis == y) {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: (-$firstSize / 2);
+  }
+
+  @if ($axis == x) {
+    position: absolute;
+    left: 50%;
+    margin-left: (-$firstSize / 2);
+  }
+
+  @if ($axis == both) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: (-$firstSize / 2);
+    margin-top: (-$height / 2);
+  }
+
+}
+
+/// Mixin that aligns inside a relative block, using transform: translate methods
+///
+/// @group center-inside-relative
+/// @name transform-center
+///
+/// @param {y|x|both} $axis [] - centering axis
+/// @param {string} $additionalTransform [''] - transform values that will be add to center translate values
+///
+/// @example
+/// .my-class {
+///
+///   //centring for x and y inside relative block
+///   &_transform-center-both {
+///     @include transform-center();
+///   }
+///
+///   //centring for y inside relative block
+///   &_transform-center-y {
+///     @include transform-center(y);
+///   }
+///
+///   //centring for x inside relative block
+///   &_transform-center-x {
+///     @include transform-center(x);
+///   }
+///
+///   //centring for x and y inside relative block, and rotate to 45deg
+///   &_transform-center-both-rotate-45 {
+///     @include transform-center(both, rotate(45deg));
+///   }
+///
+/// }
+@mixin transform-center($axis: both, $additionalTransformValues: '') {
+
+  @if ($axis == y) {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) #{$additionalTransformValues};
+  }
+
+  @if ($axis == x) {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) #{$additionalTransformValues};
+  }
+
+  @if ($axis == both) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) #{$additionalTransformValues};
+  }
+
+}

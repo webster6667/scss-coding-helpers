@@ -1,0 +1,40 @@
+{
+  "name": "scss-coding-helpers",
+  "version": "0.0.1",
+  "description": "Must have scss coding helper",
+  "watch": {
+    "build:doc": {
+      "patterns": ["src"],
+      "extensions": "scss",
+      "quiet": true,
+      "legacyWatch": true,
+      "delay": 0,
+      "runOnChangeOnly": true
+    }
+  },
+  "scripts": {
+    "build:doc": "sassdoc src/mixins/*.scss",
+    "server:start": "browser-sync start --server --files '*.html', '*.css'",
+    "sass:build": "sass --watch src/mixin-wrapper.scss:css/mixins.css src/dev.scss:css/style.css",
+    "watch": "npm-watch",
+    "start": "run-p sass:build server:start watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webster6667/scss-coding-helpers.git"
+  },
+  "keywords": [],
+  "author": "webster6667",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/webster6667/scss-coding-helpers/issues"
+  },
+  "homepage": "https://github.com/webster6667/scss-coding-helpers#readme",
+  "dependencies": {
+    "browser-sync": "^2.27.5",
+    "npm-run-all": "^4.1.5",
+    "npm-watch": "^0.11.0",
+    "sass": "^1.37.5",
+    "sassdoc": "^2.7.3"
+  }
+}

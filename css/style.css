@@ -1,0 +1,16 @@
+.relative-wrapper {
+  position: relative;
+  height: 500px;
+  background-color: silver;
+}
+
+.transform {
+  background-color: blue;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*# sourceMappingURL=style.css.map */

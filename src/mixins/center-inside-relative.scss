@@ -3,7 +3,7 @@
 /// @group center-inside-relative
 /// @name absolute-center
 ///
-/// @param {y|x|both} $axis [both] - centering axis
+/// @param {string} $axis [both] - centering axis
 /// @param {number} $firstSize [0] - with or height
 /// @param {number} $height [0] - block height
 ///
@@ -62,7 +62,7 @@
 /// @group center-inside-relative
 /// @name transform-center
 ///
-/// @param {y|x|both} $axis [] - centering axis
+/// @param {string} $axis [both] - centering axis
 /// @param {string} $additionalTransform [''] - transform values that will be add to center translate values
 ///
 /// @example

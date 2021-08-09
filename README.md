@@ -67,7 +67,7 @@ module.exports = {
 
 ### Documentation
 
-Use <a href="https://cdn.jsdelivr.net/npm/MYLIBNAME/dist/lib/MYLIBNAME.js" target="_blank">documentation</a> for quick start
+Use <a href="https://scss-coding-helpers.vercel.app/" target="_blank">documentation</a> for quick start
 
 ## Author
 

@@ -1,59 +1,82 @@
+@use "sass:math";
+
 /// Mixin that aligns inside a relative block, using absolute coordinates and negative margins
 ///
 /// @group center-inside-relative
 /// @name absolute-center
 ///
 /// @param {string} $axis [both] - centering axis
-/// @param {number} $firstSize [0] - with or height
+/// @param {number} $first-size [0] - with or height
 /// @param {number} $height [0] - block height
 ///
 /// @example
-/// $blockWidth: 300px;
-/// $blockHeight: 200px;
+/// $block-width: 50px;
+/// $block-height: 50px;
 ///
-/// .my-class {
-///   width: $blockWidth;
-///   height: $blockHeight;
+/// .relative-block {
+///   position: relative;
+///   height: 400px;
+///   background-color: silver;
+/// }
+///
+/// .center-block {
+///   width: $block-width;
+///   height: $block-height;
+///
+///   font-size: 10px;
+///   line-height: $block-height;
+///   text-align: center;
+///   color: white;
+///
+///   background-color: black;
+///   border-radius: 50%;
 ///
 ///   //centring for x and y inside relative block
 ///   &_relative-center-both {
-///     @include absolute-center(both, $blockWidth, $blockHeight);
+///     @include absolute-center(both, $block-width, $block-height);
 ///   }
 ///
 ///   //centring for y inside relative block
 ///   &_relative-center-y {
-///     @include absolute-center(y, $blockHeight);
+///     @include absolute-center(y, $block-height);
 ///   }
 ///
 ///   //centring for x inside relative block
 ///   &_relative-center-x {
-///     @include absolute-center(x, $blockWidth);
+///     @include absolute-center(x, $block-width);
 ///   }
 ///
 /// }
 ///
-@mixin absolute-center($axis: both, $firstSize: 0, $height: 0) {
+/// <div class="relative-block">
+///   <div class="center-block center-block_relative-center-both">XY</div>
+///   <div class="center-block center-block_relative-center-x">X</div>
+///   <div class="center-block center-block_relative-center-y">Y</div>
+/// </div>
+@mixin absolute-center($axis: both, $first-size: 0, $height: 0) {
 
   @if ($axis == y) {
     position: absolute;
     top: 50%;
     left: 0;
-    margin-top: (-$firstSize / 2);
+    margin-top: -(math.div($first-size, 2));
   }
 
   @if ($axis == x) {
     position: absolute;
     left: 50%;
-    margin-left: (-$firstSize / 2);
+    margin-left: -(math.div($first-size, 2));
   }
 
   @if ($axis == both) {
     position: absolute;
     left: 50%;
     top: 50%;
-    margin-left: (-$firstSize / 2);
-    margin-top: (-$height / 2);
+    margin-left: -(math.div($first-size, 2));
+    margin-top: -(math.div($height, 2));
   }
+
+
 
 }
 
@@ -89,25 +112,25 @@
 ///   }
 ///
 /// }
-@mixin transform-center($axis: both, $additionalTransformValues: '') {
+@mixin transform-center($axis: both, $additional-transform-values: '') {
 
   @if ($axis == y) {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%) #{$additionalTransformValues};
+    transform: translateY(-50%) #{$additional-transform-values};
   }
 
   @if ($axis == x) {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%) #{$additionalTransformValues};
+    transform: translateX(-50%) #{$additional-transform-values};
   }
 
   @if ($axis == both) {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) #{$additionalTransformValues};
+    transform: translate(-50%, -50%) #{$additional-transform-values};
   }
 
 }

@@ -1,0 +1,182 @@
+/// Show element from fade-out, and add transition style for fade-in after fade-out
+///
+/// @group animation
+/// @name fade-in
+///
+/// @param {number} $fade-in-duration [.5] - fade in duration
+/// @param {string} $additional-transition-values [''] - additional transition values
+///
+/// @example
+/// //fade-in
+/// .player-fade-in {
+///   position: relative;
+///   height: 200px;
+///   background:silver;
+///
+///   &__button {
+///     width: 10px;
+///     height: 10px;
+///
+///     border-radius: 50%;
+///     background-color: black;
+///
+///     @include fade-out(.5);
+///   }
+///
+///   &:hover &__button {
+///     @include fade-in(.5);
+///   }
+///
+/// }
+///
+/// //fade-out
+/// .player-fade-out {
+///   position: relative;
+///   height: 200px;
+///   background:silver;
+///
+///   &__button {
+///     width: 10px;
+///     height: 10px;
+///
+///     border-radius: 50%;
+///     background-color: black;
+///
+///     @include fade-in(.5);
+///   }
+///
+///   &:hover &__button {
+///     @include fade-out(.5);
+///   }
+///
+/// }
+///
+/// //fade effect with transform
+/// .player-fade-in-rotate {
+///   position: relative;
+///   height: 200px;
+///   background:silver;
+///
+///   $translateTransform: transform .5s 0s ease;
+///
+///   &__button {
+///     width: 10px;
+///     height: 10px;
+///
+///     background-color: black;
+///
+///     transform: rotate(45deg);
+///     @include fade-out(.5, $translateTransform);
+///   }
+///
+///   &:hover &__button {
+///     transform: rotate(0deg);
+///     @include fade-in(.5, $translateTransform);
+///   }
+///
+/// }
+///
+/// <div class="player-fade-in" >
+///   <div class="player-fade-in__button" ></div>
+/// </div>
+@mixin fade-in($fade-in-duration: .5, $additional-transition-values: '') {
+  opacity: 1;
+  visibility: visible;
+
+  @if($additional-transition-values == '') {
+    transition: opacity #{$fade-in-duration}s ease;
+  }
+
+  @else {
+    transition: opacity #{$fade-in-duration}s ease, $additional-transition-values;
+  }
+
+}
+
+/// Hide element to opacity: 0, and hide element before fade-in
+///
+/// @group animation
+/// @name fade-out
+///
+/// @param {number} $animation-duration [.5] - duration of animation
+/// @param {string} $additional-transition-values [''] - additional transition values
+///
+/// @example
+/// .modal-trigger {
+///   height: 20px;
+///   background-color: silver;
+/// }
+///
+/// //fade-in
+/// .modal {
+///   position: fixed;
+///   top: 40px;
+///   right: 0;
+///   bottom: 0;
+///   left: 0;
+///
+///   background-color: rgba(0,0,0,.5);
+///   @include fade-out(.5);
+///
+///   &_open {
+///     @include fade-in(.5);
+///   }
+///
+/// }
+///
+/// //fade-out
+/// .modal {
+///   position: absolute;
+///   top: 40px;
+///   right: 0;
+///   bottom: 0;
+///   left: 0;
+///
+///   background-color: rgba(0,0,0,.5);
+///   @include fade-in(.5);
+///
+///   &_closed {
+///     @include fade-out(.5);
+///   }
+///
+/// }
+///
+/// //fade effect with transform
+/// .modal-rotate {
+///   $translateTransform: transform .5s 0s ease;
+///
+///   position: absolute;
+///   top: 40px;
+///   right: 0;
+///   bottom: 0;
+///   left: 0;
+///
+///   background-color: rgba(0,0,0,.5);
+///   transform: skewX(100deg);
+///   @include fade-out(.5, $translateTransform);
+///
+///   &_open {
+///     transform: skewX(0deg);
+///     @include fade-in(.5, $translateTransform);
+///   }
+///
+/// }
+///
+/// //modal-rotate
+/// <div class="modal" ></div>
+/// <div class="modal-trigger" onclick="document.querySelector('.modal').classList.toggle('modal_open')"></div>
+@mixin fade-out($animation-duration: .5, $additional-transition-values: '') {
+  $fade-out-duration: $animation-duration;
+  $visibility-hidden-delay: $animation-duration;
+  opacity: 0;
+  visibility: hidden;
+
+  @if($additional-transition-values == '') {
+    transition: opacity #{$fade-out-duration}s ease, visibility 0s #{$visibility-hidden-delay}s linear;
+  }
+
+  @else {
+    transition: opacity #{$fade-out-duration}s ease, visibility 0s #{$visibility-hidden-delay}s linear, $additional-transition-values;
+  }
+
+}

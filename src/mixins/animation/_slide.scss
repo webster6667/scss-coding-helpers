@@ -1,0 +1,184 @@
+/// Slide element down
+///
+/// @group animation
+/// @name slide-in-down
+///
+/// @param {number}  $animation-duration [.5] - slide-in and fade-in duration
+/// @param {boolean} $has-fade-effect [false] - should add fade effect
+/// @param {string}  $additional-transform-values [''] - additional transition values
+///
+/// @example
+/// .dd {
+///   margin: 40px auto;
+///   width: 300px;
+///   height: 40px * 3;
+///   overflow: hidden;
+///
+///   $animation-in-duration: .5;
+///   $animation-out-duration: .5;
+///   $additional-transform-values: '';
+///   $has-fade-effect: true;
+///   $has-fade-out-delay: true;
+///
+///   &__wrapper {
+///     position: relative;
+///   }
+///
+///   &__active-item-wrapper {
+///     position: relative;
+///   }
+///
+///   &_open &__list {
+///     @include slide-in-down()
+///   }
+///
+///   &__list-item {
+///     height: 40px;
+///     background-color: silver;
+///     outline: 1px solid beige;
+///   }
+///
+///   &__list {
+///     @include slide-out-down() {
+///       bottom: 0;
+///     }
+///   }
+///
+///   &_with-fade & {
+///
+///     &__list {
+///       @include slide-out-down($animation-out-duration, $has-fade-effect) {
+///         bottom: 0;
+///       }
+///     }
+///
+///   }
+///
+///   &_with-fade-out-delay & {
+///
+///     &__list {
+///       @include slide-out-down($animation-out-duration, $has-fade-effect, $has-fade-out-delay) {
+///         bottom: 0;
+///       }
+///     }
+///
+///   }
+///
+///   &_with-fade#{&}_open &, &_with-fade-out-delay#{&}_open & {
+///
+///     &__list {
+///       @include slide-in-down($animation-out-duration, $has-fade-effect)
+///     }
+///
+///   }
+///
+/// }
+///
+/// // dd_with-fade-out-delay
+/// // dd_with-fade
+/// <div class="dd dd_with-fade-out-delay" onclick="document.querySelector('.dd').classList.toggle('dd_open')">
+///
+///   <div class="dd__wrapper">
+///
+///     <div class="dd__list">
+///       <div class="dd__list-item">2</div>
+///       <div class="dd__list-item">3</div>
+///     </div>
+///
+///     <div class="dd__active-item-wrapper">
+///       <div class="dd__list-item">1</div>
+///     </div>
+///
+///   </div>
+///
+/// </div>
+@mixin slide-in-down($animation-duration: .5, $has-fade-effect: false, $additional-transform-values: '') {
+  $slide-down-duration: $animation-duration;
+  $fade-in-duration: $animation-duration;
+
+  transform: translateY(100%) #{$additional-transform-values};
+
+  @if($has-fade-effect == true) {
+    opacity: 1;
+    transition: transform #{$slide-down-duration}s ease, opacity #{$fade-in-duration}s ease;
+  }
+
+  @else {
+    transition: transform #{$animation-duration}s ease;
+  }
+
+}
+
+/// Slide element up, from slide-in-down
+///
+/// @group animation
+/// @name slide-out-down
+///
+/// @param {number}  $animation-duration [.5] - slide-in and fade-in duration
+/// @param {boolean} $has-fade-effect [false] - should add fade effect
+/// @param {boolean} $has-fade-out-delay [false] - if true, element will hide, only after slide-down-out
+/// @param {number}  $fade-out-delay [$animation-duration] - props for update fade-out delay after slide-down-out
+/// @param {string}  $additional-transform-values [''] - additional transition values
+///
+/// @example
+/// .dd {
+///   margin: 40px auto;
+///   width: 300px;
+///   height: 40px * 3;
+///   overflow: hidden;
+///
+///   &__wrapper {
+///     position: relative;
+///   }
+///
+///   &__active-item-wrapper {
+///     position: relative;
+///   }
+///
+///   &_open &__list {
+///     @include slideInDown()
+///   }
+///
+///   &__list-item {
+///     height: 40px;
+///     background-color: silver;
+///     outline: 1px solid beige;
+///   }
+///
+///   &__list {
+///     @include slideOutDown() {
+///       bottom: 0;
+///     }
+///   }
+///
+/// }
+@mixin slide-out-down($animation-duration: .5, $has-fade-effect: false, $has-fade-out-delay: false, $fade-out-delay: $animation-duration, $additional-transform-values: '') {
+  $slide-up-duration: $animation-duration;
+  $fade-out-duration: $animation-duration;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  transform: translateY(0) #{$additional-transform-values};
+
+
+  @if($has-fade-effect == true) {
+    opacity: 0;
+
+    @if($has-fade-out-delay == true) {
+      transition: transform #{$slide-up-duration}s ease, opacity #{$fade-out-delay}s #{$fade-out-duration}s ease;
+    }
+
+    @else {
+      transition: transform #{$slide-up-duration}s ease, opacity #{$fade-out-duration}s ease;
+    }
+
+  }
+
+  @else {
+    transition: transform #{$slide-up-duration}s ease;
+  }
+
+  @content;
+}

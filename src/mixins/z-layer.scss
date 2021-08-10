@@ -1,0 +1,7 @@
+@mixin uppToZLayer($positionProperty: absolute, $offsetX: 0, $offsetY: 0) {
+  position: $positionProperty;
+  top: $offsetY;
+  right: $offsetX;
+  bottom: $offsetY;
+  left: $offsetX;
+}

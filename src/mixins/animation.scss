@@ -1,0 +1,328 @@
+/// Show element from fadeOut, and add transition style for fadeIn after fadeOut
+///
+/// @group animation
+/// @name fadeIn
+///
+/// @param {number} $animation_duration [.5] - duration of animation
+/// @param {string} $$additionalTransition [.5] - duration of animation
+///
+/// @example
+/// //fadeIn
+/// .player {
+///
+///   &__button {
+///     @include fadeOut(.5);
+///   }
+///
+///   &:hover &__button {
+///     @include fadeIn(.5);
+///   }
+///
+/// }
+///
+/// //fadeOut
+/// .player {
+///
+///   &__button {
+///     @include fadeIn(.5);
+///   }
+///
+///   &:hover &__button {
+///     @include fadeOut(.5);
+///   }
+///
+/// }
+///
+/// //fade effect with transform
+/// .player-rotate {
+///   $translateTransform: transform .5s 0s ease;
+///
+///   &__button {
+///     transform: rotate(45deg);
+///     @include fadeOut(.5, $translateTransform);
+///   }
+///
+///   &:hover &__button {
+///     transform: rotate(0deg);
+///     @include fadeIn(.5, $translateTransform);
+///   }
+///
+/// }
+@mixin fadeIn($animationDuration: .5, $additionalTransition: '') {
+  opacity: 1;
+  visibility: visible;
+
+  @if($additionalTransition == '') {
+    transition: opacity #{$animationDuration}s ease;
+  }
+
+  @else {
+    transition: opacity #{$animationDuration}s ease, $additionalTransition;
+  }
+
+}
+
+/// hide element to opacity: 0, and hide element before fadeIn
+///
+/// @group animation
+/// @name fadeOut
+///
+/// @param {number} $animation_duration [.5] - duration of animation
+/// @param {string} $$additionalTransition [.5] - duration of animation
+///
+/// @example
+/// //fadeIn
+/// .modal {
+///   position: absolute;
+///   top: 0;
+///   right: 0;
+///   bottom: 0;
+///   left: 0;
+///
+///   background-color: rgba(0,0,0,.5);
+///   @include fadeOut(.5);
+///
+///   &_open {
+///     @include fadeIn(.5);
+///   }
+///
+/// }
+///
+/// //fadeOut
+/// .modal {
+///   position: absolute;
+///   top: 0;
+///   right: 0;
+///   bottom: 0;
+///   left: 0;
+///
+///   background-color: rgba(0,0,0,.5);
+///   @include fadeIn(.5);
+///
+///   &_closed {
+///     @include fadeOut(.5);
+///   }
+///
+/// }
+///
+/// //fade effect with transform
+/// .player-rotate {
+///   $translateTransform: transform .5s 0s ease;
+///
+///   &__button {
+///     transform: rotate(45deg);
+///     @include fadeOut(.5, $translateTransform);
+///   }
+///
+///   &:hover &__button {
+///     transform: rotate(0deg);
+///     @include fadeIn(.5, $translateTransform);
+///   }
+///
+/// }
+@mixin fadeOut($animationDuration: .5, $additionalTransition: '') {
+  opacity: 0;
+  visibility: hidden;
+
+  @if($additionalTransition == '') {
+    transition: opacity #{$animationDuration}s ease, visibility 0s #{$animationDuration}s linear;
+  }
+
+  @else {
+    transition: opacity #{$animationDuration}s ease, visibility 0s #{$animationDuration}s linear, $additionalTransition;
+  }
+
+}
+
+
+/// slide element down
+///
+/// @group animation
+/// @name slide-in-down
+///
+/// @param {}  [] -
+///
+/// @example
+/// <!--dd_with-fade-out-delay-->
+/// <!--dd_with-fade-->
+/// <div class="dd dd_with-fade-out-delay" onclick="document.querySelector('.dd').classList.toggle('dd_open')">
+///
+///   <div class="dd__wrapper">
+///
+///     <div class="dd__list">
+///       <div class="dd__list-item">2</div>
+///       <div class="dd__list-item">3</div>
+///     </div>
+///
+///     <div class="dd__active-item-wrapper">
+///       <div class="dd__list-item">1</div>
+///     </div>
+///
+/// </div>
+///
+/// </div>
+/// .dd {
+///   margin: 40px auto;
+///   width: 300px;
+///   height: 40px * 3;
+///   overflow: hidden;
+///
+///   $animation-in-duration: .5;
+///   $animation-out-duration: .5;
+///   $additional-transform-values: '';
+///   $has-fade-effect: true;
+///   $has-fade-out-delay: true;
+///
+///   &__wrapper {
+///     position: relative;
+///   }
+///
+///   &__active-item-wrapper {
+///     position: relative;
+///   }
+///
+///   &_open &__list {
+///     @include slide-in-down()
+///   }
+///
+///   &__list-item {
+///     height: 40px;
+///     background-color: silver;
+///     outline: 1px solid beige;
+///   }
+///
+///   &__list {
+///     @include slide-out-down() {
+///       bottom: 0;
+///     }
+///   }
+///
+///   &_with-fade & {
+///
+///     &__list {
+///       @include slide-out-down($animation-out-duration, $has-fade-effect) {
+///         bottom: 0;
+///       }
+///     }
+///
+///   }
+///
+///   &_with-fade-out-delay & {
+///
+///     &__list {
+///       @include slide-out-down($animation-out-duration, $has-fade-effect, $has-fade-out-delay) {
+///         bottom: 0;
+///       }
+///     }
+///
+///   }
+///
+///   &_with-fade#{&}_open &, &_with-fade-out-delay#{&}_open & {
+///
+///     &__list {
+///       @include slide-in-down($animation-out-duration, $has-fade-effect)
+///     }
+///
+///   }
+///
+/// }
+@mixin slide-in-down($animation-duration: .5, $has-fade-effect: false, $additional-transform-values: '') {
+  $slide-down-duration: $animation-duration;
+  $fade-in-duration: $animation-duration;
+
+  transform: translateY(100%) #{$additional-transform-values};
+
+  @if($has-fade-effect == true) {
+    opacity: 1;
+    transition: transform #{$slide-down-duration}s ease, opacity #{$fade-in-duration}s ease;
+  }
+
+  @else {
+    transition: transform #{$animation-duration}s ease;
+  }
+
+}
+
+// slide element down
+
+/// @example
+/// .dd {
+///   margin: 40px auto;
+///   width: 300px;
+///   height: 40px * 3;
+///   overflow: hidden;
+///
+///   &__wrapper {
+///     position: relative;
+///   }
+///
+///   &__active-item-wrapper {
+///     position: relative;
+///   }
+///
+///   &_open &__list {
+///     @include slideInDown()
+///   }
+///
+///   &__list-item {
+///     height: 40px;
+///     background-color: silver;
+///     outline: 1px solid beige;
+///   }
+///
+///   &__list {
+///     @include slideOutDown() {
+///       bottom: 0;
+///     }
+///   }
+///
+/// }
+@mixin slide-out-down($animation-duration: .5, $has-fade-effect: false, $has-fade-out-delay: false, $fade-out-delay: $animation-duration, $additional-transform-values: '') {
+  $slide-up-duration: $animation-duration;
+  $fade-out-duration: $animation-duration;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  transform: translateY(0) #{$additional-transform-values};
+
+
+  @if($has-fade-effect == true) {
+    opacity: 0;
+
+    @if($has-fade-out-delay == true) {
+      transition: transform #{$slide-up-duration}s ease, opacity #{$fade-out-delay}s #{$fade-out-duration}s ease;
+    }
+
+    @else {
+      transition: transform #{$slide-up-duration}s ease, opacity #{$fade-out-duration}s ease;
+    }
+
+  }
+
+  @else {
+    transition: transform #{$slide-up-duration}s ease;
+  }
+
+  @content;
+}
+
+
+//fade-down в открытом состоянии
+//.fade-in-down(@animation_duration: .5, @second_transform_value: 0) {
+//  opacity: 1;
+//  transform: translate(@second_transform_value, 100%);
+//  visibility: visible;
+//  transition: transform ~"@{animation_duration}s" ease, opacity ~"@{animation_duration}s" ease, visibility 0s ~"@{animation_duration}s" linear;
+//}
+//
+//
+////fade-down в закрытом состоянии
+//.fade-out-down(@animation_duration: .5, @second_transform_value: 0) {
+//  opacity: 0;
+//  bottom: 100%;
+//  transform: translate(@second_transform_value, 0%);
+//  visibility: visible;
+//  transition: transform ~"@{animation_duration}s" ease, opacity ~"@{animation_duration}s" ease, visibility 0s ~"@{animation_duration}s" linear;
+//}

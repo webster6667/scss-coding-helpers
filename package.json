@@ -4,7 +4,9 @@
   "description": "Must have scss coding helper",
   "watch": {
     "build:doc": {
-      "patterns": ["src"],
+      "patterns": [
+        "src"
+      ],
       "extensions": "scss",
       "quiet": true,
       "legacyWatch": true,

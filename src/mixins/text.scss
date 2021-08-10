@@ -1,0 +1,37 @@
+
+
+/// Show only first row of text, and add ellipsis, if string not contain in first row
+///
+/// @group text
+/// @name ellipsis
+///
+/// @example
+/// <div class="ellipsis-wrapper">
+///     <span class="my-class" >String longer that container</span>
+/// </div>
+///
+/// .ellipsis-wrapper {
+///   width: 35px;
+/// }
+///
+/// .my-class {
+///   font-family: "Arial", sans-serif;
+///   font-size: 14px;
+///
+///   @include addEllipsis()
+/// }
+///
+/// .ellipsis-wrapper span with my-class // Stri...
+/// .ellipsis-wrapper span with out my-class // String
+///                                          // longer
+///                                          // that
+///                                          // container
+@mixin addEllipsis() {
+  display: inline-block;
+  width: 100%;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  overflow: hidden;
+}

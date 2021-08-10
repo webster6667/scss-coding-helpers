@@ -1,5 +1,119 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Scss-coding-helpers - v0.0.1</title><link rel="stylesheet" href="assets/css/main.css"><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,700" rel="stylesheet" type="text/css"><meta name="viewport" content="width=device-width"><meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"><!-- Open Graph tags --><meta property="og:title" content="Scss-coding-helpers - SassDoc"><meta property="og:type" content="website"><meta property="og:description" content="<p>Must have scss coding helper</p>
-"><!-- Thanks to Sass-lang.com for the icons --><link href="assets/images/favicon.png" rel="shortcut icon"></head><body><aside class="sidebar" role="nav"><div class="sidebar__header"><h1 class="sidebar__title"><a href="https://github.com/webster6667/scss-coding-helpers#readme">Scss-coding-helpers - v0.0.1</a></h1></div><div class="sidebar__body"><button type="button" class="btn-toggle js-btn-toggle" data-alt="Open all">Close all</button><p class="sidebar__item sidebar__item--heading" data-slug="center-inside-relative"><a href="#center-inside-relative">center-inside-relative</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="center-inside-relative-mixin"><a href="#center-inside-relative-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="center-inside-relative" data-name="absolute-center" data-type="mixin"><a href="#center-inside-relative-mixin-absolute-center">absolute-center</a></li><li class="sidebar__item sassdoc__item" data-group="center-inside-relative" data-name="transform-center" data-type="mixin"><a href="#center-inside-relative-mixin-transform-center">transform-center</a></li></ul></div></div></aside><article class="main" role="main"><header class="header" role="banner"><div class="container"><div class="sassdoc__searchbar searchbar"><label for="js-search-input" class="visually-hidden">Search</label><div class="searchbar__form" id="js-search"><input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search"><ul class="searchbar__suggestions" id="js-search-suggestions"></ul></div></div></div></header><section class="main__section"><h1 class="main__heading" id="center-inside-relative"><div class="container">center-inside-relative</div></h1><section class="main__sub-section" id="center-inside-relative-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="center-inside-relative-mixin-absolute-center"><h3 class="item__heading"><a class="item__name" href="#mixin-absolute-center">absolute-center</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin absolute-center($axis: both, $firstSize: 0, $height: 0) { 
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Scss-coding-helpers - v0.0.2</title><link rel="stylesheet" href="assets/css/main.css"><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,700" rel="stylesheet" type="text/css"><meta name="viewport" content="width=device-width"><meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"><!-- Open Graph tags --><meta property="og:title" content="Scss-coding-helpers - SassDoc"><meta property="og:type" content="website"><meta property="og:description" content="<p>Must have scss coding helper</p>
+"><!-- Thanks to Sass-lang.com for the icons --><link href="assets/images/favicon.png" rel="shortcut icon"></head><body><aside class="sidebar" role="nav"><div class="sidebar__header"><h1 class="sidebar__title"><a href="https://github.com/webster6667/scss-coding-helpers#readme">Scss-coding-helpers - v0.0.2</a></h1></div><div class="sidebar__body"><button type="button" class="btn-toggle js-btn-toggle" data-alt="Open all">Close all</button><p class="sidebar__item sidebar__item--heading" data-slug="animation"><a href="#animation">animation</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="animation-mixin"><a href="#animation-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="animation" data-name="fadeIn" data-type="mixin"><a href="#animation-mixin-fadeIn">fadeIn</a></li><li class="sidebar__item sassdoc__item" data-group="animation" data-name="fadeOut" data-type="mixin"><a href="#animation-mixin-fadeOut">fadeOut</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="animation-css"><a href="#animation-css">css</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="animation" data-name="slideInDown" data-type="css"><a href="#animation-css-slideInDown">slideInDown</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="center-inside-relative"><a href="#center-inside-relative">center-inside-relative</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="center-inside-relative-mixin"><a href="#center-inside-relative-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="center-inside-relative" data-name="absolute-center" data-type="mixin"><a href="#center-inside-relative-mixin-absolute-center">absolute-center</a></li><li class="sidebar__item sassdoc__item" data-group="center-inside-relative" data-name="transform-center" data-type="mixin"><a href="#center-inside-relative-mixin-transform-center">transform-center</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="text"><a href="#text">text</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="text-mixin"><a href="#text-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="text" data-name="ellipsis" data-type="mixin"><a href="#text-mixin-ellipsis">ellipsis</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="undefined"><a href="#undefined">General</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-mixin"><a href="#undefined-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="slideInDown" data-type="mixin"><a href="#undefined-mixin-slideInDown">slideInDown</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="slideOutDown" data-type="mixin"><a href="#undefined-mixin-slideOutDown">slideOutDown</a></li></ul></div></div></aside><article class="main" role="main"><header class="header" role="banner"><div class="container"><div class="sassdoc__searchbar searchbar"><label for="js-search-input" class="visually-hidden">Search</label><div class="searchbar__form" id="js-search"><input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search"><ul class="searchbar__suggestions" id="js-search-suggestions"></ul></div></div></div></header><section class="main__section"><h1 class="main__heading" id="animation"><div class="container">animation</div></h1><section class="main__sub-section" id="animation-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="animation-mixin-fadeIn"><h3 class="item__heading"><a class="item__name" href="#mixin-fadeIn">fadeIn</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin fadeIn($animation_duration: .5, $$additionalTransition: .5) { 
+  opacity: 1;
+  visibility: visible;
+
+  @if($additionalTransition == &#39;&#39;) {
+    transition: opacity #{$animationDuration}s ease;
+  }
+
+  @else {
+    transition: opacity #{$animationDuration}s ease, $additionalTransition;
+  }
+
+ }" data-collapsed="@mixin fadeIn($animation_duration: .5, $$additionalTransition: .5) { ... }"><code>@mixin fadeIn($animation_duration: .5, $$additionalTransition: .5) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Show element from fadeOut, and add transition style for fadeIn after fadeOut</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$animation_duration</code></th><td data-label="desc"><p>duration of animation</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>.5</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$$additionalTransition</code></th><td data-label="desc"><p>duration of animation</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>.5</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>//fadeIn
+.player {
+
+  &amp;__button {
+    @include fadeOut(.5);
+  }
+
+  &amp;:hover &amp;__button {
+    @include fadeIn(.5);
+  }
+
+}
+
+//fadeOut
+.player {
+
+  &amp;__button {
+    @include fadeIn(.5);
+  }
+
+  &amp;:hover &amp;__button {
+    @include fadeOut(.5);
+  }
+
+}
+
+//fade effect with transform
+.player-rotate {
+  $translateTransform: transform .5s 0s ease;
+
+  &amp;__button {
+    transform: rotate(45deg);
+    @include fadeOut(.5, $translateTransform);
+  }
+
+  &amp;:hover &amp;__button {
+    transform: rotate(0deg);
+    @include fadeIn(.5, $translateTransform);
+  }
+
+}</code></pre></div></section><section class="main__item container item" id="animation-mixin-fadeOut"><h3 class="item__heading"><a class="item__name" href="#mixin-fadeOut">fadeOut</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin fadeOut($animation_duration: .5, $$additionalTransition: .5) { 
+  opacity: 0;
+  visibility: hidden;
+
+  @if($additionalTransition == &#39;&#39;) {
+    transition: opacity #{$animationDuration}s ease, visibility 0s #{$animationDuration}s linear;
+  }
+
+  @else {
+    transition: opacity #{$animationDuration}s ease, visibility 0s #{$animationDuration}s linear, $additionalTransition;
+  }
+
+ }" data-collapsed="@mixin fadeOut($animation_duration: .5, $$additionalTransition: .5) { ... }"><code>@mixin fadeOut($animation_duration: .5, $$additionalTransition: .5) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>hide element to opacity: 0, and hide element before fadeIn</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$animation_duration</code></th><td data-label="desc"><p>duration of animation</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>.5</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$$additionalTransition</code></th><td data-label="desc"><p>duration of animation</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>.5</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>//fadeIn
+.modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background-color: rgba(0,0,0,.5);
+  @include fadeOut(.5);
+
+  &amp;_open {
+    @include fadeIn(.5);
+  }
+
+}
+
+//fadeOut
+.modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background-color: rgba(0,0,0,.5);
+  @include fadeIn(.5);
+
+  &amp;_closed {
+    @include fadeOut(.5);
+  }
+
+}
+
+//fade effect with transform
+.player-rotate {
+  $translateTransform: transform .5s 0s ease;
+
+  &amp;__button {
+    transform: rotate(45deg);
+    @include fadeOut(.5, $translateTransform);
+  }
+
+  &amp;:hover &amp;__button {
+    transform: rotate(0deg);
+    @include fadeIn(.5, $translateTransform);
+  }
+
+}</code></pre></div></section></section><section class="main__sub-section" id="animation-css"><h2 class="main__heading--secondary"><div class="container">css</div></h2><section class="main__item container item" id="animation-css-slideInDown"><h3 class="item__heading"><a class="item__name" href="#css-slideInDown">slideInDown</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>slideInDown {
+  
+}</code>" data-collapsed="slideInDown { ... }"><code>slideInDown { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>slide element down</p></div></section></section></section><section class="main__section"><h1 class="main__heading" id="center-inside-relative"><div class="container">center-inside-relative</div></h1><section class="main__sub-section" id="center-inside-relative-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="center-inside-relative-mixin-absolute-center"><h3 class="item__heading"><a class="item__name" href="#mixin-absolute-center">absolute-center</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin absolute-center($axis: both, $firstSize: 0, $height: 0) { 
 
   @if ($axis == y) {
     position: absolute;
@@ -87,4 +201,102 @@ $blockHeight: 200px;
     @include transform-center(both, rotate(45deg));
   }
 
-}</code></pre></div></section></section></section><footer class="footer" role="contentinfo"><div class="container"><div class="footer__project-info project-info"><!-- Name and URL --> <a class="project-info__name" href="https://github.com/webster6667/scss-coding-helpers#readme">Scss-coding-helpers</a><!-- Version --> <span class="project-info__version">- v0.0.1</span><!-- License --> <span class="project-info__license">, under MIT</span></div><a class="footer__watermark" href="http://sassdoc.com"><img src="assets/images/logo_light_inline.svg" alt="SassDoc Logo"></a></div></footer></article><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script><script src="assets/js/main.min.js"></script></body></html>
+}</code></pre></div></section></section></section><section class="main__section"><h1 class="main__heading" id="text"><div class="container">text</div></h1><section class="main__sub-section" id="text-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="text-mixin-ellipsis"><h3 class="item__heading"><a class="item__name" href="#mixin-ellipsis">ellipsis</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin ellipsis() { 
+  display: inline-block;
+  width: 100%;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  overflow: hidden;
+ }" data-collapsed="@mixin ellipsis() { ... }"><code>@mixin ellipsis() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Show only first row of text, and add ellipsis, if string not contain in first row</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>&lt;div class=&quot;ellipsis-wrapper&quot;&gt;
+    &lt;span class=&quot;my-class&quot; &gt;String longer that container&lt;/span&gt;
+&lt;/div&gt;
+
+.ellipsis-wrapper {
+  width: 35px;
+}
+
+.my-class {
+  font-family: &quot;Arial&quot;, sans-serif;
+  font-size: 14px;
+
+  @include addEllipsis()
+}
+
+.ellipsis-wrapper span with my-class // Stri...
+.ellipsis-wrapper span with out my-class // String
+                                         // longer
+                                         // that
+                                         // container</code></pre></div></section></section></section><section class="main__section"><h1 class="main__heading" id="undefined"><div class="container">General</div></h1><section class="main__sub-section" id="undefined-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="undefined-mixin-slideInDown"><h3 class="item__heading"><a class="item__name" href="#mixin-slideInDown">slideInDown</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin slideInDown() { 
+  transform: translateY(100%) #{$additionalTransformValues};
+  //transition: transform #{$animationDuration}s ease;
+ }" data-collapsed="@mixin slideInDown() { ... }"><code>@mixin slideInDown() { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.dd {
+  margin: 40px auto;
+  width: 300px;
+  height: 40px * 3;
+  overflow: hidden;
+
+  &amp;__wrapper {
+    position: relative;
+  }
+
+  &amp;__active-item-wrapper {
+    position: relative;
+  }
+
+  &amp;_open &amp;__list {
+    @include slideInDown()
+  }
+
+  &amp;__list-item {
+    height: 40px;
+    background-color: silver;
+    outline: 1px solid beige;
+  }
+
+  &amp;__list {
+    @include slideOutDown() {
+      bottom: 0;
+    }
+  }
+
+}</code></pre></div></section><section class="main__item container item" id="undefined-mixin-slideOutDown"><h3 class="item__heading"><a class="item__name" href="#mixin-slideOutDown">slideOutDown</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin slideOutDown() { 
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  transform: translateY(0%);
+  transition: transform #{$animationDuration}s ease;
+  @content;
+ }" data-collapsed="@mixin slideOutDown() { ... }"><code>@mixin slideOutDown() { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.dd {
+  margin: 40px auto;
+  width: 300px;
+  height: 40px * 3;
+  overflow: hidden;
+
+  &amp;__wrapper {
+    position: relative;
+  }
+
+  &amp;__active-item-wrapper {
+    position: relative;
+  }
+
+  &amp;_open &amp;__list {
+    @include slideInDown()
+  }
+
+  &amp;__list-item {
+    height: 40px;
+    background-color: silver;
+    outline: 1px solid beige;
+  }
+
+  &amp;__list {
+    @include slideOutDown() {
+      bottom: 0;
+    }
+  }
+
+}</code></pre></div></section></section></section><footer class="footer" role="contentinfo"><div class="container"><div class="footer__project-info project-info"><!-- Name and URL --> <a class="project-info__name" href="https://github.com/webster6667/scss-coding-helpers#readme">Scss-coding-helpers</a><!-- Version --> <span class="project-info__version">- v0.0.2</span><!-- License --> <span class="project-info__license">, under MIT</span></div><a class="footer__watermark" href="http://sassdoc.com"><img src="assets/images/logo_light_inline.svg" alt="SassDoc Logo"></a></div></footer></article><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script><script src="assets/js/main.min.js"></script></body></html>

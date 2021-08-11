@@ -3,9 +3,10 @@
 /// @group animation
 /// @name slide-in-down
 ///
-/// @param {number}  $animation-duration [.5] - slide-in and fade-in duration
-/// @param {boolean} $has-fade-effect [false] - should add fade effect
-/// @param {string}  $additional-transform-values [''] - additional transition values
+/// @param {map} $settings [(animation-duration: .5, has-fade-effect: false, additional-transition-values: '')] - mixin settings
+/// @param {number}  $settings.animation-duration [.5] - slide-in and fade-in duration
+/// @param {boolean} $settings.has-fade-effect [false] - should add fade effect
+/// @param {string}  $settings.additional-transform-values [''] - additional transition values
 ///
 /// @example
 /// .dd {
@@ -13,12 +14,6 @@
 ///   width: 300px;
 ///   height: 40px * 3;
 ///   overflow: hidden;
-///
-///   $animation-in-duration: .5;
-///   $animation-out-duration: .5;
-///   $additional-transform-values: '';
-///   $has-fade-effect: true;
-///   $has-fade-out-delay: true;
 ///
 ///   &__wrapper {
 ///     position: relative;
@@ -28,7 +23,7 @@
 ///     position: relative;
 ///   }
 ///
-///   &_open &__list {
+///   &_open-down &__list {
 ///     @include slide-in-down()
 ///   }
 ///
@@ -47,7 +42,7 @@
 ///   &_with-fade & {
 ///
 ///     &__list {
-///       @include slide-out-y($animation-out-duration, $has-fade-effect) {
+///       @include slide-out-y((has-fade-effect: true)) {
 ///         bottom: 0;
 ///       }
 ///     }
@@ -57,26 +52,28 @@
 ///   &_with-fade-out-delay & {
 ///
 ///     &__list {
-///       @include slide-out-y($animation-out-duration, $has-fade-effect, $has-fade-out-delay) {
+///       @include slide-out-y((has-fade-effect: true, has-fade-out-delay: true)) {
 ///         bottom: 0;
 ///       }
 ///     }
 ///
 ///   }
 ///
-///   &_with-fade#{&}_open &, &_with-fade-out-delay#{&}_open & {
+///   &_with-fade#{&}_open-down &, &_with-fade-out-delay#{&}_open-down & {
 ///
 ///     &__list {
-///       @include slide-in-down($animation-out-duration, $has-fade-effect)
+///       @include slide-in-down((has-fade-effect: true));
 ///     }
 ///
 ///   }
 ///
 /// }
 ///
-/// // dd_with-fade-out-delay
-/// // dd_with-fade
-/// <div class="dd dd_with-fade-out-delay" onclick="document.querySelector('.dd').classList.toggle('dd_open')">
+/// //class with mod
+/// <!--dd_with-fade-out-delay-->
+/// <!--dd_with-fade-->
+///
+/// <div class="dd dd_with-fade-out-delay" onclick="document.querySelector('.dd').classList.toggle('dd_open-down')">
 ///
 ///   <div class="dd__wrapper">
 ///
@@ -92,9 +89,11 @@
 ///   </div>
 ///
 /// </div>
-@mixin slide-in-down($animation-duration: .5, $has-fade-effect: false, $additional-transform-values: '') {
-  $slide-down-duration: $animation-duration;
-  $fade-in-duration: $animation-duration;
+@mixin slide-in-down($settings: (animation-duration: .5, has-fade-effect: false, additional-transform-values: '')) {
+  $slide-down-duration: get-map-prop-or-default($settings, animation-duration, .5);
+  $fade-in-duration: get-map-prop-or-default($settings, animation-duration, .5);
+  $additional-transform-values: get-map-prop-or-default($settings, additional-transform-values);
+  $has-fade-effect: get-map-prop-or-default($settings, has-fade-effect, false);
 
   transform: translateY(100%) #{$additional-transform-values};
 
@@ -104,7 +103,7 @@
   }
 
   @else {
-    transition: transform #{$animation-duration}s ease;
+    transition: transform #{$slide-down-duration}s ease;
   }
 
 }
@@ -114,38 +113,28 @@
 /// @group animation
 /// @name slide-in-up
 ///
-/// @param {number}  $animation-duration [.5] - slide-in and fade-in duration
-/// @param {boolean} $has-fade-effect [false] - should add fade effect
-/// @param {string}  $additional-transform-values [''] - additional transition values
+/// @param {map} $settings [(animation-duration: .5, has-fade-effect: false, additional-transition-values: '')] - mixin settings
+/// @param {number}  $settings.animation-duration [.5] - slide-in and fade-in duration
+/// @param {boolean} $settings.has-fade-effect [false] - should add fade effect
+/// @param {string}  $settings.additional-transform-values [''] - additional transition values
 ///
 /// @example
 /// .dd {
-///   display: flex;
-///   flex-direction: column;
-///
-///   margin: 200px auto 0;
+///   margin: 40px auto;
 ///   width: 300px;
 ///   height: 40px * 3;
 ///   overflow: hidden;
 ///
-///   $animation-in-duration: .5;
-///   $animation-out-duration: .5;
-///   $additional-transform-values: '';
-///   $has-fade-effect: true;
-///   $has-fade-out-delay: true;
-///
 ///   &__wrapper {
 ///     position: relative;
-///
-///     margin-top: auto;
 ///   }
 ///
 ///   &__active-item-wrapper {
 ///     position: relative;
 ///   }
 ///
-///   &_open &__list {
-///     @include slide-in-up()
+///   &_open-up &__list {
+///     @include slide-in-down()
 ///   }
 ///
 ///   &__list-item {
@@ -156,15 +145,15 @@
 ///
 ///   &__list {
 ///     @include slide-out-y() {
-///       top: 0;
+///       bottom: 0;
 ///     }
 ///   }
 ///
 ///   &_with-fade & {
 ///
 ///     &__list {
-///       @include slide-out-y($animation-out-duration, $has-fade-effect) {
-///         top: 0;
+///       @include slide-out-y((has-fade-effect: true)) {
+///         bottom: 0;
 ///       }
 ///     }
 ///
@@ -173,26 +162,28 @@
 ///   &_with-fade-out-delay & {
 ///
 ///     &__list {
-///       @include slide-out-y($animation-out-duration, $has-fade-effect, $has-fade-out-delay) {
-///         top: 0;
+///       @include slide-out-y((has-fade-effect: true, has-fade-out-delay: true)) {
+///         bottom: 0;
 ///       }
 ///     }
 ///
 ///   }
 ///
-///   &_with-fade#{&}_open &, &_with-fade-out-delay#{&}_open & {
+///   &_with-fade#{&}_open-up &, &_with-fade-out-delay#{&}_open-up & {
 ///
 ///     &__list {
-///       @include slide-in-up($animation-out-duration, $has-fade-effect)
+///       @include slide-in-down((has-fade-effect: true));
 ///     }
 ///
 ///   }
 ///
 /// }
 ///
-/// // dd_with-fade-out-delay
-/// // dd_with-fade
-/// <div class="dd dd_with-fade-out-delay" onclick="document.querySelector('.dd').classList.toggle('dd_open')">
+/// //class with mod
+/// <!--dd_with-fade-out-delay-->
+/// <!--dd_with-fade-->
+///
+/// <div class="dd dd_with-fade-out-delay" onclick="document.querySelector('.dd').classList.toggle('dd_open-up')">
 ///
 ///   <div class="dd__wrapper">
 ///
@@ -208,19 +199,21 @@
 ///   </div>
 ///
 /// </div>
-@mixin slide-in-up($animation-duration: .5, $has-fade-effect: false, $additional-transform-values: '') {
-  $slide-down-duration: $animation-duration;
-  $fade-in-duration: $animation-duration;
+@mixin slide-in-up($settings: (animation-duration: .5, has-fade-effect: false, additional-transform-values: '')) {
+  $slide-up-duration: get-map-prop-or-default($settings, animation-duration, .5);
+  $fade-in-duration: get-map-prop-or-default($settings, animation-duration, .5);
+  $additional-transform-values: get-map-prop-or-default($settings, additional-transform-values);
+  $has-fade-effect: get-map-prop-or-default($settings, has-fade-effect, false);
 
   transform: translateY(-100%) #{$additional-transform-values};
 
   @if($has-fade-effect == true) {
     opacity: 1;
-    transition: transform #{$slide-down-duration}s ease, opacity #{$fade-in-duration}s ease;
+    transition: transform #{$slide-up-duration}s ease, opacity #{$fade-in-duration}s ease;
   }
 
   @else {
-    transition: transform #{$animation-duration}s ease;
+    transition: transform #{$slide-up-duration}s ease;
   }
 
 }
@@ -230,40 +223,30 @@
 /// @group animation
 /// @name slide-out-y
 ///
+/// @param {map} $settings [(animation-duration: .5, has-fade-effect: false, has-fade-out-delay: false, fade-out-delay: $settings.animation-duration, additional-transition-values: '')] - mixin settings
 /// @param {number}  $animation-duration [.5] - slide-in and fade-in duration
 /// @param {boolean} $has-fade-effect [false] - should add fade effect
 /// @param {boolean} $has-fade-out-delay [false] - if true, element will hide, only after slide-down-out
-/// @param {number}  $fade-out-delay [$animation-duration] - props for update fade-out delay after slide-down-out
+/// @param {number}  $fade-out-delay [$settings.animation-duration] - props for update fade-out delay after slide-down-out
 /// @param {string}  $additional-transform-values [''] - additional transition values
 ///
 /// @example
 /// .dd {
-///   display: flex;
-///   flex-direction: column;
-///
-///   margin: 200px auto 0;
+///   margin: 40px auto;
 ///   width: 300px;
 ///   height: 40px * 3;
 ///   overflow: hidden;
 ///
-///   $animation-in-duration: .5;
-///   $animation-out-duration: .5;
-///   $additional-transform-values: '';
-///   $has-fade-effect: true;
-///   $has-fade-out-delay: true;
-///
 ///   &__wrapper {
 ///     position: relative;
-///
-///     margin-top: auto;
 ///   }
 ///
 ///   &__active-item-wrapper {
 ///     position: relative;
 ///   }
 ///
-///   &_open &__list {
-///     @include slide-in-up()
+///   &_open-down &__list {
+///     @include slide-in-down()
 ///   }
 ///
 ///   &__list-item {
@@ -274,15 +257,15 @@
 ///
 ///   &__list {
 ///     @include slide-out-y() {
-///       top: 0;
+///       bottom: 0;
 ///     }
 ///   }
 ///
 ///   &_with-fade & {
 ///
 ///     &__list {
-///       @include slide-out-y($animation-out-duration, $has-fade-effect) {
-///         top: 0;
+///       @include slide-out-y((has-fade-effect: true)) {
+///         bottom: 0;
 ///       }
 ///     }
 ///
@@ -291,26 +274,28 @@
 ///   &_with-fade-out-delay & {
 ///
 ///     &__list {
-///       @include slide-out-y($animation-out-duration, $has-fade-effect, $has-fade-out-delay) {
-///         top: 0;
+///       @include slide-out-y((has-fade-effect: true, has-fade-out-delay: true)) {
+///         bottom: 0;
 ///       }
 ///     }
 ///
 ///   }
 ///
-///   &_with-fade#{&}_open &, &_with-fade-out-delay#{&}_open & {
+///   &_with-fade#{&}_open-down &, &_with-fade-out-delay#{&}_open-down & {
 ///
 ///     &__list {
-///       @include slide-in-up($animation-out-duration, $has-fade-effect)
+///       @include slide-in-down((has-fade-effect: true));
 ///     }
 ///
 ///   }
 ///
 /// }
 ///
-/// // dd_with-fade-out-delay
-/// // dd_with-fade
-/// <div class="dd dd_with-fade-out-delay" onclick="document.querySelector('.dd').classList.toggle('dd_open')">
+/// //class with mod
+/// <!--dd_with-fade-out-delay-->
+/// <!--dd_with-fade-->
+///
+/// <div class="dd dd_with-fade-out-delay" onclick="document.querySelector('.dd').classList.toggle('dd_open-down')">
 ///
 ///   <div class="dd__wrapper">
 ///
@@ -326,9 +311,14 @@
 ///   </div>
 ///
 /// </div>
-@mixin slide-out-y($animation-duration: .5, $has-fade-effect: false, $has-fade-out-delay: false, $fade-out-delay: $animation-duration, $additional-transform-values: '') {
-  $slide-down-duration: $animation-duration;
-  $fade-out-duration: $animation-duration;
+@mixin slide-out-y($settings: (animation-duration: .5, has-fade-effect: false, has-fade-out-delay: false, fade-out-delay: .5, additional-transform-values: '')) {
+  $slide-out-duration: get-map-prop-or-default($settings, animation-duration, .5);
+  $fade-in-duration: get-map-prop-or-default($settings, animation-duration, .5);
+  $additional-transform-values: get-map-prop-or-default($settings, additional-transform-values);
+  $has-fade-effect: get-map-prop-or-default($settings, has-fade-effect, false);
+  $has-fade-out-delay: get-map-prop-or-default($settings, has-fade-out-delay, false);
+  $fade-out-delay: get-map-prop-or-default($settings, fade-out-delay, $slide-out-duration);
+  $fade-out-duration: $slide-out-duration;
 
   position: absolute;
   left: 0;
@@ -341,17 +331,17 @@
     opacity: 0;
 
     @if($has-fade-out-delay == true) {
-      transition: transform #{$slide-down-duration}s ease, opacity #{$fade-out-delay}s #{$fade-out-duration}s ease;
+      transition: transform #{$slide-out-duration}s ease, opacity #{$fade-out-delay}s #{$fade-out-duration}s ease;
     }
 
     @else {
-      transition: transform #{$slide-down-duration}s ease, opacity #{$fade-out-duration}s ease;
+      transition: transform #{$slide-out-duration}s ease, opacity #{$fade-out-duration}s ease;
     }
 
   }
 
   @else {
-    transition: transform #{$slide-down-duration}s ease;
+    transition: transform #{$slide-out-duration}s ease;
   }
 
   @content;
@@ -363,9 +353,10 @@
 /// @group animation
 /// @name slide-in-right
 ///
-/// @param {number}  $animation-duration [.5] - slide-in and fade-in duration
-/// @param {boolean} $has-fade-effect [false] - should add fade effect
-/// @param {string}  $additional-transform-values [''] - additional transition values
+/// @param {map} $settings [(animation-duration: .5, has-fade-effect: false, additional-transition-values: '')] - mixin settings
+/// @param {number}  $settings.animation-duration [.5] - slide-in and fade-in duration
+/// @param {boolean} $settings.has-fade-effect [false] - should add fade effect
+/// @param {string}  $settings.additional-transform-values [''] - additional transition values
 ///
 /// @example
 /// .open-trigger {
@@ -381,13 +372,6 @@
 /// }
 ///
 /// .side-bar {
-///
-///   $animation-in-duration: 1;
-///   $animation-out-duration: 1;
-///   $additional-transform-values: '';
-///   $has-fade-effect: true;
-///   $has-fade-out-delay: true;
-///
 ///   position: fixed;
 ///   top: 0;
 ///   bottom: 0;
@@ -400,44 +384,49 @@
 ///     right: 100%;
 ///   }
 ///
-///   &_open {
+///   &_open-right {
 ///     @include slide-in-right();
 ///   }
 ///
 ///   &_with-fade {
-///     @include slide-out-x($animation-out-duration, $has-fade-effect) {
+///     @include slide-out-x((has-fade-effect: true)) {
 ///       right: 100%;
 ///     }
 ///   }
 ///
 ///   &_with-fade-out-delay {
-///     @include slide-out-x($animation-out-duration, $has-fade-effect, $has-fade-out-delay) {
+///     @include slide-out-x((has-fade-effect: true, has-fade-out-delay: true)) {
 ///       right: 100%;
 ///     }
 ///   }
 ///
-///   &_with-fade#{&}_open, &_with-fade-out-delay#{&}_open {
-///     @include slide-in-right($animation-in-duration, $has-fade-effect);
+///   &_with-fade#{&}_open-right, &_with-fade-out-delay#{&}_open-right {
+///     @include slide-in-right((has-fade-effect: true));
 ///   }
 ///
 /// }
-/// //side-bar_with-fade
-/// //side-bar_with-fade-out-delay
-/// <div class="side-bar side-bar_with-fade-out-delay"></div>
-/// <div class="open-trigger" onclick="document.querySelector('.side-bar').classList.toggle('side-bar_open')">Close/Open</div>
-@mixin slide-in-right($animation-duration: .5, $has-fade-effect: false, $additional-transform-values: '') {
-  $slide-down-duration: $animation-duration;
-  $fade-in-duration: $animation-duration;
+///
+/// //class with mod
+/// <!--side-bar_with-fade-->
+/// <!--side-bar_with-fade-out-delay-->
+///
+/// <div class="side-bar"></div>
+/// <div class="open-trigger" onclick="document.querySelector('.side-bar').classList.toggle('side-bar_open-right')">Close/Open</div>
+@mixin slide-in-right($settings: (animation-duration: .5, has-fade-effect: false, additional-transform-values: '')) {
+  $slide-right-duration: get-map-prop-or-default($settings, animation-duration, .5);
+  $fade-in-duration: get-map-prop-or-default($settings, animation-duration, .5);
+  $additional-transform-values: get-map-prop-or-default($settings, additional-transform-values);
+  $has-fade-effect: get-map-prop-or-default($settings, has-fade-effect, false);
 
   transform: translateX(100%) #{$additional-transform-values};
 
   @if($has-fade-effect == true) {
     opacity: 1;
-    transition: transform #{$slide-down-duration}s ease, opacity #{$fade-in-duration}s ease;
+    transition: transform #{$slide-right-duration}s ease, opacity #{$fade-in-duration}s ease;
   }
 
   @else {
-    transition: transform #{$animation-duration}s ease;
+    transition: transform #{$slide-right-duration}s ease;
   }
 
 }
@@ -447,9 +436,10 @@
 /// @group animation
 /// @name slide-in-left
 ///
-/// @param {number}  $animation-duration [.5] - slide-in and fade-in duration
-/// @param {boolean} $has-fade-effect [false] - should add fade effect
-/// @param {string}  $additional-transform-values [''] - additional transition values
+/// @param {map} $settings [(animation-duration: .5, has-fade-effect: false, additional-transition-values: '')] - mixin settings
+/// @param {number}  $settings.animation-duration [.5] - slide-in and fade-in duration
+/// @param {boolean} $settings.has-fade-effect [false] - should add fade effect
+/// @param {string}  $settings.additional-transform-values [''] - additional transition values
 ///
 /// @example
 /// .open-trigger {
@@ -465,13 +455,6 @@
 /// }
 ///
 /// .side-bar {
-///
-///   $animation-in-duration: 1;
-///   $animation-out-duration: 1;
-///   $additional-transform-values: '';
-///   $has-fade-effect: true;
-///   $has-fade-out-delay: true;
-///
 ///   position: fixed;
 ///   top: 0;
 ///   bottom: 0;
@@ -484,44 +467,49 @@
 ///     left: 100%;
 ///   }
 ///
-///   &_open {
+///   &_open-left {
 ///     @include slide-in-left();
 ///   }
 ///
 ///   &_with-fade {
-///     @include slide-out-x($animation-out-duration, $has-fade-effect) {
+///     @include slide-out-x((has-fade-effect: true)) {
 ///       left: 100%;
 ///     }
 ///   }
 ///
 ///   &_with-fade-out-delay {
-///     @include slide-out-x($animation-out-duration, $has-fade-effect, $has-fade-out-delay) {
+///     @include slide-out-x((has-fade-effect: true, has-fade-out-delay: true)) {
 ///       left: 100%;
 ///     }
 ///   }
 ///
-///   &_with-fade#{&}_open, &_with-fade-out-delay#{&}_open {
-///     @include slide-in-left($animation-in-duration, $has-fade-effect);
+///   &_with-fade#{&}_open-left, &_with-fade-out-delay#{&}_open-left {
+///     @include slide-in-left((has-fade-effect: true));
 ///   }
 ///
 /// }
-/// //side-bar_with-fade
-/// //side-bar_with-fade-out-delay
-/// <div class="side-bar side-bar_with-fade-out-delay"></div>
-/// <div class="open-trigger" onclick="document.querySelector('.side-bar').classList.toggle('side-bar_open')">Close/Open</div>
-@mixin slide-in-left($animation-duration: .5, $has-fade-effect: false, $additional-transform-values: '') {
-  $slide-down-duration: $animation-duration;
-  $fade-in-duration: $animation-duration;
+///
+/// //class with mod
+/// <!--side-bar_with-fade-->
+/// <!--side-bar_with-fade-out-delay-->
+///
+/// <div class="side-bar"></div>
+/// <div class="open-trigger" onclick="document.querySelector('.side-bar').classList.toggle('side-bar_open-left')">Close/Open</div>
+@mixin slide-in-left($settings: (animation-duration: .5, has-fade-effect: false, additional-transform-values: '')) {
+  $slide-left-duration: get-map-prop-or-default($settings, animation-duration, .5);
+  $fade-in-duration: get-map-prop-or-default($settings, animation-duration, .5);
+  $additional-transform-values: get-map-prop-or-default($settings, additional-transform-values);
+  $has-fade-effect: get-map-prop-or-default($settings, has-fade-effect, false);
 
   transform: translateX(-100%) #{$additional-transform-values};
 
   @if($has-fade-effect == true) {
     opacity: 1;
-    transition: transform #{$slide-down-duration}s ease, opacity #{$fade-in-duration}s ease;
+    transition: transform #{$slide-left-duration}s ease, opacity #{$fade-in-duration}s ease;
   }
 
   @else {
-    transition: transform #{$animation-duration}s ease;
+    transition: transform #{$slide-left-duration}s ease;
   }
 
 }
@@ -595,9 +583,14 @@
 /// //side-bar_with-fade-out-delay
 /// <div class="side-bar side-bar_with-fade-out-delay"></div>
 /// <div class="open-trigger" onclick="document.querySelector('.side-bar').classList.toggle('side-bar_open')">Close/Open</div>
-@mixin slide-out-x($animation-duration: .5, $has-fade-effect: false, $has-fade-out-delay: false, $fade-out-delay: $animation-duration, $additional-transform-values: '') {
-  $slide-down-duration: $animation-duration;
-  $fade-out-duration: $animation-duration;
+@mixin slide-out-x($settings: (animation-duration: .5, has-fade-effect: false, has-fade-out-delay: false, fade-out-delay: .5, additional-transition-values: '')) {
+  $slide-out-duration: get-map-prop-or-default($settings, animation-duration, .5);
+  $fade-in-duration: get-map-prop-or-default($settings, animation-duration, .5);
+  $additional-transform-values: get-map-prop-or-default($settings, additional-transform-values);
+  $has-fade-effect: get-map-prop-or-default($settings, has-fade-effect, false);
+  $has-fade-out-delay: get-map-prop-or-default($settings, has-fade-out-delay, false);
+  $fade-out-delay: get-map-prop-or-default($settings, fade-out-delay, $slide-out-duration);
+  $fade-out-duration: $slide-out-duration;
 
   position: absolute;
 
@@ -608,17 +601,17 @@
     opacity: 0;
 
     @if($has-fade-out-delay == true) {
-      transition: transform #{$slide-down-duration}s ease, opacity #{$fade-out-delay}s #{$fade-out-duration}s ease;
+      transition: transform #{$slide-out-duration}s ease, opacity #{$fade-out-delay}s #{$fade-out-duration}s ease;
     }
 
     @else {
-      transition: transform #{$slide-down-duration}s ease, opacity #{$fade-out-duration}s ease;
+      transition: transform #{$slide-out-duration}s ease, opacity #{$fade-out-duration}s ease;
     }
 
   }
 
   @else {
-    transition: transform #{$slide-down-duration}s ease;
+    transition: transform #{$slide-out-duration}s ease;
   }
 
   @content;

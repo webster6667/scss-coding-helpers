@@ -1,5 +1,5 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><title>Scss-coding-helpers - v0.0.2</title><link rel="stylesheet" href="assets/css/main.css"><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,700" rel="stylesheet" type="text/css"><meta name="viewport" content="width=device-width"><meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"><!-- Open Graph tags --><meta property="og:title" content="Scss-coding-helpers - SassDoc"><meta property="og:type" content="website"><meta property="og:description" content="<p>Must have scss coding helper</p>
-"><!-- Thanks to Sass-lang.com for the icons --><link href="assets/images/favicon.png" rel="shortcut icon"></head><body><aside class="sidebar" role="nav"><div class="sidebar__header"><h1 class="sidebar__title"><a href="https://github.com/webster6667/scss-coding-helpers#readme">Scss-coding-helpers - v0.0.2</a></h1></div><div class="sidebar__body"><button type="button" class="btn-toggle js-btn-toggle" data-alt="Open all">Close all</button><p class="sidebar__item sidebar__item--heading" data-slug="animation"><a href="#animation">animation</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="animation-mixin"><a href="#animation-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="animation" data-name="fade-in" data-type="mixin"><a href="#animation-mixin-fade-in">fade-in</a></li><li class="sidebar__item sassdoc__item" data-group="animation" data-name="fade-out" data-type="mixin"><a href="#animation-mixin-fade-out">fade-out</a></li><li class="sidebar__item sassdoc__item" data-group="animation" data-name="slide-in-down" data-type="mixin"><a href="#animation-mixin-slide-in-down">slide-in-down</a></li><li class="sidebar__item sassdoc__item" data-group="animation" data-name="slide-in-up" data-type="mixin"><a href="#animation-mixin-slide-in-up">slide-in-up</a></li><li class="sidebar__item sassdoc__item" data-group="animation" data-name="slide-out-y" data-type="mixin"><a href="#animation-mixin-slide-out-y">slide-out-y</a></li><li class="sidebar__item sassdoc__item" data-group="animation" data-name="slide-in-right" data-type="mixin"><a href="#animation-mixin-slide-in-right">slide-in-right</a></li><li class="sidebar__item sassdoc__item" data-group="animation" data-name="slide-in-left" data-type="mixin"><a href="#animation-mixin-slide-in-left">slide-in-left</a></li><li class="sidebar__item sassdoc__item" data-group="animation" data-name="slide-out-x" data-type="mixin"><a href="#animation-mixin-slide-out-x">slide-out-x</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="center-inside-relative"><a href="#center-inside-relative">center-inside-relative</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="center-inside-relative-mixin"><a href="#center-inside-relative-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="center-inside-relative" data-name="absolute-center" data-type="mixin"><a href="#center-inside-relative-mixin-absolute-center">absolute-center</a></li><li class="sidebar__item sassdoc__item" data-group="center-inside-relative" data-name="transform-center" data-type="mixin"><a href="#center-inside-relative-mixin-transform-center">transform-center</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="keyframes"><a href="#keyframes">keyframes</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="keyframes-mixin"><a href="#keyframes-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="keyframes" data-name="keyframes-rotate-360-z_right" data-type="mixin"><a href="#keyframes-mixin-keyframes-rotate-360-z_right">keyframes-rotate-360-z_right</a></li><li class="sidebar__item sassdoc__item" data-group="keyframes" data-name="keyframes-rotate-360-z_left" data-type="mixin"><a href="#keyframes-mixin-keyframes-rotate-360-z_left">keyframes-rotate-360-z_left</a></li><li class="sidebar__item sassdoc__item" data-group="keyframes" data-name="keyframes-rotate-360-x_right" data-type="mixin"><a href="#keyframes-mixin-keyframes-rotate-360-x_right">keyframes-rotate-360-x_right</a></li><li class="sidebar__item sassdoc__item" data-group="keyframes" data-name="keyframes-rotate-360-x_left" data-type="mixin"><a href="#keyframes-mixin-keyframes-rotate-360-x_left">keyframes-rotate-360-x_left</a></li><li class="sidebar__item sassdoc__item" data-group="keyframes" data-name="keyframes-rotate-360-y_forward" data-type="mixin"><a href="#keyframes-mixin-keyframes-rotate-360-y_forward">keyframes-rotate-360-y_forward</a></li><li class="sidebar__item sassdoc__item" data-group="keyframes" data-name="keyframes-rotate-360-y_backward" data-type="mixin"><a href="#keyframes-mixin-keyframes-rotate-360-y_backward">keyframes-rotate-360-y_backward</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="text"><a href="#text">text</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="text-mixin"><a href="#text-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="text" data-name="ellipsis" data-type="mixin"><a href="#text-mixin-ellipsis">ellipsis</a></li></ul></div></div></aside><article class="main" role="main"><header class="header" role="banner"><div class="container"><div class="sassdoc__searchbar searchbar"><label for="js-search-input" class="visually-hidden">Search</label><div class="searchbar__form" id="js-search"><input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search"><ul class="searchbar__suggestions" id="js-search-suggestions"></ul></div></div></div></header><section class="main__section"><h1 class="main__heading" id="animation"><div class="container">animation</div></h1><section class="main__sub-section" id="animation-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="animation-mixin-fade-in"><h3 class="item__heading"><a class="item__name" href="#mixin-fade-in">fade-in</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin fade-in($settings: (animation-duration: .5, additional-transition-values: &#39;&#39;)) { 
+"><!-- Thanks to Sass-lang.com for the icons --><link href="assets/images/favicon.png" rel="shortcut icon"></head><body><aside class="sidebar" role="nav"><div class="sidebar__header"><h1 class="sidebar__title"><a href="https://github.com/webster6667/scss-coding-helpers#readme">Scss-coding-helpers - v0.0.2</a></h1></div><div class="sidebar__body"><button type="button" class="btn-toggle js-btn-toggle" data-alt="Open all">Close all</button><p class="sidebar__item sidebar__item--heading" data-slug="animation"><a href="#animation">animation</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="animation-mixin"><a href="#animation-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="animation" data-name="fade-in" data-type="mixin"><a href="#animation-mixin-fade-in">fade-in</a></li><li class="sidebar__item sassdoc__item" data-group="animation" data-name="fade-out" data-type="mixin"><a href="#animation-mixin-fade-out">fade-out</a></li><li class="sidebar__item sassdoc__item" data-group="animation" data-name="slide-in-down" data-type="mixin"><a href="#animation-mixin-slide-in-down">slide-in-down</a></li><li class="sidebar__item sassdoc__item" data-group="animation" data-name="slide-in-up" data-type="mixin"><a href="#animation-mixin-slide-in-up">slide-in-up</a></li><li class="sidebar__item sassdoc__item" data-group="animation" data-name="slide-out-y" data-type="mixin"><a href="#animation-mixin-slide-out-y">slide-out-y</a></li><li class="sidebar__item sassdoc__item" data-group="animation" data-name="slide-in-right" data-type="mixin"><a href="#animation-mixin-slide-in-right">slide-in-right</a></li><li class="sidebar__item sassdoc__item" data-group="animation" data-name="slide-in-left" data-type="mixin"><a href="#animation-mixin-slide-in-left">slide-in-left</a></li><li class="sidebar__item sassdoc__item" data-group="animation" data-name="slide-out-x" data-type="mixin"><a href="#animation-mixin-slide-out-x">slide-out-x</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="center-inside-relative"><a href="#center-inside-relative">center-inside-relative</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="center-inside-relative-mixin"><a href="#center-inside-relative-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="center-inside-relative" data-name="absolute-center" data-type="mixin"><a href="#center-inside-relative-mixin-absolute-center">absolute-center</a></li><li class="sidebar__item sassdoc__item" data-group="center-inside-relative" data-name="transform-center" data-type="mixin"><a href="#center-inside-relative-mixin-transform-center">transform-center</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="keyframes"><a href="#keyframes">keyframes</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="keyframes-mixin"><a href="#keyframes-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="keyframes" data-name="keyframes-rotate-360-z_right" data-type="mixin"><a href="#keyframes-mixin-keyframes-rotate-360-z_right">keyframes-rotate-360-z_right</a></li><li class="sidebar__item sassdoc__item" data-group="keyframes" data-name="keyframes-rotate-360-z_left" data-type="mixin"><a href="#keyframes-mixin-keyframes-rotate-360-z_left">keyframes-rotate-360-z_left</a></li><li class="sidebar__item sassdoc__item" data-group="keyframes" data-name="keyframes-rotate-360-x_right" data-type="mixin"><a href="#keyframes-mixin-keyframes-rotate-360-x_right">keyframes-rotate-360-x_right</a></li><li class="sidebar__item sassdoc__item" data-group="keyframes" data-name="keyframes-rotate-360-x_left" data-type="mixin"><a href="#keyframes-mixin-keyframes-rotate-360-x_left">keyframes-rotate-360-x_left</a></li><li class="sidebar__item sassdoc__item" data-group="keyframes" data-name="keyframes-rotate-360-y_forward" data-type="mixin"><a href="#keyframes-mixin-keyframes-rotate-360-y_forward">keyframes-rotate-360-y_forward</a></li><li class="sidebar__item sassdoc__item" data-group="keyframes" data-name="keyframes-rotate-360-y_backward" data-type="mixin"><a href="#keyframes-mixin-keyframes-rotate-360-y_backward">keyframes-rotate-360-y_backward</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="text"><a href="#text">text</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="text-mixin"><a href="#text-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="text" data-name="ellipsis" data-type="mixin"><a href="#text-mixin-ellipsis">ellipsis</a></li></ul></div></div></aside><article class="main" role="main"><header class="header" role="banner"><div class="container"><div class="sassdoc__searchbar searchbar"><label for="js-search-input" class="visually-hidden">Search</label><div class="searchbar__form" id="js-search"><input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search"><ul class="searchbar__suggestions" id="js-search-suggestions"></ul></div></div></div></header><section class="main__section"><h1 class="main__heading" id="animation"><div class="container">animation</div></h1><section class="main__sub-section" id="animation-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="animation-mixin-fade-in"><h3 class="item__heading"><a class="item__name" href="#mixin-fade-in">fade-in</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin fade-in($settings: (animation-duration: .5, additional-transition-values: &#39;&#39;), $settings.animation-duration: .5, $settings.additional-transition-values: &#39;&#39;) { 
   $additional-transition-values: get-map-prop-or-default($settings, additional-transition-values);
   $fade-in-duration: get-map-prop-or-default($settings, animation-duration, .5);
 
@@ -14,7 +14,7 @@
     transition: opacity #{$fade-in-duration}s ease, $additional-transition-values;
   }
 
- }" data-collapsed="@mixin fade-in($settings: (animation-duration: .5, additional-transition-values: &#39;&#39;)) { ... }"><code>@mixin fade-in($settings: (animation-duration: .5, additional-transition-values: &#39;&#39;)) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Show element from fade-out, and add transition style for fade-in after fade-out</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$settings</code></th><td data-label="desc"><p>mixin settings</p></td><td data-label="type"><code>Map</code></td><td data-label="default"><code>(animation-duration: .5, additional-transition-values: &#39;&#39;)</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.player {
+ }" data-collapsed="@mixin fade-in($settings: (animation-duration: .5, additional-transition-values: &#39;&#39;), $settings.animation-duration: .5, $settings.additional-transition-values: &#39;&#39;) { ... }"><code>@mixin fade-in($settings: (animation-duration: .5, additional-transition-values: &#39;&#39;), $settings.animation-duration: .5, $settings.additional-transition-values: &#39;&#39;) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Show element from fade-out, and add transition style for fade-in after fade-out</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$settings</code></th><td data-label="desc"><p>mixin settings</p></td><td data-label="type"><code>Map</code></td><td data-label="default"><code>(animation-duration: .5, additional-transition-values: &#39;&#39;)</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$settings.animation-duration</code></th><td data-label="desc"><p>fade in duration</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>.5</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$settings.additional-transition-values</code></th><td data-label="desc"><p>additional transition values</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>&#39;&#39;</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.player {
   position: relative;
   height: 200px;
   background:silver;
@@ -84,7 +84,7 @@
 
 &lt;div class=&quot;player player_with-fade-in-btn&quot; &gt;
   &lt;div class=&quot;button&quot; &gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre></div></section><section class="main__item container item" id="animation-mixin-fade-out"><h3 class="item__heading"><a class="item__name" href="#mixin-fade-out">fade-out</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin fade-out($settings: (animation-duration: .5, additional-transition-values: &#39;&#39;)) { 
+&lt;/div&gt;</code></pre></div></section><section class="main__item container item" id="animation-mixin-fade-out"><h3 class="item__heading"><a class="item__name" href="#mixin-fade-out">fade-out</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin fade-out($settings: (animation-duration: .5, additional-transition-values: &#39;&#39;), $settings.animation-duration: .5, $settings.additional-transition-values: &#39;&#39;) { 
   $additional-transition-values: get-map-prop-or-default($settings, additional-transition-values);
   $animation-duration: get-map-prop-or-default($settings, animation-duration, .5);
 
@@ -102,7 +102,7 @@
     transition: opacity #{$fade-out-duration}s ease, visibility 0s #{$visibility-hidden-delay}s linear, $additional-transition-values;
   }
 
- }" data-collapsed="@mixin fade-out($settings: (animation-duration: .5, additional-transition-values: &#39;&#39;)) { ... }"><code>@mixin fade-out($settings: (animation-duration: .5, additional-transition-values: &#39;&#39;)) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Hide element to opacity: 0, and hide element before fade-in</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$settings</code></th><td data-label="desc"><p>mixin settings</p></td><td data-label="type"><code>Map</code></td><td data-label="default"><code>(animation-duration: .5, additional-transition-values: &#39;&#39;)</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.modal-trigger {
+ }" data-collapsed="@mixin fade-out($settings: (animation-duration: .5, additional-transition-values: &#39;&#39;), $settings.animation-duration: .5, $settings.additional-transition-values: &#39;&#39;) { ... }"><code>@mixin fade-out($settings: (animation-duration: .5, additional-transition-values: &#39;&#39;), $settings.animation-duration: .5, $settings.additional-transition-values: &#39;&#39;) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Hide element to opacity: 0, and hide element before fade-in</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$settings</code></th><td data-label="desc"><p>mixin settings</p></td><td data-label="type"><code>Map</code></td><td data-label="default"><code>(animation-duration: .5, additional-transition-values: &#39;&#39;)</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$settings.animation-duration</code></th><td data-label="desc"><p>fade out duration</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>.5</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$settings.additional-transition-values</code></th><td data-label="desc"><p>additional transition values</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>&#39;&#39;</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.modal-trigger {
   height: 20px;
 
   text-align: center;
@@ -165,9 +165,11 @@
 &lt;!--modal_for-open-with-rotate, inJs: modal_open-with-rotate--&gt;
 
 &lt;div class=&quot;modal modal_for-open&quot; &gt;&lt;/div&gt;
-&lt;div class=&quot;modal-trigger&quot; onclick=&quot;document.querySelector(&#39;.modal&#39;).classList.toggle(&#39;modal_open&#39;)&quot;&gt;open/close&lt;/div&gt;</code></pre></div></section><section class="main__item container item" id="animation-mixin-slide-in-down"><h3 class="item__heading"><a class="item__name" href="#mixin-slide-in-down">slide-in-down</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin slide-in-down($animation-duration: .5, $has-fade-effect: false, $additional-transform-values: &#39;&#39;) { 
-  $slide-down-duration: $animation-duration;
-  $fade-in-duration: $animation-duration;
+&lt;div class=&quot;modal-trigger&quot; onclick=&quot;document.querySelector(&#39;.modal&#39;).classList.toggle(&#39;modal_open&#39;)&quot;&gt;open/close&lt;/div&gt;</code></pre></div></section><section class="main__item container item" id="animation-mixin-slide-in-down"><h3 class="item__heading"><a class="item__name" href="#mixin-slide-in-down">slide-in-down</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin slide-in-down($settings: (animation-duration: .5, has-fade-effect: false, additional-transition-values: &#39;&#39;), $settings.animation-duration: .5, $settings.has-fade-effect: false, $settings.additional-transform-values: &#39;&#39;) { 
+  $slide-down-duration: get-map-prop-or-default($settings, animation-duration, .5);
+  $fade-in-duration: get-map-prop-or-default($settings, animation-duration, .5);
+  $additional-transform-values: get-map-prop-or-default($settings, additional-transform-values);
+  $has-fade-effect: get-map-prop-or-default($settings, has-fade-effect, false);
 
   transform: translateY(100%) #{$additional-transform-values};
 
@@ -177,20 +179,14 @@
   }
 
   @else {
-    transition: transform #{$animation-duration}s ease;
+    transition: transform #{$slide-down-duration}s ease;
   }
 
- }" data-collapsed="@mixin slide-in-down($animation-duration: .5, $has-fade-effect: false, $additional-transform-values: &#39;&#39;) { ... }"><code>@mixin slide-in-down($animation-duration: .5, $has-fade-effect: false, $additional-transform-values: &#39;&#39;) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Slide element down</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$animation-duration</code></th><td data-label="desc"><p>slide-in and fade-in duration</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>.5</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$has-fade-effect</code></th><td data-label="desc"><p>should add fade effect</p></td><td data-label="type"><code>Boolean</code></td><td data-label="default"><code>false</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$additional-transform-values</code></th><td data-label="desc"><p>additional transition values</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>&#39;&#39;</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.dd {
+ }" data-collapsed="@mixin slide-in-down($settings: (animation-duration: .5, has-fade-effect: false, additional-transition-values: &#39;&#39;), $settings.animation-duration: .5, $settings.has-fade-effect: false, $settings.additional-transform-values: &#39;&#39;) { ... }"><code>@mixin slide-in-down($settings: (animation-duration: .5, has-fade-effect: false, additional-transition-values: &#39;&#39;), $settings.animation-duration: .5, $settings.has-fade-effect: false, $settings.additional-transform-values: &#39;&#39;) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Slide element down</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$settings</code></th><td data-label="desc"><p>mixin settings</p></td><td data-label="type"><code>Map</code></td><td data-label="default"><code>(animation-duration: .5, has-fade-effect: false, additional-transition-values: &#39;&#39;)</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$settings.animation-duration</code></th><td data-label="desc"><p>slide-in and fade-in duration</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>.5</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$settings.has-fade-effect</code></th><td data-label="desc"><p>should add fade effect</p></td><td data-label="type"><code>Boolean</code></td><td data-label="default"><code>false</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$settings.additional-transform-values</code></th><td data-label="desc"><p>additional transition values</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>&#39;&#39;</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.dd {
   margin: 40px auto;
   width: 300px;
   height: 40px * 3;
   overflow: hidden;
-
-  $animation-in-duration: .5;
-  $animation-out-duration: .5;
-  $additional-transform-values: &#39;&#39;;
-  $has-fade-effect: true;
-  $has-fade-out-delay: true;
 
   &amp;__wrapper {
     position: relative;
@@ -200,7 +196,7 @@
     position: relative;
   }
 
-  &amp;_open &amp;__list {
+  &amp;_open-down &amp;__list {
     @include slide-in-down()
   }
 
@@ -219,7 +215,7 @@
   &amp;_with-fade &amp; {
 
     &amp;__list {
-      @include slide-out-y($animation-out-duration, $has-fade-effect) {
+      @include slide-out-y((has-fade-effect: true)) {
         bottom: 0;
       }
     }
@@ -229,26 +225,28 @@
   &amp;_with-fade-out-delay &amp; {
 
     &amp;__list {
-      @include slide-out-y($animation-out-duration, $has-fade-effect, $has-fade-out-delay) {
+      @include slide-out-y((has-fade-effect: true, has-fade-out-delay: true)) {
         bottom: 0;
       }
     }
 
   }
 
-  &amp;_with-fade#{&amp;}_open &amp;, &amp;_with-fade-out-delay#{&amp;}_open &amp; {
+  &amp;_with-fade#{&amp;}_open-down &amp;, &amp;_with-fade-out-delay#{&amp;}_open-down &amp; {
 
     &amp;__list {
-      @include slide-in-down($animation-out-duration, $has-fade-effect)
+      @include slide-in-down((has-fade-effect: true));
     }
 
   }
 
 }
 
-// dd_with-fade-out-delay
-// dd_with-fade
-&lt;div class=&quot;dd dd_with-fade-out-delay&quot; onclick=&quot;document.querySelector(&#39;.dd&#39;).classList.toggle(&#39;dd_open&#39;)&quot;&gt;
+//class with mod
+&lt;!--dd_with-fade-out-delay--&gt;
+&lt;!--dd_with-fade--&gt;
+
+&lt;div class=&quot;dd dd_with-fade-out-delay&quot; onclick=&quot;document.querySelector(&#39;.dd&#39;).classList.toggle(&#39;dd_open-down&#39;)&quot;&gt;
 
   &lt;div class=&quot;dd__wrapper&quot;&gt;
 
@@ -263,48 +261,39 @@
 
   &lt;/div&gt;
 
-&lt;/div&gt;</code></pre></div></section><section class="main__item container item" id="animation-mixin-slide-in-up"><h3 class="item__heading"><a class="item__name" href="#mixin-slide-in-up">slide-in-up</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin slide-in-up($animation-duration: .5, $has-fade-effect: false, $additional-transform-values: &#39;&#39;) { 
-  $slide-down-duration: $animation-duration;
-  $fade-in-duration: $animation-duration;
+&lt;/div&gt;</code></pre></div></section><section class="main__item container item" id="animation-mixin-slide-in-up"><h3 class="item__heading"><a class="item__name" href="#mixin-slide-in-up">slide-in-up</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin slide-in-up($settings: (animation-duration: .5, has-fade-effect: false, additional-transition-values: &#39;&#39;), $settings.animation-duration: .5, $settings.has-fade-effect: false, $settings.additional-transform-values: &#39;&#39;) { 
+  $slide-up-duration: get-map-prop-or-default($settings, animation-duration, .5);
+  $fade-in-duration: get-map-prop-or-default($settings, animation-duration, .5);
+  $additional-transform-values: get-map-prop-or-default($settings, additional-transform-values);
+  $has-fade-effect: get-map-prop-or-default($settings, has-fade-effect, false);
 
   transform: translateY(-100%) #{$additional-transform-values};
 
   @if($has-fade-effect == true) {
     opacity: 1;
-    transition: transform #{$slide-down-duration}s ease, opacity #{$fade-in-duration}s ease;
+    transition: transform #{$slide-up-duration}s ease, opacity #{$fade-in-duration}s ease;
   }
 
   @else {
-    transition: transform #{$animation-duration}s ease;
+    transition: transform #{$slide-up-duration}s ease;
   }
 
- }" data-collapsed="@mixin slide-in-up($animation-duration: .5, $has-fade-effect: false, $additional-transform-values: &#39;&#39;) { ... }"><code>@mixin slide-in-up($animation-duration: .5, $has-fade-effect: false, $additional-transform-values: &#39;&#39;) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Slide element up</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$animation-duration</code></th><td data-label="desc"><p>slide-in and fade-in duration</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>.5</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$has-fade-effect</code></th><td data-label="desc"><p>should add fade effect</p></td><td data-label="type"><code>Boolean</code></td><td data-label="default"><code>false</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$additional-transform-values</code></th><td data-label="desc"><p>additional transition values</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>&#39;&#39;</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.dd {
-  display: flex;
-  flex-direction: column;
-
-  margin: 200px auto 0;
+ }" data-collapsed="@mixin slide-in-up($settings: (animation-duration: .5, has-fade-effect: false, additional-transition-values: &#39;&#39;), $settings.animation-duration: .5, $settings.has-fade-effect: false, $settings.additional-transform-values: &#39;&#39;) { ... }"><code>@mixin slide-in-up($settings: (animation-duration: .5, has-fade-effect: false, additional-transition-values: &#39;&#39;), $settings.animation-duration: .5, $settings.has-fade-effect: false, $settings.additional-transform-values: &#39;&#39;) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Slide element up</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$settings</code></th><td data-label="desc"><p>mixin settings</p></td><td data-label="type"><code>Map</code></td><td data-label="default"><code>(animation-duration: .5, has-fade-effect: false, additional-transition-values: &#39;&#39;)</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$settings.animation-duration</code></th><td data-label="desc"><p>slide-in and fade-in duration</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>.5</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$settings.has-fade-effect</code></th><td data-label="desc"><p>should add fade effect</p></td><td data-label="type"><code>Boolean</code></td><td data-label="default"><code>false</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$settings.additional-transform-values</code></th><td data-label="desc"><p>additional transition values</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>&#39;&#39;</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.dd {
+  margin: 40px auto;
   width: 300px;
   height: 40px * 3;
   overflow: hidden;
 
-  $animation-in-duration: .5;
-  $animation-out-duration: .5;
-  $additional-transform-values: &#39;&#39;;
-  $has-fade-effect: true;
-  $has-fade-out-delay: true;
-
   &amp;__wrapper {
     position: relative;
-
-    margin-top: auto;
   }
 
   &amp;__active-item-wrapper {
     position: relative;
   }
 
-  &amp;_open &amp;__list {
-    @include slide-in-up()
+  &amp;_open-up &amp;__list {
+    @include slide-in-down()
   }
 
   &amp;__list-item {
@@ -315,15 +304,15 @@
 
   &amp;__list {
     @include slide-out-y() {
-      top: 0;
+      bottom: 0;
     }
   }
 
   &amp;_with-fade &amp; {
 
     &amp;__list {
-      @include slide-out-y($animation-out-duration, $has-fade-effect) {
-        top: 0;
+      @include slide-out-y((has-fade-effect: true)) {
+        bottom: 0;
       }
     }
 
@@ -332,26 +321,28 @@
   &amp;_with-fade-out-delay &amp; {
 
     &amp;__list {
-      @include slide-out-y($animation-out-duration, $has-fade-effect, $has-fade-out-delay) {
-        top: 0;
+      @include slide-out-y((has-fade-effect: true, has-fade-out-delay: true)) {
+        bottom: 0;
       }
     }
 
   }
 
-  &amp;_with-fade#{&amp;}_open &amp;, &amp;_with-fade-out-delay#{&amp;}_open &amp; {
+  &amp;_with-fade#{&amp;}_open-up &amp;, &amp;_with-fade-out-delay#{&amp;}_open-up &amp; {
 
     &amp;__list {
-      @include slide-in-up($animation-out-duration, $has-fade-effect)
+      @include slide-in-down((has-fade-effect: true));
     }
 
   }
 
 }
 
-// dd_with-fade-out-delay
-// dd_with-fade
-&lt;div class=&quot;dd dd_with-fade-out-delay&quot; onclick=&quot;document.querySelector(&#39;.dd&#39;).classList.toggle(&#39;dd_open&#39;)&quot;&gt;
+//class with mod
+&lt;!--dd_with-fade-out-delay--&gt;
+&lt;!--dd_with-fade--&gt;
+
+&lt;div class=&quot;dd dd_with-fade-out-delay&quot; onclick=&quot;document.querySelector(&#39;.dd&#39;).classList.toggle(&#39;dd_open-up&#39;)&quot;&gt;
 
   &lt;div class=&quot;dd__wrapper&quot;&gt;
 
@@ -366,9 +357,14 @@
 
   &lt;/div&gt;
 
-&lt;/div&gt;</code></pre></div></section><section class="main__item container item" id="animation-mixin-slide-out-y"><h3 class="item__heading"><a class="item__name" href="#mixin-slide-out-y">slide-out-y</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin slide-out-y($animation-duration: .5, $has-fade-effect: false, $has-fade-out-delay: false, $fade-out-delay: $animation-duration, $additional-transform-values: &#39;&#39;) { 
-  $slide-down-duration: $animation-duration;
-  $fade-out-duration: $animation-duration;
+&lt;/div&gt;</code></pre></div></section><section class="main__item container item" id="animation-mixin-slide-out-y"><h3 class="item__heading"><a class="item__name" href="#mixin-slide-out-y">slide-out-y</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin slide-out-y($settings: (animation-duration: .5, has-fade-effect: false, has-fade-out-delay: false, fade-out-delay: $settings.animation-duration, additional-transition-values: &#39;&#39;), $animation-duration: .5, $has-fade-effect: false, $has-fade-out-delay: false, $fade-out-delay: $settings.animation-duration, $additional-transform-values: &#39;&#39;) { 
+  $slide-out-duration: get-map-prop-or-default($settings, animation-duration, .5);
+  $fade-in-duration: get-map-prop-or-default($settings, animation-duration, .5);
+  $additional-transform-values: get-map-prop-or-default($settings, additional-transform-values);
+  $has-fade-effect: get-map-prop-or-default($settings, has-fade-effect, false);
+  $has-fade-out-delay: get-map-prop-or-default($settings, has-fade-out-delay, false);
+  $fade-out-delay: get-map-prop-or-default($settings, fade-out-delay, $slide-out-duration);
+  $fade-out-duration: $slide-out-duration;
 
   position: absolute;
   left: 0;
@@ -381,47 +377,36 @@
     opacity: 0;
 
     @if($has-fade-out-delay == true) {
-      transition: transform #{$slide-down-duration}s ease, opacity #{$fade-out-delay}s #{$fade-out-duration}s ease;
+      transition: transform #{$slide-out-duration}s ease, opacity #{$fade-out-delay}s #{$fade-out-duration}s ease;
     }
 
     @else {
-      transition: transform #{$slide-down-duration}s ease, opacity #{$fade-out-duration}s ease;
+      transition: transform #{$slide-out-duration}s ease, opacity #{$fade-out-duration}s ease;
     }
 
   }
 
   @else {
-    transition: transform #{$slide-down-duration}s ease;
+    transition: transform #{$slide-out-duration}s ease;
   }
 
   @content;
- }" data-collapsed="@mixin slide-out-y($animation-duration: .5, $has-fade-effect: false, $has-fade-out-delay: false, $fade-out-delay: $animation-duration, $additional-transform-values: &#39;&#39;) { ... }"><code>@mixin slide-out-y($animation-duration: .5, $has-fade-effect: false, $has-fade-out-delay: false, $fade-out-delay: $animation-duration, $additional-transform-values: &#39;&#39;) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Hide element, before slide-in-up or slide-in-down</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$animation-duration</code></th><td data-label="desc"><p>slide-in and fade-in duration</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>.5</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$has-fade-effect</code></th><td data-label="desc"><p>should add fade effect</p></td><td data-label="type"><code>Boolean</code></td><td data-label="default"><code>false</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$has-fade-out-delay</code></th><td data-label="desc"><p>if true, element will hide, only after slide-down-out</p></td><td data-label="type"><code>Boolean</code></td><td data-label="default"><code>false</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$fade-out-delay</code></th><td data-label="desc"><p>props for update fade-out delay after slide-down-out</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>$animation-duration</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$additional-transform-values</code></th><td data-label="desc"><p>additional transition values</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>&#39;&#39;</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.dd {
-  display: flex;
-  flex-direction: column;
-
-  margin: 200px auto 0;
+ }" data-collapsed="@mixin slide-out-y($settings: (animation-duration: .5, has-fade-effect: false, has-fade-out-delay: false, fade-out-delay: $settings.animation-duration, additional-transition-values: &#39;&#39;), $animation-duration: .5, $has-fade-effect: false, $has-fade-out-delay: false, $fade-out-delay: $settings.animation-duration, $additional-transform-values: &#39;&#39;) { ... }"><code>@mixin slide-out-y($settings: (animation-duration: .5, has-fade-effect: false, has-fade-out-delay: false, fade-out-delay: $settings.animation-duration, additional-transition-values: &#39;&#39;), $animation-duration: .5, $has-fade-effect: false, $has-fade-out-delay: false, $fade-out-delay: $settings.animation-duration, $additional-transform-values: &#39;&#39;) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Hide element, before slide-in-up or slide-in-down</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$settings</code></th><td data-label="desc"><p>mixin settings</p></td><td data-label="type"><code>Map</code></td><td data-label="default"><code>(animation-duration: .5, has-fade-effect: false, has-fade-out-delay: false, fade-out-delay: $settings.animation-duration, additional-transition-values: &#39;&#39;)</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$animation-duration</code></th><td data-label="desc"><p>slide-in and fade-in duration</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>.5</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$has-fade-effect</code></th><td data-label="desc"><p>should add fade effect</p></td><td data-label="type"><code>Boolean</code></td><td data-label="default"><code>false</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$has-fade-out-delay</code></th><td data-label="desc"><p>if true, element will hide, only after slide-down-out</p></td><td data-label="type"><code>Boolean</code></td><td data-label="default"><code>false</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$fade-out-delay</code></th><td data-label="desc"><p>props for update fade-out delay after slide-down-out</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>$settings.animation-duration</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$additional-transform-values</code></th><td data-label="desc"><p>additional transition values</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>&#39;&#39;</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.dd {
+  margin: 40px auto;
   width: 300px;
   height: 40px * 3;
   overflow: hidden;
 
-  $animation-in-duration: .5;
-  $animation-out-duration: .5;
-  $additional-transform-values: &#39;&#39;;
-  $has-fade-effect: true;
-  $has-fade-out-delay: true;
-
   &amp;__wrapper {
     position: relative;
-
-    margin-top: auto;
   }
 
   &amp;__active-item-wrapper {
     position: relative;
   }
 
-  &amp;_open &amp;__list {
-    @include slide-in-up()
+  &amp;_open-down &amp;__list {
+    @include slide-in-down()
   }
 
   &amp;__list-item {
@@ -432,15 +417,15 @@
 
   &amp;__list {
     @include slide-out-y() {
-      top: 0;
+      bottom: 0;
     }
   }
 
   &amp;_with-fade &amp; {
 
     &amp;__list {
-      @include slide-out-y($animation-out-duration, $has-fade-effect) {
-        top: 0;
+      @include slide-out-y((has-fade-effect: true)) {
+        bottom: 0;
       }
     }
 
@@ -449,26 +434,28 @@
   &amp;_with-fade-out-delay &amp; {
 
     &amp;__list {
-      @include slide-out-y($animation-out-duration, $has-fade-effect, $has-fade-out-delay) {
-        top: 0;
+      @include slide-out-y((has-fade-effect: true, has-fade-out-delay: true)) {
+        bottom: 0;
       }
     }
 
   }
 
-  &amp;_with-fade#{&amp;}_open &amp;, &amp;_with-fade-out-delay#{&amp;}_open &amp; {
+  &amp;_with-fade#{&amp;}_open-down &amp;, &amp;_with-fade-out-delay#{&amp;}_open-down &amp; {
 
     &amp;__list {
-      @include slide-in-up($animation-out-duration, $has-fade-effect)
+      @include slide-in-down((has-fade-effect: true));
     }
 
   }
 
 }
 
-// dd_with-fade-out-delay
-// dd_with-fade
-&lt;div class=&quot;dd dd_with-fade-out-delay&quot; onclick=&quot;document.querySelector(&#39;.dd&#39;).classList.toggle(&#39;dd_open&#39;)&quot;&gt;
+//class with mod
+&lt;!--dd_with-fade-out-delay--&gt;
+&lt;!--dd_with-fade--&gt;
+
+&lt;div class=&quot;dd dd_with-fade-out-delay&quot; onclick=&quot;document.querySelector(&#39;.dd&#39;).classList.toggle(&#39;dd_open-down&#39;)&quot;&gt;
 
   &lt;div class=&quot;dd__wrapper&quot;&gt;
 
@@ -483,22 +470,24 @@
 
   &lt;/div&gt;
 
-&lt;/div&gt;</code></pre></div></section><section class="main__item container item" id="animation-mixin-slide-in-right"><h3 class="item__heading"><a class="item__name" href="#mixin-slide-in-right">slide-in-right</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin slide-in-right($animation-duration: .5, $has-fade-effect: false, $additional-transform-values: &#39;&#39;) { 
-  $slide-down-duration: $animation-duration;
-  $fade-in-duration: $animation-duration;
+&lt;/div&gt;</code></pre></div></section><section class="main__item container item" id="animation-mixin-slide-in-right"><h3 class="item__heading"><a class="item__name" href="#mixin-slide-in-right">slide-in-right</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin slide-in-right($settings: (animation-duration: .5, has-fade-effect: false, additional-transition-values: &#39;&#39;), $settings.animation-duration: .5, $settings.has-fade-effect: false, $settings.additional-transform-values: &#39;&#39;) { 
+  $slide-right-duration: get-map-prop-or-default($settings, animation-duration, .5);
+  $fade-in-duration: get-map-prop-or-default($settings, animation-duration, .5);
+  $additional-transform-values: get-map-prop-or-default($settings, additional-transform-values);
+  $has-fade-effect: get-map-prop-or-default($settings, has-fade-effect, false);
 
   transform: translateX(100%) #{$additional-transform-values};
 
   @if($has-fade-effect == true) {
     opacity: 1;
-    transition: transform #{$slide-down-duration}s ease, opacity #{$fade-in-duration}s ease;
+    transition: transform #{$slide-right-duration}s ease, opacity #{$fade-in-duration}s ease;
   }
 
   @else {
-    transition: transform #{$animation-duration}s ease;
+    transition: transform #{$slide-right-duration}s ease;
   }
 
- }" data-collapsed="@mixin slide-in-right($animation-duration: .5, $has-fade-effect: false, $additional-transform-values: &#39;&#39;) { ... }"><code>@mixin slide-in-right($animation-duration: .5, $has-fade-effect: false, $additional-transform-values: &#39;&#39;) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Slide element to right, from slide-out-x</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$animation-duration</code></th><td data-label="desc"><p>slide-in and fade-in duration</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>.5</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$has-fade-effect</code></th><td data-label="desc"><p>should add fade effect</p></td><td data-label="type"><code>Boolean</code></td><td data-label="default"><code>false</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$additional-transform-values</code></th><td data-label="desc"><p>additional transition values</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>&#39;&#39;</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.open-trigger {
+ }" data-collapsed="@mixin slide-in-right($settings: (animation-duration: .5, has-fade-effect: false, additional-transition-values: &#39;&#39;), $settings.animation-duration: .5, $settings.has-fade-effect: false, $settings.additional-transform-values: &#39;&#39;) { ... }"><code>@mixin slide-in-right($settings: (animation-duration: .5, has-fade-effect: false, additional-transition-values: &#39;&#39;), $settings.animation-duration: .5, $settings.has-fade-effect: false, $settings.additional-transform-values: &#39;&#39;) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Slide element to right, from slide-out-x</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$settings</code></th><td data-label="desc"><p>mixin settings</p></td><td data-label="type"><code>Map</code></td><td data-label="default"><code>(animation-duration: .5, has-fade-effect: false, additional-transition-values: &#39;&#39;)</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$settings.animation-duration</code></th><td data-label="desc"><p>slide-in and fade-in duration</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>.5</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$settings.has-fade-effect</code></th><td data-label="desc"><p>should add fade effect</p></td><td data-label="type"><code>Boolean</code></td><td data-label="default"><code>false</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$settings.additional-transform-values</code></th><td data-label="desc"><p>additional transition values</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>&#39;&#39;</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.open-trigger {
   margin: auto;
 
   width: 100px;
@@ -511,13 +500,6 @@
 }
 
 .side-bar {
-
-  $animation-in-duration: 1;
-  $animation-out-duration: 1;
-  $additional-transform-values: &#39;&#39;;
-  $has-fade-effect: true;
-  $has-fade-out-delay: true;
-
   position: fixed;
   top: 0;
   bottom: 0;
@@ -530,46 +512,51 @@
     right: 100%;
   }
 
-  &amp;_open {
+  &amp;_open-right {
     @include slide-in-right();
   }
 
   &amp;_with-fade {
-    @include slide-out-x($animation-out-duration, $has-fade-effect) {
+    @include slide-out-x((has-fade-effect: true)) {
       right: 100%;
     }
   }
 
   &amp;_with-fade-out-delay {
-    @include slide-out-x($animation-out-duration, $has-fade-effect, $has-fade-out-delay) {
+    @include slide-out-x((has-fade-effect: true, has-fade-out-delay: true)) {
       right: 100%;
     }
   }
 
-  &amp;_with-fade#{&amp;}_open, &amp;_with-fade-out-delay#{&amp;}_open {
-    @include slide-in-right($animation-in-duration, $has-fade-effect);
+  &amp;_with-fade#{&amp;}_open-right, &amp;_with-fade-out-delay#{&amp;}_open-right {
+    @include slide-in-right((has-fade-effect: true));
   }
 
 }
-//side-bar_with-fade
-//side-bar_with-fade-out-delay
-&lt;div class=&quot;side-bar side-bar_with-fade-out-delay&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;open-trigger&quot; onclick=&quot;document.querySelector(&#39;.side-bar&#39;).classList.toggle(&#39;side-bar_open&#39;)&quot;&gt;Close/Open&lt;/div&gt;</code></pre></div></section><section class="main__item container item" id="animation-mixin-slide-in-left"><h3 class="item__heading"><a class="item__name" href="#mixin-slide-in-left">slide-in-left</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin slide-in-left($animation-duration: .5, $has-fade-effect: false, $additional-transform-values: &#39;&#39;) { 
-  $slide-down-duration: $animation-duration;
-  $fade-in-duration: $animation-duration;
+
+//class with mod
+&lt;!--side-bar_with-fade--&gt;
+&lt;!--side-bar_with-fade-out-delay--&gt;
+
+&lt;div class=&quot;side-bar&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;open-trigger&quot; onclick=&quot;document.querySelector(&#39;.side-bar&#39;).classList.toggle(&#39;side-bar_open-right&#39;)&quot;&gt;Close/Open&lt;/div&gt;</code></pre></div></section><section class="main__item container item" id="animation-mixin-slide-in-left"><h3 class="item__heading"><a class="item__name" href="#mixin-slide-in-left">slide-in-left</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin slide-in-left($settings: (animation-duration: .5, has-fade-effect: false, additional-transition-values: &#39;&#39;), $settings.animation-duration: .5, $settings.has-fade-effect: false, $settings.additional-transform-values: &#39;&#39;) { 
+  $slide-left-duration: get-map-prop-or-default($settings, animation-duration, .5);
+  $fade-in-duration: get-map-prop-or-default($settings, animation-duration, .5);
+  $additional-transform-values: get-map-prop-or-default($settings, additional-transform-values);
+  $has-fade-effect: get-map-prop-or-default($settings, has-fade-effect, false);
 
   transform: translateX(-100%) #{$additional-transform-values};
 
   @if($has-fade-effect == true) {
     opacity: 1;
-    transition: transform #{$slide-down-duration}s ease, opacity #{$fade-in-duration}s ease;
+    transition: transform #{$slide-left-duration}s ease, opacity #{$fade-in-duration}s ease;
   }
 
   @else {
-    transition: transform #{$animation-duration}s ease;
+    transition: transform #{$slide-left-duration}s ease;
   }
 
- }" data-collapsed="@mixin slide-in-left($animation-duration: .5, $has-fade-effect: false, $additional-transform-values: &#39;&#39;) { ... }"><code>@mixin slide-in-left($animation-duration: .5, $has-fade-effect: false, $additional-transform-values: &#39;&#39;) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Slide element to right, from slide-out-x</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$animation-duration</code></th><td data-label="desc"><p>slide-in and fade-in duration</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>.5</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$has-fade-effect</code></th><td data-label="desc"><p>should add fade effect</p></td><td data-label="type"><code>Boolean</code></td><td data-label="default"><code>false</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$additional-transform-values</code></th><td data-label="desc"><p>additional transition values</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>&#39;&#39;</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.open-trigger {
+ }" data-collapsed="@mixin slide-in-left($settings: (animation-duration: .5, has-fade-effect: false, additional-transition-values: &#39;&#39;), $settings.animation-duration: .5, $settings.has-fade-effect: false, $settings.additional-transform-values: &#39;&#39;) { ... }"><code>@mixin slide-in-left($settings: (animation-duration: .5, has-fade-effect: false, additional-transition-values: &#39;&#39;), $settings.animation-duration: .5, $settings.has-fade-effect: false, $settings.additional-transform-values: &#39;&#39;) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Slide element to right, from slide-out-x</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$settings</code></th><td data-label="desc"><p>mixin settings</p></td><td data-label="type"><code>Map</code></td><td data-label="default"><code>(animation-duration: .5, has-fade-effect: false, additional-transition-values: &#39;&#39;)</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$settings.animation-duration</code></th><td data-label="desc"><p>slide-in and fade-in duration</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>.5</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$settings.has-fade-effect</code></th><td data-label="desc"><p>should add fade effect</p></td><td data-label="type"><code>Boolean</code></td><td data-label="default"><code>false</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$settings.additional-transform-values</code></th><td data-label="desc"><p>additional transition values</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>&#39;&#39;</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.open-trigger {
   margin: auto;
 
   width: 100px;
@@ -582,13 +569,6 @@
 }
 
 .side-bar {
-
-  $animation-in-duration: 1;
-  $animation-out-duration: 1;
-  $additional-transform-values: &#39;&#39;;
-  $has-fade-effect: true;
-  $has-fade-out-delay: true;
-
   position: fixed;
   top: 0;
   bottom: 0;
@@ -601,33 +581,41 @@
     left: 100%;
   }
 
-  &amp;_open {
+  &amp;_open-left {
     @include slide-in-left();
   }
 
   &amp;_with-fade {
-    @include slide-out-x($animation-out-duration, $has-fade-effect) {
+    @include slide-out-x((has-fade-effect: true)) {
       left: 100%;
     }
   }
 
   &amp;_with-fade-out-delay {
-    @include slide-out-x($animation-out-duration, $has-fade-effect, $has-fade-out-delay) {
+    @include slide-out-x((has-fade-effect: true, has-fade-out-delay: true)) {
       left: 100%;
     }
   }
 
-  &amp;_with-fade#{&amp;}_open, &amp;_with-fade-out-delay#{&amp;}_open {
-    @include slide-in-left($animation-in-duration, $has-fade-effect);
+  &amp;_with-fade#{&amp;}_open-left, &amp;_with-fade-out-delay#{&amp;}_open-left {
+    @include slide-in-left((has-fade-effect: true));
   }
 
 }
-//side-bar_with-fade
-//side-bar_with-fade-out-delay
-&lt;div class=&quot;side-bar side-bar_with-fade-out-delay&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;open-trigger&quot; onclick=&quot;document.querySelector(&#39;.side-bar&#39;).classList.toggle(&#39;side-bar_open&#39;)&quot;&gt;Close/Open&lt;/div&gt;</code></pre></div></section><section class="main__item container item" id="animation-mixin-slide-out-x"><h3 class="item__heading"><a class="item__name" href="#mixin-slide-out-x">slide-out-x</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin slide-out-x($animation-duration: .5, $has-fade-effect: false, $has-fade-out-delay: false, $fade-out-delay: $animation-duration, $additional-transform-values: &#39;&#39;) { 
-  $slide-down-duration: $animation-duration;
-  $fade-out-duration: $animation-duration;
+
+//class with mod
+&lt;!--side-bar_with-fade--&gt;
+&lt;!--side-bar_with-fade-out-delay--&gt;
+
+&lt;div class=&quot;side-bar&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;open-trigger&quot; onclick=&quot;document.querySelector(&#39;.side-bar&#39;).classList.toggle(&#39;side-bar_open-left&#39;)&quot;&gt;Close/Open&lt;/div&gt;</code></pre></div></section><section class="main__item container item" id="animation-mixin-slide-out-x"><h3 class="item__heading"><a class="item__name" href="#mixin-slide-out-x">slide-out-x</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin slide-out-x($animation-duration: .5, $has-fade-effect: false, $has-fade-out-delay: false, $fade-out-delay: $animation-duration, $additional-transform-values: &#39;&#39;) { 
+  $slide-out-duration: get-map-prop-or-default($settings, animation-duration, .5);
+  $fade-in-duration: get-map-prop-or-default($settings, animation-duration, .5);
+  $additional-transform-values: get-map-prop-or-default($settings, additional-transform-values);
+  $has-fade-effect: get-map-prop-or-default($settings, has-fade-effect, false);
+  $has-fade-out-delay: get-map-prop-or-default($settings, has-fade-out-delay, false);
+  $fade-out-delay: get-map-prop-or-default($settings, fade-out-delay, $slide-out-duration);
+  $fade-out-duration: $slide-out-duration;
 
   position: absolute;
 
@@ -638,17 +626,17 @@
     opacity: 0;
 
     @if($has-fade-out-delay == true) {
-      transition: transform #{$slide-down-duration}s ease, opacity #{$fade-out-delay}s #{$fade-out-duration}s ease;
+      transition: transform #{$slide-out-duration}s ease, opacity #{$fade-out-delay}s #{$fade-out-duration}s ease;
     }
 
     @else {
-      transition: transform #{$slide-down-duration}s ease, opacity #{$fade-out-duration}s ease;
+      transition: transform #{$slide-out-duration}s ease, opacity #{$fade-out-duration}s ease;
     }
 
   }
 
   @else {
-    transition: transform #{$slide-down-duration}s ease;
+    transition: transform #{$slide-out-duration}s ease;
   }
 
   @content;

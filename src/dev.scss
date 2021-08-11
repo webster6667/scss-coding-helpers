@@ -1,59 +1,49 @@
 @import "mixin-wrapper";
 
 
-.modal-trigger {
+.open-trigger {
+  margin: auto;
+
+  width: 100px;
   height: 20px;
 
+  color: white;
   text-align: center;
 
-  background-color: silver;
+  background-color: black;
 }
 
-.modal {
+.side-bar {
   position: fixed;
-  top: 40px;
-  right: 0;
+  top: 0;
   bottom: 0;
-  left: 0;
 
-  background-color: rgba(0,0,0,.5);
+  width: 300px;
+  background-color: black;
 
-  $map-with-additional-transition: (additional-transition-values: transform .5s 0s ease);
-
-  //modal-state-for-open
-  &_for-open {
-    @include fade-out();
+  //side-bar is hidden on start
+  @include slide-out-x() {
+    right: 100%;
   }
 
-  //modal-state-for-closed
-  &_for-closed {
-    @include fade-in();
+  &_open-right {
+    @include slide-in-right();
   }
 
-  //modal-state-for-open-with-rotate
-  &_for-open-with-rotate {
-    transform: skewX(100deg);
-    @include fade-out($map-with-additional-transition);
+  &_with-fade {
+    @include slide-out-x((has-fade-effect: true)) {
+      right: 100%;
+    }
   }
 
-  //modal fade-in
-  &_open {
-    @include fade-in();
+  &_with-fade-out-delay {
+    @include slide-out-x((has-fade-effect: true, has-fade-out-delay: true)) {
+      right: 100%;
+    }
   }
 
-  &_open-with-rotate {
-    @include fade-in();
-  }
-
-  //modal fade-out
-  &_closed {
-    @include fade-out();
-  }
-
-  //modal fade-in with rotate
-  &_open-with-rotate {
-    transform: skewX(0deg);
-    @include fade-in($map-with-additional-transition);
+  &_with-fade#{&}_open-right, &_with-fade-out-delay#{&}_open-right {
+    @include slide-in-right((has-fade-effect: true));
   }
 
 }

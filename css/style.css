@@ -1,53 +1,45 @@
-.modal-trigger {
+.open-trigger {
+  margin: auto;
+  width: 100px;
   height: 20px;
+  color: white;
   text-align: center;
-  background-color: silver;
+  background-color: black;
 }
 
-.modal {
+.side-bar {
   position: fixed;
-  top: 40px;
-  right: 0;
+  top: 0;
   bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  width: 300px;
+  background-color: black;
+  position: absolute;
+  transform: translateX(0);
+  transition: transform 0.5s ease;
+  right: 100%;
 }
-.modal_for-open {
+.side-bar_open-right {
+  transform: translateX(100%);
+  transition: transform 0.5s ease;
+}
+.side-bar_with-fade {
+  position: absolute;
+  transform: translateX(0);
   opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s ease, visibility 0s 0.5s linear;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  right: 100%;
 }
-.modal_for-closed {
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 0.5s ease;
-}
-.modal_for-open-with-rotate {
-  transform: skewX(100deg);
+.side-bar_with-fade-out-delay {
+  position: absolute;
+  transform: translateX(0);
   opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s ease, visibility 0s 0.5s linear, transform 0.5s 0s ease;
+  transition: transform 0.5s ease, opacity 0.5s 0.5s ease;
+  right: 100%;
 }
-.modal_open {
+.side-bar_with-fade.side-bar_open-right, .side-bar_with-fade-out-delay.side-bar_open-right {
+  transform: translateX(100%);
   opacity: 1;
-  visibility: visible;
-  transition: opacity 0.5s ease;
-}
-.modal_open-with-rotate {
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 0.5s ease;
-}
-.modal_closed {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s ease, visibility 0s 0.5s linear;
-}
-.modal_open-with-rotate {
-  transform: skewX(0deg);
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 0.5s ease, transform 0.5s 0s ease;
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 /*# sourceMappingURL=style.css.map */

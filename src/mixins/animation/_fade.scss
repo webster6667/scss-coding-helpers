@@ -6,6 +6,8 @@
 /// @name fade-in
 ///
 /// @param {map} $settings [(animation-duration: .5, additional-transition-values: '')] - mixin settings
+/// @param {number} $settings.animation-duration [.5] - fade in duration
+/// @param {string} $settings.additional-transition-values [''] - additional transition values
 ///
 /// @example
 /// .player {
@@ -102,6 +104,8 @@
 /// @name fade-out
 ///
 /// @param {map} $settings [(animation-duration: .5, additional-transition-values: '')] - mixin settings
+/// @param {number} $settings.animation-duration [.5] - fade out duration
+/// @param {string} $settings.additional-transition-values [''] - additional transition values
 ///
 /// @example
 /// .modal-trigger {

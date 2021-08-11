@@ -1,0 +1,33 @@
+@use "sass:math";
+@use "sass:map";
+
+
+//Указать значение в процентах числа a от числа b
+@function percent-size-from-size($size, $parent-size) {
+  $result: math.percentage(math.div($size, $parent-size));
+
+  @return $result;
+}
+
+@mixin stretching-padding-height($size, $parent-size, $dynamic-size-map: '', $is-mobile-first: true) {
+  padding-top: percent-size-from-size($size, $parent-size);
+
+  @each $screen, $size-for-media in $dynamic-size-map {
+    $media-queries-value: max-width;
+
+    @if ($is-mobile-first == true) {
+      $media-queries-value: min-width;
+    } @else {
+      $media-queries-value: max-width;
+    }
+
+    @media ($media-queries-value: $screen) {
+      $size-for-media-f: map.get($size-for-media, size);
+      $parent-size-for-media: map.get($size-for-media, parent-size);
+
+      padding-top: percent-size-from-size($size-for-media-f, $parent-size-for-media);
+    }
+
+  }
+
+}

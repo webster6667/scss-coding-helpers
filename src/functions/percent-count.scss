@@ -1,0 +1,8 @@
+@use "sass:math";
+
+//Указать значение в процентах числа a от числа b
+@function percent-size-from-size($size, $parent-size) {
+  $result: math.percentage(math.div($size, $parent-size));
+
+  @return $result;
+}

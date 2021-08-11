@@ -1,5 +1,10 @@
+@import "functions/map-helpers";
+@import "functions/percent-count";
+
 @import "mixins/center-inside-relative";
 @import "mixins/text";
 @import "mixins/animation";
 @import "mixins/keyframes";
+@import "mixins/media-queries";
+@import "mixins/percent-count";
 @import "mixins/z-layer";

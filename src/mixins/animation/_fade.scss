@@ -1,85 +1,88 @@
+@use "sass:map";
+
 /// Show element from fade-out, and add transition style for fade-in after fade-out
 ///
 /// @group animation
 /// @name fade-in
 ///
-/// @param {number} $fade-in-duration [.5] - fade in duration
-/// @param {string} $additional-transition-values [''] - additional transition values
+/// @param {map} $settings [(animation-duration: .5, additional-transition-values: '')] - mixin settings
 ///
 /// @example
-/// //fade-in
-/// .player-fade-in {
+/// .player {
 ///   position: relative;
 ///   height: 200px;
 ///   background:silver;
 ///
-///   &__button {
-///     width: 10px;
-///     height: 10px;
+///   .button {
+///     position: absolute;
+///     left: 50%;
+///     top: 50%;
 ///
-///     border-radius: 50%;
+///     width: 30px;
+///     height: 30px;
+///     transform: translate(-50%, -50%);
+///
+///     border-radius: 4px;
 ///     background-color: black;
-///
-///     @include fade-out(.5);
 ///   }
 ///
-///   &:hover &__button {
-///     @include fade-in(.5);
+///   //button fade-in
+///   &_with-fade-in-btn {
+///
+///     .button {
+///       @include fade-out();
+///     }
+///
+///     &:hover .button {
+///       @include fade-in();
+///     }
+///
+///   }
+///
+///   //button fade-out
+///   &_with-fade-out-btn {
+///
+///     .button {
+///       @include fade-in();
+///     }
+///
+///     &:hover .button {
+///       @include fade-out();
+///     }
+///
+///   }
+///
+///   //button fade-in with rotate
+///   &_with-fade-in-rotate-btn {
+///     $map-with-additional-transition: (additional-transition-values: transform .5s 0s ease);
+///
+///     .button {
+///       transform: rotate(45deg);
+///       @include fade-out($map-with-additional-transition);
+///     }
+///
+///     &:hover .button {
+///
+///       transform: rotate(0deg);
+///       @include fade-in($map-with-additional-transition);
+///     }
+///
 ///   }
 ///
 /// }
 ///
-/// //fade-out
-/// .player-fade-out {
-///   position: relative;
-///   height: 200px;
-///   background:silver;
+/// //class with mod
+/// <!--player_with-fade-in-btn-->
+/// <!--player_with-fade-out-btn-->
+/// <!--player_with-fade-in-rotate-btn-->
 ///
-///   &__button {
-///     width: 10px;
-///     height: 10px;
-///
-///     border-radius: 50%;
-///     background-color: black;
-///
-///     @include fade-in(.5);
-///   }
-///
-///   &:hover &__button {
-///     @include fade-out(.5);
-///   }
-///
-/// }
-///
-/// //fade effect with transform
-/// .player-fade-in-rotate {
-///   position: relative;
-///   height: 200px;
-///   background:silver;
-///
-///   $translateTransform: transform .5s 0s ease;
-///
-///   &__button {
-///     width: 10px;
-///     height: 10px;
-///
-///     background-color: black;
-///
-///     transform: rotate(45deg);
-///     @include fade-out(.5, $translateTransform);
-///   }
-///
-///   &:hover &__button {
-///     transform: rotate(0deg);
-///     @include fade-in(.5, $translateTransform);
-///   }
-///
-/// }
-///
-/// <div class="player-fade-in" >
-///   <div class="player-fade-in__button" ></div>
+/// <div class="player player_with-fade-in-btn" >
+///   <div class="button" ></div>
 /// </div>
-@mixin fade-in($fade-in-duration: .5, $additional-transition-values: '') {
+@mixin fade-in($settings: (animation-duration: .5, additional-transition-values: '')) {
+  $additional-transition-values: get-map-prop-or-default($settings, additional-transition-values);
+  $fade-in-duration: get-map-prop-or-default($settings, animation-duration, .5);
+
   opacity: 1;
   visibility: visible;
 
@@ -98,16 +101,17 @@
 /// @group animation
 /// @name fade-out
 ///
-/// @param {number} $animation-duration [.5] - duration of animation
-/// @param {string} $additional-transition-values [''] - additional transition values
+/// @param {map} $settings [(animation-duration: .5, additional-transition-values: '')] - mixin settings
 ///
 /// @example
 /// .modal-trigger {
 ///   height: 20px;
+///
+///   text-align: center;
+///
 ///   background-color: silver;
 /// }
 ///
-/// //fade-in
 /// .modal {
 ///   position: fixed;
 ///   top: 40px;
@@ -116,58 +120,61 @@
 ///   left: 0;
 ///
 ///   background-color: rgba(0,0,0,.5);
-///   @include fade-out(.5);
 ///
-///   &_open {
-///     @include fade-in(.5);
+///   $map-with-additional-transition: (additional-transition-values: transform .5s 0s ease);
+///
+///   //modal-state-for-open
+///   &_for-open {
+///     @include fade-out();
 ///   }
 ///
-/// }
+///   //modal-state-for-closed
+///   &_for-closed {
+///     @include fade-in();
+///   }
 ///
-/// //fade-out
-/// .modal {
-///   position: absolute;
-///   top: 40px;
-///   right: 0;
-///   bottom: 0;
-///   left: 0;
+///   //modal-state-for-open-with-rotate
+///   &_for-open-with-rotate {
+///     transform: skewX(100deg);
+///     @include fade-out($map-with-additional-transition);
+///   }
 ///
-///   background-color: rgba(0,0,0,.5);
-///   @include fade-in(.5);
+///   //modal fade-in
+///   &_open {
+///     @include fade-in();
+///   }
 ///
+///   &_open-with-rotate {
+///     @include fade-in();
+///   }
+///
+///   //modal fade-out
 ///   &_closed {
-///     @include fade-out(.5);
+///     @include fade-out();
 ///   }
 ///
-/// }
-///
-/// //fade effect with transform
-/// .modal-rotate {
-///   $translateTransform: transform .5s 0s ease;
-///
-///   position: absolute;
-///   top: 40px;
-///   right: 0;
-///   bottom: 0;
-///   left: 0;
-///
-///   background-color: rgba(0,0,0,.5);
-///   transform: skewX(100deg);
-///   @include fade-out(.5, $translateTransform);
-///
-///   &_open {
+///   //modal fade-in with rotate
+///   &_open-with-rotate {
 ///     transform: skewX(0deg);
-///     @include fade-in(.5, $translateTransform);
+///     @include fade-in($map-with-additional-transition);
 ///   }
 ///
 /// }
 ///
-/// //modal-rotate
-/// <div class="modal" ></div>
-/// <div class="modal-trigger" onclick="document.querySelector('.modal').classList.toggle('modal_open')"></div>
-@mixin fade-out($animation-duration: .5, $additional-transition-values: '') {
+/// //class with mod
+/// <!--modal_for-open, inJs: modal_open-->
+/// <!--modal_for-close, inJs: modal_close-->
+/// <!--modal_for-open-with-rotate, inJs: modal_open-with-rotate-->
+///
+/// <div class="modal modal_for-open" ></div>
+/// <div class="modal-trigger" onclick="document.querySelector('.modal').classList.toggle('modal_open')">open/close</div>
+@mixin fade-out($settings: (animation-duration: .5, additional-transition-values: '')) {
+  $additional-transition-values: get-map-prop-or-default($settings, additional-transition-values);
+  $animation-duration: get-map-prop-or-default($settings, animation-duration, .5);
+
   $fade-out-duration: $animation-duration;
   $visibility-hidden-delay: $animation-duration;
+
   opacity: 0;
   visibility: hidden;
 
@@ -180,3 +187,4 @@
   }
 
 }
+

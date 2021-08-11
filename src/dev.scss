@@ -1,17 +1,59 @@
 @import "mixin-wrapper";
 
-@include keyframes-rotate-360-z_left();
-@include keyframes-rotate-360-z_right();
-@include keyframes-rotate-360-x_left();
-@include keyframes-rotate-360-x_right();
-@include keyframes-rotate-360-y_forward();
-@include keyframes-rotate-360-y_backward();
 
-.preloader {
-  width: 40px;
-  height: 40px;
-  background-color: red;
+.modal-trigger {
+  height: 20px;
 
-  animation: rotate-360-y_forward 1.5s linear infinite;
+  text-align: center;
+
+  background-color: silver;
 }
 
+.modal {
+  position: fixed;
+  top: 40px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background-color: rgba(0,0,0,.5);
+
+  $map-with-additional-transition: (additional-transition-values: transform .5s 0s ease);
+
+  //modal-state-for-open
+  &_for-open {
+    @include fade-out();
+  }
+
+  //modal-state-for-closed
+  &_for-closed {
+    @include fade-in();
+  }
+
+  //modal-state-for-open-with-rotate
+  &_for-open-with-rotate {
+    transform: skewX(100deg);
+    @include fade-out($map-with-additional-transition);
+  }
+
+  //modal fade-in
+  &_open {
+    @include fade-in();
+  }
+
+  &_open-with-rotate {
+    @include fade-in();
+  }
+
+  //modal fade-out
+  &_closed {
+    @include fade-out();
+  }
+
+  //modal fade-in with rotate
+  &_open-with-rotate {
+    transform: skewX(0deg);
+    @include fade-in($map-with-additional-transition);
+  }
+
+}

@@ -1,39 +1,17 @@
 @import "mixin-wrapper";
 
-$block-width: 50px;
-$block-height: 50px;
+@include keyframes-rotate-360-z_left();
+@include keyframes-rotate-360-z_right();
+@include keyframes-rotate-360-x_left();
+@include keyframes-rotate-360-x_right();
+@include keyframes-rotate-360-y_forward();
+@include keyframes-rotate-360-y_backward();
 
-.relative-block {
-  position: relative;
-  height: 400px;
-  background-color: silver;
+.preloader {
+  width: 40px;
+  height: 40px;
+  background-color: red;
+
+  animation: rotate-360-y_forward 1.5s linear infinite;
 }
 
-.center-block {
-  width: $block-width;
-  height: $block-height;
-
-  font-size: 10px;
-  line-height: $block-height;
-  text-align: center;
-  color: white;
-
-  background-color: black;
-  border-radius: 50%;
-
-  //centring for x and y inside relative block
-  &_relative-center-both {
-    @include absolute-center(both, $block-width, $block-height);
-  }
-
-  //centring for y inside relative block
-  &_relative-center-y {
-    @include absolute-center(y, $block-height);
-  }
-
-  //centring for x inside relative block
-  &_relative-center-x {
-    @include absolute-center(x, $block-width);
-  }
-
-}

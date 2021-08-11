@@ -1,0 +1,174 @@
+/// Rotate element 360deg right by z axis
+///
+/// @group keyframes
+/// @name keyframes-rotate-360-z_right
+///
+/// @example
+/// //include animation keyframe in common sass file
+/// //@include keyframes-rotate-360-z_right();
+///
+/// //animation name like mixin name, but with out 'keyframes-'
+/// .preloader {
+///   width: 40px;
+///   height: 40px;
+///   background-color: red;
+///
+///   animation: rotate-360-y_right 1.5s linear infinite;
+/// }
+/// <div class="preloader"></div>
+@mixin keyframes-rotate-360-z_right {
+  @keyframes rotate-360-z_right {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+/// Rotate element 360deg left by z axis
+///
+/// @group keyframes
+/// @name keyframes-rotate-360-z_left
+///
+/// @example
+/// //include animation keyframe in common sass file
+/// //@include keyframes-rotate-360-z_left();
+///
+/// //animation name like mixin name, but with out 'keyframes-'
+/// .preloader {
+///   width: 40px;
+///   height: 40px;
+///   background-color: red;
+///
+///   animation: rotate-360-y_left 1.5s linear infinite;
+/// }
+/// <div class="preloader"></div>
+@mixin keyframes-rotate-360-z_left {
+  @keyframes rotate-360-z_left {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+}
+
+/// Rotate element 360deg right by x axis
+///
+/// @group keyframes
+/// @name keyframes-rotate-360-x_right
+///
+/// @example
+/// //include animation keyframe in common sass file
+/// //@include keyframes-rotate-360-x_right();
+///
+/// //animation name like mixin name, but with out 'keyframes-'
+/// .preloader {
+///   width: 40px;
+///   height: 40px;
+///   background-color: red;
+///
+///   animation: rotate-360-x_right 1.5s linear infinite;
+/// }
+/// <div class="preloader"></div>
+@mixin keyframes-rotate-360-x_right {
+  @keyframes rotate-360-x_right {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+}
+
+/// Rotate element 360deg left by x axis
+///
+/// @group keyframes
+/// @name keyframes-rotate-360-x_left
+///
+/// @example
+/// //include animation keyframe in common sass file
+/// //@include keyframes-rotate-360-x_left();
+///
+/// //animation name like mixin name, but with out 'keyframes-'
+/// .preloader {
+///   width: 40px;
+///   height: 40px;
+///   background-color: red;
+///
+///   animation: rotate-360-x_left 1.5s linear infinite;
+/// }
+/// <div class="preloader"></div>
+@mixin keyframes-rotate-360-x_left {
+  @keyframes rotate-360-x_left {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(-360deg);
+    }
+  }
+}
+
+/// Rotate element 360deg forward by y axis
+///
+/// @group keyframes
+/// @name keyframes-rotate-360-y_forward
+///
+/// @example
+/// //include animation keyframe in common sass file
+/// //@include keyframes-rotate-360-y_forward();
+///
+/// //animation name like mixin name, but with out 'keyframes-'
+/// .preloader {
+///   width: 40px;
+///   height: 40px;
+///   background-color: red;
+///
+///   animation: rotate-360-y_forward 1.5s linear infinite;
+/// }
+/// <div class="preloader"></div>
+@mixin keyframes-rotate-360-y_forward {
+  @keyframes rotate-360-y_forward {
+    0% {
+      transform: rotateX(0deg);
+    }
+    100% {
+      transform: rotateX(360deg);
+    }
+  }
+}
+
+/// Rotate element 360deg backward by y axis
+///
+/// @group keyframes
+/// @name keyframes-rotate-360-y_backward
+///
+/// @example
+/// //include animation keyframe in common sass file
+/// //@include keyframes-rotate-360-y_backward();
+///
+/// //animation name like mixin name, but with out 'keyframes-'
+/// .preloader {
+///   width: 40px;
+///   height: 40px;
+///   background-color: red;
+///
+///   animation: rotate-360-y_backward 1.5s linear infinite;
+/// }
+/// <div class="preloader"></div>
+@mixin keyframes-rotate-360-y_backward {
+  @keyframes rotate-360-y_backward {
+    0% {
+      transform: rotateX(0deg);
+    }
+    100% {
+      transform: rotateX(-360deg);
+    }
+  }
+}
+

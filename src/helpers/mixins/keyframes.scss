@@ -1,0 +1,153 @@
+/// Rotate element 360deg right by z axis
+///
+/// @group keyframes
+/// @name keyframes-rotate-360-z
+///
+/// @example
+/// //include animation keyframe with need duration in common sass file
+/// //@include keyframes-rotate-360-z(right);
+/// //@include keyframes-rotate-360-z(left);
+///
+///
+/// //animation name like mixin name with duration, but with out 'keyframes-'
+/// .preloader {
+///   display: inline-block;
+///
+///   margin: 40px;
+///
+///   width: 40px;
+///   height: 40px;
+///   background-color: red;
+///
+///   &_rotate-z-right {
+///     animation: rotate-360-z_right 1.5s linear infinite;
+///   }
+///
+///   &_rotate-z-left {
+///     animation: rotate-360-z_left 1.5s linear infinite;
+///   }
+///
+/// }
+///
+/// <div class="preloader preloader_rotate-z-right"></div>
+/// <div class="preloader preloader_rotate-z-left"></div>
+@mixin keyframes-rotate-360-z($duration: null) {
+
+  @if ($duration == null) {
+    @error "mixin keyframes-rotate-360-z must have duration, right or left";
+  }
+
+  $deg: if-else($duration == right, 360deg, -360deg);
+
+  @keyframes rotate-360-z_#{$duration} {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate($deg);
+    }
+  }
+}
+
+/// Rotate element 360deg right by x axis
+///
+/// @group keyframes
+/// @name keyframes-rotate-360-x
+///
+/// @example
+/// //include animation keyframe with need duration in common sass file
+/// //@include keyframes-rotate-360-x(right);
+/// //@include keyframes-rotate-360-x(left);
+///
+///
+/// //animation name like mixin name with duration, but with out 'keyframes-'
+/// .preloader {
+///   display: inline-block;
+///
+///   margin: 40px;
+///
+///   width: 40px;
+///   height: 40px;
+///   background-color: red;
+///
+///   &_rotate-x-right {
+///     animation: rotate-360-x_right 1.5s linear infinite;
+///   }
+///
+///   &_rotate-x-left {
+///     animation: rotate-360-x_left 1.5s linear infinite;
+///   }
+///
+/// }
+///
+/// <div class="preloader preloader_rotate-x-right"></div>
+/// <div class="preloader preloader_rotate-x-left"></div>
+@mixin keyframes-rotate-360-x($duration: null) {
+
+  @if ($duration == null) {
+    @error "mixin keyframes-rotate-360-x must have duration, right or left";
+  }
+
+  $deg: if-else($duration == right, 360deg, -360deg);
+
+
+  @keyframes rotate-360-x_#{$duration} {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY($deg);
+    }
+  }
+}
+
+/// Rotate element 360deg forward by y axis
+///
+/// @group keyframes
+/// @name keyframes-rotate-360-y
+///
+/// @example
+/// //include animation keyframe with need duration in common sass file
+/// //@include keyframes-rotate-360-y(forward);
+/// //@include keyframes-rotate-360-y(backward);
+///
+///
+/// //animation name like mixin name with duration, but with out 'keyframes-'
+/// .preloader {
+///   display: inline-block;
+///
+///   margin: 40px;
+///
+///   width: 40px;
+///   height: 40px;
+///   background-color: red;
+///
+///   &_rotate-y-forward {
+///     animation: rotate-360-y_forward 1.5s linear infinite;
+///   }
+///
+///   &_rotate-y-backward {
+///     animation: rotate-360-y_backward 1.5s linear infinite;
+///   }
+///
+/// }
+///
+/// <div class="preloader preloader_rotate-y-forward"></div>
+/// <div class="preloader preloader_rotate-y-backward"></div>
+@mixin keyframes-rotate-360-y($duration: null) {
+
+  @if ($duration == null) {
+    @error "mixin keyframes-rotate-360-y must have duration, forward or backward";
+  }
+
+  $deg: if-else($duration == forward, 360deg, -360deg);
+
+  @keyframes rotate-360-y_#{$duration} {
+    0% {
+      transform: rotateX(0deg);
+    }
+    100% {
+      transform: rotateX($deg);
+    }
+  }
+}

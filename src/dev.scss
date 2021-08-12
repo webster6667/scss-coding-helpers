@@ -1,49 +1,31 @@
-@import "mixin-wrapper";
+@import "helpers-wrapper";
 
+.relative-block {
+  position: relative;
+  width: 400px;
+  height: 400px;
 
-.open-trigger {
-  margin: auto;
+  background-color: silver;
 
-  width: 100px;
-  height: 20px;
-
-  color: white;
-  text-align: center;
-
-  background-color: black;
-}
-
-.side-bar {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-
-  width: 300px;
-  background-color: black;
-
-  //side-bar is hidden on start
-  @include slide-out-x() {
-    right: 100%;
+  &__z-layer-absolute {
+    background-color: rgba(0, 82, 246, 0.4);
+    @include upp-to-z-layer() {
+      z-index: 1;
+    };
   }
 
-  &_open-right {
-    @include slide-in-right();
+  &__z-layer-absolute-with-offset {
+    background-color: rgba(0,0,0,.5);
+    @include upp-to-z-layer(absolute, 10px, 10px) {
+      z-index: 2;
+    };
   }
 
-  &_with-fade {
-    @include slide-out-x((has-fade-effect: true)) {
-      right: 100%;
-    }
-  }
-
-  &_with-fade-out-delay {
-    @include slide-out-x((has-fade-effect: true, has-fade-out-delay: true)) {
-      right: 100%;
-    }
-  }
-
-  &_with-fade#{&}_open-right, &_with-fade-out-delay#{&}_open-right {
-    @include slide-in-right((has-fade-effect: true));
+  &__z-layer-fixed {
+    background-color: rgba(0,0,0,.5);
+    @include upp-to-z-layer(fixed, 100px, 100px) {
+      z-index: 2;
+    };
   }
 
 }

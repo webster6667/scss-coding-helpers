@@ -1,0 +1,61 @@
+/// Mixin create min-width media queries
+///
+/// @group adaptive
+/// @name media-min-w
+///
+/// @param {string} $screen-size [null] - size when media queries style will be enable
+///
+/// @example
+/// .block {
+///   width: 40px;
+///   height: 40px;
+///
+///   background-color: red;
+///
+///   @include media-min-w(1024px) {
+///     background-color: blue;
+///   }
+/// }
+///
+/// <div class="block"></div>
+@mixin media-min-w($screen-size: null) {
+
+  @if ($screen-size == null) {
+    @error "media-min-w screen-size cant be null"
+  }
+
+  @media (min-width: $screen-size) {
+    @content
+  }
+}
+
+/// Mixin create max-width media queries
+///
+/// @group adaptive
+/// @name media-max-w
+///
+/// @param {string} $screen-size [null] - size when media queries style will be enable
+///
+/// @example
+/// .block {
+///   width: 40px;
+///   height: 40px;
+///
+///   background-color: red;
+///
+///   @include media-max-w(1200px) {
+///     background-color: blue;
+///   }
+/// }
+///
+/// <div class="block"></div>
+@mixin media-max-w($screen-size: null) {
+
+  @if ($screen-size == null) {
+    @error "media-max-w screen-size cant be null"
+  }
+
+  @media (max-width: $screen-size) {
+    @content
+  }
+}

@@ -1,0 +1,22 @@
+/// Return result relative conditional
+///
+/// @group helpers
+/// @name if-else
+///
+/// @param {boolean} $conditional - conditional
+/// @param {any} $if-true - will returned if conditional === true
+/// @param {any} $else - will returned if conditional !== true
+///
+/// @example
+/// $media-queries-value: if-else($is-mobile-first == true, min-width, max-width);
+@function if-else($conditional, $if-true, $else) {
+  $result: null;
+
+  @if ($conditional == true) {
+    $result: $if-true;
+  } @else {
+    $result: $else
+  }
+
+  @return $result
+}

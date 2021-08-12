@@ -1,0 +1,150 @@
+@use "sass:map";
+
+/// Mixin return stretch height, with help padding-top
+///
+/// @group adaptive
+/// @name stretching-padding-height
+///
+/// @param {string} $need-height [null] - needed height with out media-queries
+/// @param {string} $parent-width [null] - parent element with
+/// @param {map} $dynamic-size-map [null] - map with adaptive settings
+/// @param {boolean} $is-mobile-first [true] - should use min-with on media-queries
+///
+/// @example
+/// * {
+///   box-sizing: border-box;
+/// }
+///
+/// .container {
+///   max-width: 1200px;
+///   padding: 0 20px;
+/// }
+///
+/// .content {
+///   height: 40px;
+///   background-color: silver;
+///
+///   text-transform: uppercase;
+///   text-align: center;
+/// }
+///
+/// .row  {
+///   display: flex;
+///   align-items: flex-start;
+///
+///   margin-left: -10px;
+///   margin-right: -10px;
+/// }
+///
+/// %card-label {
+///   position: absolute;
+///   top: 50%;
+///   left: 50%;
+///   transform: translate(-50%, -50%);
+///   text-align: center;
+///   font-size: 12px;
+/// }
+///
+/// .card {
+///   position: relative;
+///
+///   margin: 0 10px;
+///   background-color: red;
+///
+///   &_with-calc {
+///     width: calc(13.16% - 5px);
+///
+///     &:before {
+///       @extend %card-label;
+///       content: 'Calc';
+///     }
+///
+///     .card__wrapper {
+///       width: 100%;
+///       @include stretching-padding-height(35px, 35px);
+///     }
+///
+///   }
+///
+///   &_with-out-calc {
+///     width: 11.27%;
+///     @include stretching-padding-height(32px, 284px);
+///
+///     &:before {
+///       @extend %card-label;
+///       content: 'with out calc';
+///     }
+///
+///   }
+///
+///   &_with-adaptive {
+///     width: 11.27%;
+///
+///     $break-point_md: 1024px;
+///
+///     @include stretching-padding-height(32px, 284px,
+///             (
+///                     $break-point_md: (
+///                             need-height: 150px,
+///                             parent-width: 988px
+///                     )
+///             )
+///     );
+///
+///     &:before {
+///       @extend %card-label;
+///       content: 'adaptive';
+///     }
+///
+///   }
+///
+/// }
+///
+/// <div class="container">
+///
+///   <div class="content">Content</div>
+///
+///   <div class="row">
+///
+///     <div class="card card_with-adaptive"></div>
+///
+///     <div class="card card_with-calc">
+///       <div class="card__wrapper"></div>
+///     </div>
+///
+///     <div class="card card_with-out-calc"></div>
+///
+///   </div>
+///
+/// </div>
+@mixin stretching-padding-height($need-height: null, $parent-width: null, $dynamic-size-map: null, $is-mobile-first: true) {
+
+  @if ($need-height == null) {
+    @error "stretching-padding-height need-height cant be null"
+  }
+
+  @if ($parent-width == null) {
+    @error "stretching-padding-height parent-width cant be null"
+  }
+
+  height: 0;
+  padding-bottom: 0;
+  padding-top: percent-size-from-size($need-height, $parent-width);
+
+  @if ($dynamic-size-map != null) {
+
+    @each $screen, $media-settings in $dynamic-size-map {
+      $media-queries-value: if-else($is-mobile-first == true, min-width, max-width);
+
+      @media ($media-queries-value: $screen) {
+        $need-height-for-media: map.get($media-settings, need-height);
+        $parent-width-on-media: map.get($media-settings, parent-width);
+
+        padding-top: percent-size-from-size($need-height-for-media, $parent-width-on-media);
+      }
+
+    }
+
+  }
+
+}

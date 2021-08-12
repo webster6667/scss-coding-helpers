@@ -1,0 +1,53 @@
+/// Mixin up element to Z layer
+///
+/// @group z-layer
+/// @name upp-to-z-layer
+///
+/// @param {string} $position-value [absolute] - with which position element will be raised
+/// @param {string} $offset-x [0] - which offset will be from x sides
+/// @param {string} $offset-y [0] - which offset will be from y sides
+/// @example
+/// .relative-block {
+///   position: relative;
+///   width: 400px;
+///   height: 400px;
+///
+///   background-color: silver;
+///
+///   &__z-layer-absolute {
+///     background-color: rgba(0, 82, 246, 0.4);
+///     @include upp-to-z-layer() {
+///       z-index: 1;
+///     };
+///   }
+///
+///   &__z-layer-absolute-with-offset {
+///     background-color: rgba(0,0,0,.5);
+///     @include upp-to-z-layer(absolute, 10px, 10px) {
+///       z-index: 2;
+///     };
+///   }
+///
+///   &__z-layer-fixed {
+///     background-color: rgba(0,0,0,.5);
+///     @include upp-to-z-layer(fixed, 100px, 100px) {
+///       z-index: 2;
+///     };
+///   }
+///
+/// }
+/// <div class="relative-block">
+///
+///   <div class="relative-block__z-layer-absolute"></div>
+///   <div class="relative-block__z-layer-absolute-with-offset"></div>
+///   <div class="relative-block__z-layer-fixed"></div>
+///
+/// </div>
+@mixin upp-to-z-layer($position-value: absolute, $offset-x: 0, $offset-y: 0) {
+  position: $position-value;
+  top: $offset-y;
+  right: $offset-x;
+  bottom: $offset-y;
+  left: $offset-x;
+  @content
+}

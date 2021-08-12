@@ -1,5 +1,184 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><title>Scss-coding-helpers - v0.0.2</title><link rel="stylesheet" href="assets/css/main.css"><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,700" rel="stylesheet" type="text/css"><meta name="viewport" content="width=device-width"><meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"><!-- Open Graph tags --><meta property="og:title" content="Scss-coding-helpers - SassDoc"><meta property="og:type" content="website"><meta property="og:description" content="<p>Must have scss coding helper</p>
-"><!-- Thanks to Sass-lang.com for the icons --><link href="assets/images/favicon.png" rel="shortcut icon"></head><body><aside class="sidebar" role="nav"><div class="sidebar__header"><h1 class="sidebar__title"><a href="https://github.com/webster6667/scss-coding-helpers#readme">Scss-coding-helpers - v0.0.2</a></h1></div><div class="sidebar__body"><button type="button" class="btn-toggle js-btn-toggle" data-alt="Open all">Close all</button><p class="sidebar__item sidebar__item--heading" data-slug="animation"><a href="#animation">animation</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="animation-mixin"><a href="#animation-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="animation" data-name="fade-in" data-type="mixin"><a href="#animation-mixin-fade-in">fade-in</a></li><li class="sidebar__item sassdoc__item" data-group="animation" data-name="fade-out" data-type="mixin"><a href="#animation-mixin-fade-out">fade-out</a></li><li class="sidebar__item sassdoc__item" data-group="animation" data-name="slide-in-down" data-type="mixin"><a href="#animation-mixin-slide-in-down">slide-in-down</a></li><li class="sidebar__item sassdoc__item" data-group="animation" data-name="slide-in-up" data-type="mixin"><a href="#animation-mixin-slide-in-up">slide-in-up</a></li><li class="sidebar__item sassdoc__item" data-group="animation" data-name="slide-out-y" data-type="mixin"><a href="#animation-mixin-slide-out-y">slide-out-y</a></li><li class="sidebar__item sassdoc__item" data-group="animation" data-name="slide-in-right" data-type="mixin"><a href="#animation-mixin-slide-in-right">slide-in-right</a></li><li class="sidebar__item sassdoc__item" data-group="animation" data-name="slide-in-left" data-type="mixin"><a href="#animation-mixin-slide-in-left">slide-in-left</a></li><li class="sidebar__item sassdoc__item" data-group="animation" data-name="slide-out-x" data-type="mixin"><a href="#animation-mixin-slide-out-x">slide-out-x</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="center-inside-relative"><a href="#center-inside-relative">center-inside-relative</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="center-inside-relative-mixin"><a href="#center-inside-relative-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="center-inside-relative" data-name="absolute-center" data-type="mixin"><a href="#center-inside-relative-mixin-absolute-center">absolute-center</a></li><li class="sidebar__item sassdoc__item" data-group="center-inside-relative" data-name="transform-center" data-type="mixin"><a href="#center-inside-relative-mixin-transform-center">transform-center</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="keyframes"><a href="#keyframes">keyframes</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="keyframes-mixin"><a href="#keyframes-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="keyframes" data-name="keyframes-rotate-360-z_right" data-type="mixin"><a href="#keyframes-mixin-keyframes-rotate-360-z_right">keyframes-rotate-360-z_right</a></li><li class="sidebar__item sassdoc__item" data-group="keyframes" data-name="keyframes-rotate-360-z_left" data-type="mixin"><a href="#keyframes-mixin-keyframes-rotate-360-z_left">keyframes-rotate-360-z_left</a></li><li class="sidebar__item sassdoc__item" data-group="keyframes" data-name="keyframes-rotate-360-x_right" data-type="mixin"><a href="#keyframes-mixin-keyframes-rotate-360-x_right">keyframes-rotate-360-x_right</a></li><li class="sidebar__item sassdoc__item" data-group="keyframes" data-name="keyframes-rotate-360-x_left" data-type="mixin"><a href="#keyframes-mixin-keyframes-rotate-360-x_left">keyframes-rotate-360-x_left</a></li><li class="sidebar__item sassdoc__item" data-group="keyframes" data-name="keyframes-rotate-360-y_forward" data-type="mixin"><a href="#keyframes-mixin-keyframes-rotate-360-y_forward">keyframes-rotate-360-y_forward</a></li><li class="sidebar__item sassdoc__item" data-group="keyframes" data-name="keyframes-rotate-360-y_backward" data-type="mixin"><a href="#keyframes-mixin-keyframes-rotate-360-y_backward">keyframes-rotate-360-y_backward</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="text"><a href="#text">text</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="text-mixin"><a href="#text-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="text" data-name="ellipsis" data-type="mixin"><a href="#text-mixin-ellipsis">ellipsis</a></li></ul></div></div></aside><article class="main" role="main"><header class="header" role="banner"><div class="container"><div class="sassdoc__searchbar searchbar"><label for="js-search-input" class="visually-hidden">Search</label><div class="searchbar__form" id="js-search"><input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search"><ul class="searchbar__suggestions" id="js-search-suggestions"></ul></div></div></div></header><section class="main__section"><h1 class="main__heading" id="animation"><div class="container">animation</div></h1><section class="main__sub-section" id="animation-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="animation-mixin-fade-in"><h3 class="item__heading"><a class="item__name" href="#mixin-fade-in">fade-in</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin fade-in($settings: (animation-duration: .5, additional-transition-values: &#39;&#39;), $settings.animation-duration: .5, $settings.additional-transition-values: &#39;&#39;) { 
+"><!-- Thanks to Sass-lang.com for the icons --><link href="assets/images/favicon.png" rel="shortcut icon"></head><body><aside class="sidebar" role="nav"><div class="sidebar__header"><h1 class="sidebar__title"><a href="https://github.com/webster6667/scss-coding-helpers#readme">Scss-coding-helpers - v0.0.2</a></h1></div><div class="sidebar__body"><button type="button" class="btn-toggle js-btn-toggle" data-alt="Open all">Close all</button><p class="sidebar__item sidebar__item--heading" data-slug="adaptive"><a href="#adaptive">adaptive</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="adaptive-function"><a href="#adaptive-function">functions</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="adaptive" data-name="percent-size-from-size" data-type="function"><a href="#adaptive-function-percent-size-from-size">percent-size-from-size</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="adaptive-mixin"><a href="#adaptive-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="adaptive" data-name="media-min-w" data-type="mixin"><a href="#adaptive-mixin-media-min-w">media-min-w</a></li><li class="sidebar__item sassdoc__item" data-group="adaptive" data-name="media-max-w" data-type="mixin"><a href="#adaptive-mixin-media-max-w">media-max-w</a></li><li class="sidebar__item sassdoc__item" data-group="adaptive" data-name="stretching-padding-height" data-type="mixin"><a href="#adaptive-mixin-stretching-padding-height">stretching-padding-height</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="animation"><a href="#animation">animation</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="animation-mixin"><a href="#animation-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="animation" data-name="fade-in" data-type="mixin"><a href="#animation-mixin-fade-in">fade-in</a></li><li class="sidebar__item sassdoc__item" data-group="animation" data-name="fade-out" data-type="mixin"><a href="#animation-mixin-fade-out">fade-out</a></li><li class="sidebar__item sassdoc__item" data-group="animation" data-name="slide-in-down" data-type="mixin"><a href="#animation-mixin-slide-in-down">slide-in-down</a></li><li class="sidebar__item sassdoc__item" data-group="animation" data-name="slide-in-up" data-type="mixin"><a href="#animation-mixin-slide-in-up">slide-in-up</a></li><li class="sidebar__item sassdoc__item" data-group="animation" data-name="slide-out-y" data-type="mixin"><a href="#animation-mixin-slide-out-y">slide-out-y</a></li><li class="sidebar__item sassdoc__item" data-group="animation" data-name="slide-in-right" data-type="mixin"><a href="#animation-mixin-slide-in-right">slide-in-right</a></li><li class="sidebar__item sassdoc__item" data-group="animation" data-name="slide-in-left" data-type="mixin"><a href="#animation-mixin-slide-in-left">slide-in-left</a></li><li class="sidebar__item sassdoc__item" data-group="animation" data-name="slide-out-x" data-type="mixin"><a href="#animation-mixin-slide-out-x">slide-out-x</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="center-inside-relative"><a href="#center-inside-relative">center-inside-relative</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="center-inside-relative-mixin"><a href="#center-inside-relative-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="center-inside-relative" data-name="absolute-center" data-type="mixin"><a href="#center-inside-relative-mixin-absolute-center">absolute-center</a></li><li class="sidebar__item sassdoc__item" data-group="center-inside-relative" data-name="transform-center" data-type="mixin"><a href="#center-inside-relative-mixin-transform-center">transform-center</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="helpers"><a href="#helpers">helpers</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="helpers-function"><a href="#helpers-function">functions</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="helpers" data-name="if-else" data-type="function"><a href="#helpers-function-if-else">if-else</a></li><li class="sidebar__item sassdoc__item" data-group="helpers" data-name="get-map-prop-or-default" data-type="function"><a href="#helpers-function-get-map-prop-or-default">get-map-prop-or-default</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="keyframes"><a href="#keyframes">keyframes</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="keyframes-mixin"><a href="#keyframes-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="keyframes" data-name="keyframes-rotate-360-z" data-type="mixin"><a href="#keyframes-mixin-keyframes-rotate-360-z">keyframes-rotate-360-z</a></li><li class="sidebar__item sassdoc__item" data-group="keyframes" data-name="keyframes-rotate-360-x" data-type="mixin"><a href="#keyframes-mixin-keyframes-rotate-360-x">keyframes-rotate-360-x</a></li><li class="sidebar__item sassdoc__item" data-group="keyframes" data-name="keyframes-rotate-360-y" data-type="mixin"><a href="#keyframes-mixin-keyframes-rotate-360-y">keyframes-rotate-360-y</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="text"><a href="#text">text</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="text-mixin"><a href="#text-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="text" data-name="ellipsis" data-type="mixin"><a href="#text-mixin-ellipsis">ellipsis</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="z-layer"><a href="#z-layer">z-layer</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="z-layer-mixin"><a href="#z-layer-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="z-layer" data-name="upp-to-z-layer" data-type="mixin"><a href="#z-layer-mixin-upp-to-z-layer">upp-to-z-layer</a></li></ul></div></div></aside><article class="main" role="main"><header class="header" role="banner"><div class="container"><div class="sassdoc__searchbar searchbar"><label for="js-search-input" class="visually-hidden">Search</label><div class="searchbar__form" id="js-search"><input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search"><ul class="searchbar__suggestions" id="js-search-suggestions"></ul></div></div></div></header><section class="main__section"><h1 class="main__heading" id="adaptive"><div class="container">adaptive</div></h1><section class="main__sub-section" id="adaptive-function"><h2 class="main__heading--secondary"><div class="container">functions</div></h2><section class="main__item container item" id="adaptive-function-percent-size-from-size"><h3 class="item__heading"><a class="item__name" href="#function-percent-size-from-size">percent-size-from-size</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function percent-size-from-size($number-need-to-percent, $from-number) { 
+  $result: math.percentage(math.div($number-need-to-percent, $from-number));
+
+  @return $result;
+ }" data-collapsed="@function percent-size-from-size($number-need-to-percent, $from-number) { ... }"><code>@function percent-size-from-size($number-need-to-percent, $from-number) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Return percent number from number</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$number-need-to-percent</code></th><td data-label="desc"><p>number which need convert to percent from $from-number</p></td><td data-label="type"><code>String</code> or <code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$from-number</code></th><td data-label="desc"><p>number from what will count percent $number-need-to-percent</p></td><td data-label="type"><code>String</code> or <code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>percent-size-from-size(10, 100) // =&gt; 10</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#adaptive-mixin-stretching-padding-height"><code>stretching-padding-height</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#adaptive-mixin-stretching-padding-height"><code>stretching-padding-height</code></a></li></ul></section></section><section class="main__sub-section" id="adaptive-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="adaptive-mixin-media-min-w"><h3 class="item__heading"><a class="item__name" href="#mixin-media-min-w">media-min-w</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin media-min-w($screen-size: null) { 
+
+  @if ($screen-size == null) {
+    @error &quot;media-min-w screen-size cant be null&quot;
+  }
+
+  @media (min-width: $screen-size) {
+    @content
+  }
+ }" data-collapsed="@mixin media-min-w($screen-size: null) { ... }"><code>@mixin media-min-w($screen-size: null) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Mixin create min-width media queries</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$screen-size</code></th><td data-label="desc"><p>size when media queries style will be enable</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>null</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.block {
+  width: 40px;
+  height: 40px;
+
+  background-color: red;
+
+  @include media-min-w(1024px) {
+    background-color: blue;
+  }
+}
+
+&lt;div class=&quot;block&quot;&gt;&lt;/div&gt;</code></pre></div><h3 class="item__sub-heading">Throws</h3><ul class="list-unstyled"><li><p>media-min-w screen-size cant be null</p></li></ul></section><section class="main__item container item" id="adaptive-mixin-media-max-w"><h3 class="item__heading"><a class="item__name" href="#mixin-media-max-w">media-max-w</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin media-max-w($screen-size: null) { 
+
+  @if ($screen-size == null) {
+    @error &quot;media-max-w screen-size cant be null&quot;
+  }
+
+  @media (max-width: $screen-size) {
+    @content
+  }
+ }" data-collapsed="@mixin media-max-w($screen-size: null) { ... }"><code>@mixin media-max-w($screen-size: null) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Mixin create max-width media queries</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$screen-size</code></th><td data-label="desc"><p>size when media queries style will be enable</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>null</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.block {
+  width: 40px;
+  height: 40px;
+
+  background-color: red;
+
+  @include media-max-w(1200px) {
+    background-color: blue;
+  }
+}
+
+&lt;div class=&quot;block&quot;&gt;&lt;/div&gt;</code></pre></div><h3 class="item__sub-heading">Throws</h3><ul class="list-unstyled"><li><p>media-max-w screen-size cant be null</p></li></ul></section><section class="main__item container item" id="adaptive-mixin-stretching-padding-height"><h3 class="item__heading"><a class="item__name" href="#mixin-stretching-padding-height">stretching-padding-height</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin stretching-padding-height($need-height: null, $parent-width: null, $dynamic-size-map: null, $is-mobile-first: true) { 
+
+  @if ($need-height == null) {
+    @error &quot;stretching-padding-height need-height cant be null&quot;
+  }
+
+  @if ($parent-width == null) {
+    @error &quot;stretching-padding-height parent-width cant be null&quot;
+  }
+
+  height: 0;
+  padding-bottom: 0;
+  padding-top: percent-size-from-size($need-height, $parent-width);
+
+  @if ($dynamic-size-map != null) {
+
+    @each $screen, $media-settings in $dynamic-size-map {
+      $media-queries-value: if-else($is-mobile-first == true, min-width, max-width);
+
+      @media ($media-queries-value: $screen) {
+        $need-height-for-media: map.get($media-settings, need-height);
+        $parent-width-on-media: map.get($media-settings, parent-width);
+
+        padding-top: percent-size-from-size($need-height-for-media, $parent-width-on-media);
+      }
+
+    }
+
+  }
+
+ }" data-collapsed="@mixin stretching-padding-height($need-height: null, $parent-width: null, $dynamic-size-map: null, $is-mobile-first: true) { ... }"><code>@mixin stretching-padding-height($need-height: null, $parent-width: null, $dynamic-size-map: null, $is-mobile-first: true) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Mixin return stretch height, with help padding-top</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$need-height</code></th><td data-label="desc"><p>needed height with out media-queries</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>null</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$parent-width</code></th><td data-label="desc"><p>parent element with</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>null</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$dynamic-size-map</code></th><td data-label="desc"><p>map with adaptive settings</p></td><td data-label="type"><code>Map</code></td><td data-label="default"><code>null</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$is-mobile-first</code></th><td data-label="desc"><p>should use min-with on media-queries</p></td><td data-label="type"><code>Boolean</code></td><td data-label="default"><code>true</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.content {
+  height: 40px;
+  background-color: silver;
+
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.row  {
+  display: flex;
+  align-items: flex-start;
+
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+%card-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 12px;
+}
+
+.card {
+  position: relative;
+
+  margin: 0 10px;
+  background-color: red;
+
+  &amp;_with-calc {
+    width: calc(13.16% - 5px);
+
+    &amp;:before {
+      @extend %card-label;
+      content: &#39;Calc&#39;;
+    }
+
+    .card__wrapper {
+      width: 100%;
+      @include stretching-padding-height(35px, 35px);
+    }
+
+  }
+
+  &amp;_with-out-calc {
+    width: 11.27%;
+    @include stretching-padding-height(32px, 284px);
+
+    &amp;:before {
+      @extend %card-label;
+      content: &#39;with out calc&#39;;
+    }
+
+  }
+
+  &amp;_with-adaptive {
+    width: 11.27%;
+
+    $break-point_md: 1024px;
+
+    @include stretching-padding-height(32px, 284px,
+            (
+                    $break-point_md: (
+                            need-height: 150px,
+                            parent-width: 988px
+                    )
+            )
+    );
+
+    &amp;:before {
+      @extend %card-label;
+      content: &#39;adaptive&#39;;
+    }
+
+  }
+
+}
+
+&lt;div class=&quot;container&quot;&gt;
+
+  &lt;div class=&quot;content&quot;&gt;Content&lt;/div&gt;
+
+  &lt;div class=&quot;row&quot;&gt;
+
+    &lt;div class=&quot;card card_with-adaptive&quot;&gt;&lt;/div&gt;
+
+    &lt;div class=&quot;card card_with-calc&quot;&gt;
+      &lt;div class=&quot;card__wrapper&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;card card_with-out-calc&quot;&gt;&lt;/div&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;</code></pre></div><h3 class="item__sub-heading">Throws</h3><ul class="list-unstyled"><li><p>stretching-padding-height need-height cant be null</p></li><li><p>stretching-padding-height parent-width cant be null</p></li></ul><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#adaptive-function-percent-size-from-size"><code>percent-size-from-size</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#helpers-function-if-else"><code>if-else</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#adaptive-function-percent-size-from-size"><code>percent-size-from-size</code></a></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="animation"><div class="container">animation</div></h1><section class="main__sub-section" id="animation-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="animation-mixin-fade-in"><h3 class="item__heading"><a class="item__name" href="#mixin-fade-in">fade-in</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin fade-in($settings: (animation-duration: .5, additional-transition-values: &#39;&#39;), $settings.animation-duration: .5, $settings.additional-transition-values: &#39;&#39;) { 
   $additional-transition-values: get-map-prop-or-default($settings, additional-transition-values);
   $fade-in-duration: get-map-prop-or-default($settings, animation-duration, .5);
 
@@ -84,7 +263,7 @@
 
 &lt;div class=&quot;player player_with-fade-in-btn&quot; &gt;
   &lt;div class=&quot;button&quot; &gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre></div></section><section class="main__item container item" id="animation-mixin-fade-out"><h3 class="item__heading"><a class="item__name" href="#mixin-fade-out">fade-out</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin fade-out($settings: (animation-duration: .5, additional-transition-values: &#39;&#39;), $settings.animation-duration: .5, $settings.additional-transition-values: &#39;&#39;) { 
+&lt;/div&gt;</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#helpers-function-get-map-prop-or-default"><code>get-map-prop-or-default</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#helpers-function-get-map-prop-or-default"><code>get-map-prop-or-default</code></a></li></ul></section><section class="main__item container item" id="animation-mixin-fade-out"><h3 class="item__heading"><a class="item__name" href="#mixin-fade-out">fade-out</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin fade-out($settings: (animation-duration: .5, additional-transition-values: &#39;&#39;), $settings.animation-duration: .5, $settings.additional-transition-values: &#39;&#39;) { 
   $additional-transition-values: get-map-prop-or-default($settings, additional-transition-values);
   $animation-duration: get-map-prop-or-default($settings, animation-duration, .5);
 
@@ -165,7 +344,7 @@
 &lt;!--modal_for-open-with-rotate, inJs: modal_open-with-rotate--&gt;
 
 &lt;div class=&quot;modal modal_for-open&quot; &gt;&lt;/div&gt;
-&lt;div class=&quot;modal-trigger&quot; onclick=&quot;document.querySelector(&#39;.modal&#39;).classList.toggle(&#39;modal_open&#39;)&quot;&gt;open/close&lt;/div&gt;</code></pre></div></section><section class="main__item container item" id="animation-mixin-slide-in-down"><h3 class="item__heading"><a class="item__name" href="#mixin-slide-in-down">slide-in-down</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin slide-in-down($settings: (animation-duration: .5, has-fade-effect: false, additional-transition-values: &#39;&#39;), $settings.animation-duration: .5, $settings.has-fade-effect: false, $settings.additional-transform-values: &#39;&#39;) { 
+&lt;div class=&quot;modal-trigger&quot; onclick=&quot;document.querySelector(&#39;.modal&#39;).classList.toggle(&#39;modal_open&#39;)&quot;&gt;open/close&lt;/div&gt;</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#helpers-function-get-map-prop-or-default"><code>get-map-prop-or-default</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#helpers-function-get-map-prop-or-default"><code>get-map-prop-or-default</code></a></li></ul></section><section class="main__item container item" id="animation-mixin-slide-in-down"><h3 class="item__heading"><a class="item__name" href="#mixin-slide-in-down">slide-in-down</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin slide-in-down($settings: (animation-duration: .5, has-fade-effect: false, additional-transition-values: &#39;&#39;), $settings.animation-duration: .5, $settings.has-fade-effect: false, $settings.additional-transform-values: &#39;&#39;) { 
   $slide-down-duration: get-map-prop-or-default($settings, animation-duration, .5);
   $fade-in-duration: get-map-prop-or-default($settings, animation-duration, .5);
   $additional-transform-values: get-map-prop-or-default($settings, additional-transform-values);
@@ -261,7 +440,7 @@
 
   &lt;/div&gt;
 
-&lt;/div&gt;</code></pre></div></section><section class="main__item container item" id="animation-mixin-slide-in-up"><h3 class="item__heading"><a class="item__name" href="#mixin-slide-in-up">slide-in-up</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin slide-in-up($settings: (animation-duration: .5, has-fade-effect: false, additional-transition-values: &#39;&#39;), $settings.animation-duration: .5, $settings.has-fade-effect: false, $settings.additional-transform-values: &#39;&#39;) { 
+&lt;/div&gt;</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#helpers-function-get-map-prop-or-default"><code>get-map-prop-or-default</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#helpers-function-get-map-prop-or-default"><code>get-map-prop-or-default</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#helpers-function-get-map-prop-or-default"><code>get-map-prop-or-default</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#helpers-function-get-map-prop-or-default"><code>get-map-prop-or-default</code></a></li></ul></section><section class="main__item container item" id="animation-mixin-slide-in-up"><h3 class="item__heading"><a class="item__name" href="#mixin-slide-in-up">slide-in-up</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin slide-in-up($settings: (animation-duration: .5, has-fade-effect: false, additional-transition-values: &#39;&#39;), $settings.animation-duration: .5, $settings.has-fade-effect: false, $settings.additional-transform-values: &#39;&#39;) { 
   $slide-up-duration: get-map-prop-or-default($settings, animation-duration, .5);
   $fade-in-duration: get-map-prop-or-default($settings, animation-duration, .5);
   $additional-transform-values: get-map-prop-or-default($settings, additional-transform-values);
@@ -357,7 +536,7 @@
 
   &lt;/div&gt;
 
-&lt;/div&gt;</code></pre></div></section><section class="main__item container item" id="animation-mixin-slide-out-y"><h3 class="item__heading"><a class="item__name" href="#mixin-slide-out-y">slide-out-y</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin slide-out-y($settings: (animation-duration: .5, has-fade-effect: false, has-fade-out-delay: false, fade-out-delay: $settings.animation-duration, additional-transition-values: &#39;&#39;), $animation-duration: .5, $has-fade-effect: false, $has-fade-out-delay: false, $fade-out-delay: $settings.animation-duration, $additional-transform-values: &#39;&#39;) { 
+&lt;/div&gt;</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#helpers-function-get-map-prop-or-default"><code>get-map-prop-or-default</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#helpers-function-get-map-prop-or-default"><code>get-map-prop-or-default</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#helpers-function-get-map-prop-or-default"><code>get-map-prop-or-default</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#helpers-function-get-map-prop-or-default"><code>get-map-prop-or-default</code></a></li></ul></section><section class="main__item container item" id="animation-mixin-slide-out-y"><h3 class="item__heading"><a class="item__name" href="#mixin-slide-out-y">slide-out-y</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin slide-out-y($settings: (animation-duration: .5, has-fade-effect: false, has-fade-out-delay: false, fade-out-delay: $settings.animation-duration, additional-transition-values: &#39;&#39;), $animation-duration: .5, $has-fade-effect: false, $has-fade-out-delay: false, $fade-out-delay: $settings.animation-duration, $additional-transform-values: &#39;&#39;) { 
   $slide-out-duration: get-map-prop-or-default($settings, animation-duration, .5);
   $fade-in-duration: get-map-prop-or-default($settings, animation-duration, .5);
   $additional-transform-values: get-map-prop-or-default($settings, additional-transform-values);
@@ -470,7 +649,7 @@
 
   &lt;/div&gt;
 
-&lt;/div&gt;</code></pre></div></section><section class="main__item container item" id="animation-mixin-slide-in-right"><h3 class="item__heading"><a class="item__name" href="#mixin-slide-in-right">slide-in-right</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin slide-in-right($settings: (animation-duration: .5, has-fade-effect: false, additional-transition-values: &#39;&#39;), $settings.animation-duration: .5, $settings.has-fade-effect: false, $settings.additional-transform-values: &#39;&#39;) { 
+&lt;/div&gt;</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#helpers-function-get-map-prop-or-default"><code>get-map-prop-or-default</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#helpers-function-get-map-prop-or-default"><code>get-map-prop-or-default</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#helpers-function-get-map-prop-or-default"><code>get-map-prop-or-default</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#helpers-function-get-map-prop-or-default"><code>get-map-prop-or-default</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#helpers-function-get-map-prop-or-default"><code>get-map-prop-or-default</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#helpers-function-get-map-prop-or-default"><code>get-map-prop-or-default</code></a></li></ul></section><section class="main__item container item" id="animation-mixin-slide-in-right"><h3 class="item__heading"><a class="item__name" href="#mixin-slide-in-right">slide-in-right</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin slide-in-right($settings: (animation-duration: .5, has-fade-effect: false, additional-transition-values: &#39;&#39;), $settings.animation-duration: .5, $settings.has-fade-effect: false, $settings.additional-transform-values: &#39;&#39;) { 
   $slide-right-duration: get-map-prop-or-default($settings, animation-duration, .5);
   $fade-in-duration: get-map-prop-or-default($settings, animation-duration, .5);
   $additional-transform-values: get-map-prop-or-default($settings, additional-transform-values);
@@ -539,7 +718,7 @@
 &lt;!--side-bar_with-fade-out-delay--&gt;
 
 &lt;div class=&quot;side-bar&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;open-trigger&quot; onclick=&quot;document.querySelector(&#39;.side-bar&#39;).classList.toggle(&#39;side-bar_open-right&#39;)&quot;&gt;Close/Open&lt;/div&gt;</code></pre></div></section><section class="main__item container item" id="animation-mixin-slide-in-left"><h3 class="item__heading"><a class="item__name" href="#mixin-slide-in-left">slide-in-left</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin slide-in-left($settings: (animation-duration: .5, has-fade-effect: false, additional-transition-values: &#39;&#39;), $settings.animation-duration: .5, $settings.has-fade-effect: false, $settings.additional-transform-values: &#39;&#39;) { 
+&lt;div class=&quot;open-trigger&quot; onclick=&quot;document.querySelector(&#39;.side-bar&#39;).classList.toggle(&#39;side-bar_open-right&#39;)&quot;&gt;Close/Open&lt;/div&gt;</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#helpers-function-get-map-prop-or-default"><code>get-map-prop-or-default</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#helpers-function-get-map-prop-or-default"><code>get-map-prop-or-default</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#helpers-function-get-map-prop-or-default"><code>get-map-prop-or-default</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#helpers-function-get-map-prop-or-default"><code>get-map-prop-or-default</code></a></li></ul></section><section class="main__item container item" id="animation-mixin-slide-in-left"><h3 class="item__heading"><a class="item__name" href="#mixin-slide-in-left">slide-in-left</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin slide-in-left($settings: (animation-duration: .5, has-fade-effect: false, additional-transition-values: &#39;&#39;), $settings.animation-duration: .5, $settings.has-fade-effect: false, $settings.additional-transform-values: &#39;&#39;) { 
   $slide-left-duration: get-map-prop-or-default($settings, animation-duration, .5);
   $fade-in-duration: get-map-prop-or-default($settings, animation-duration, .5);
   $additional-transform-values: get-map-prop-or-default($settings, additional-transform-values);
@@ -608,7 +787,7 @@
 &lt;!--side-bar_with-fade-out-delay--&gt;
 
 &lt;div class=&quot;side-bar&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;open-trigger&quot; onclick=&quot;document.querySelector(&#39;.side-bar&#39;).classList.toggle(&#39;side-bar_open-left&#39;)&quot;&gt;Close/Open&lt;/div&gt;</code></pre></div></section><section class="main__item container item" id="animation-mixin-slide-out-x"><h3 class="item__heading"><a class="item__name" href="#mixin-slide-out-x">slide-out-x</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin slide-out-x($animation-duration: .5, $has-fade-effect: false, $has-fade-out-delay: false, $fade-out-delay: $animation-duration, $additional-transform-values: &#39;&#39;) { 
+&lt;div class=&quot;open-trigger&quot; onclick=&quot;document.querySelector(&#39;.side-bar&#39;).classList.toggle(&#39;side-bar_open-left&#39;)&quot;&gt;Close/Open&lt;/div&gt;</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#helpers-function-get-map-prop-or-default"><code>get-map-prop-or-default</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#helpers-function-get-map-prop-or-default"><code>get-map-prop-or-default</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#helpers-function-get-map-prop-or-default"><code>get-map-prop-or-default</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#helpers-function-get-map-prop-or-default"><code>get-map-prop-or-default</code></a></li></ul></section><section class="main__item container item" id="animation-mixin-slide-out-x"><h3 class="item__heading"><a class="item__name" href="#mixin-slide-out-x">slide-out-x</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin slide-out-x($animation-duration: .5, $has-fade-effect: false, $has-fade-out-delay: false, $fade-out-delay: $animation-duration, $additional-transform-values: &#39;&#39;) { 
   $slide-out-duration: get-map-prop-or-default($settings, animation-duration, .5);
   $fade-in-duration: get-map-prop-or-default($settings, animation-duration, .5);
   $additional-transform-values: get-map-prop-or-default($settings, additional-transform-values);
@@ -696,7 +875,7 @@
 //side-bar_with-fade
 //side-bar_with-fade-out-delay
 &lt;div class=&quot;side-bar side-bar_with-fade-out-delay&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;open-trigger&quot; onclick=&quot;document.querySelector(&#39;.side-bar&#39;).classList.toggle(&#39;side-bar_open&#39;)&quot;&gt;Close/Open&lt;/div&gt;</code></pre></div></section></section></section><section class="main__section"><h1 class="main__heading" id="center-inside-relative"><div class="container">center-inside-relative</div></h1><section class="main__sub-section" id="center-inside-relative-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="center-inside-relative-mixin-absolute-center"><h3 class="item__heading"><a class="item__name" href="#mixin-absolute-center">absolute-center</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin absolute-center($axis: both, $first-size: 0, $height: 0) { 
+&lt;div class=&quot;open-trigger&quot; onclick=&quot;document.querySelector(&#39;.side-bar&#39;).classList.toggle(&#39;side-bar_open&#39;)&quot;&gt;Close/Open&lt;/div&gt;</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#helpers-function-get-map-prop-or-default"><code>get-map-prop-or-default</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#helpers-function-get-map-prop-or-default"><code>get-map-prop-or-default</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#helpers-function-get-map-prop-or-default"><code>get-map-prop-or-default</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#helpers-function-get-map-prop-or-default"><code>get-map-prop-or-default</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#helpers-function-get-map-prop-or-default"><code>get-map-prop-or-default</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#helpers-function-get-map-prop-or-default"><code>get-map-prop-or-default</code></a></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="center-inside-relative"><div class="container">center-inside-relative</div></h1><section class="main__sub-section" id="center-inside-relative-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="center-inside-relative-mixin-absolute-center"><h3 class="item__heading"><a class="item__name" href="#mixin-absolute-center">absolute-center</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin absolute-center($axis: both, $first-size: 0, $height: 0) { 
 
   @if ($axis == y) {
     position: absolute;
@@ -783,7 +962,27 @@ $block-height: 50px;
     transform: translate(-50%, -50%) #{$additional-transform-values};
   }
 
- }" data-collapsed="@mixin transform-center($axis: both, $additionalTransform: &#39;&#39;) { ... }"><code>@mixin transform-center($axis: both, $additionalTransform: &#39;&#39;) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Mixin that aligns inside a relative block, using transform: translate methods</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$axis</code></th><td data-label="desc"><p>centering axis</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>both</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$additionalTransform</code></th><td data-label="desc"><p>transform values that will be add to center translate values</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>&#39;&#39;</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.my-class {
+ }" data-collapsed="@mixin transform-center($axis: both, $additionalTransform: &#39;&#39;) { ... }"><code>@mixin transform-center($axis: both, $additionalTransform: &#39;&#39;) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Mixin that aligns inside a relative block, using transform: translate methods</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$axis</code></th><td data-label="desc"><p>centering axis</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>both</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$additionalTransform</code></th><td data-label="desc"><p>transform values that will be add to center translate values</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>&#39;&#39;</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.relative-block {
+  position: relative;
+  height: 400px;
+  background-color: silver;
+}
+
+.center-block {
+  $block-width: 50px;
+  $block-height: 50px;
+
+  width: $block-width;
+  height: $block-height;
+
+  font-size: 10px;
+  line-height: $block-height;
+  text-align: center;
+  color: white;
+
+  background-color: black;
+  border-radius: 50%;
+
 
   //centring for x and y inside relative block
   &amp;_transform-center-both {
@@ -805,127 +1004,160 @@ $block-height: 50px;
     @include transform-center(both, rotate(45deg));
   }
 
-}</code></pre></div></section></section></section><section class="main__section"><h1 class="main__heading" id="keyframes"><div class="container">keyframes</div></h1><section class="main__sub-section" id="keyframes-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="keyframes-mixin-keyframes-rotate-360-z_right"><h3 class="item__heading"><a class="item__name" href="#mixin-keyframes-rotate-360-z_right">keyframes-rotate-360-z_right</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin keyframes-rotate-360-z_right() { 
-  @keyframes rotate-360-z_right {
+}
+
+&lt;div class=&quot;relative-block&quot;&gt;
+  &lt;div class=&quot;center-block center-block_transform-center-both&quot;&gt;XY&lt;/div&gt;
+  &lt;div class=&quot;center-block center-block_transform-center-x&quot;&gt;X&lt;/div&gt;
+  &lt;div class=&quot;center-block center-block_transform-center-y&quot;&gt;Y&lt;/div&gt;
+&lt;/div&gt;</code></pre></div></section></section></section><section class="main__section"><h1 class="main__heading" id="helpers"><div class="container">helpers</div></h1><section class="main__sub-section" id="helpers-function"><h2 class="main__heading--secondary"><div class="container">functions</div></h2><section class="main__item container item" id="helpers-function-if-else"><h3 class="item__heading"><a class="item__name" href="#function-if-else">if-else</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function if-else($conditional, $if-true, $else) { 
+  $result: null;
+
+  @if ($conditional == true) {
+    $result: $if-true;
+  } @else {
+    $result: $else
+  }
+
+  @return $result
+ }" data-collapsed="@function if-else($conditional, $if-true, $else) { ... }"><code>@function if-else($conditional, $if-true, $else) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Return result relative conditional</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$conditional</code></th><td data-label="desc"><p>conditional</p></td><td data-label="type"><code>Boolean</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$if-true</code></th><td data-label="desc"><p>will returned if conditional === true</p></td><td data-label="type"><code>Any</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$else</code></th><td data-label="desc"><p>will returned if conditional !== true</p></td><td data-label="type"><code>Any</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>$media-queries-value: if-else($is-mobile-first == true, min-width, max-width);</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#adaptive-mixin-stretching-padding-height"><code>stretching-padding-height</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#keyframes-mixin-keyframes-rotate-360-z"><code>keyframes-rotate-360-z</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#keyframes-mixin-keyframes-rotate-360-x"><code>keyframes-rotate-360-x</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#keyframes-mixin-keyframes-rotate-360-y"><code>keyframes-rotate-360-y</code></a></li></ul></section><section class="main__item container item" id="helpers-function-get-map-prop-or-default"><h3 class="item__heading"><a class="item__name" href="#function-get-map-prop-or-default">get-map-prop-or-default</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function get-map-prop-or-default($map, $search-key, $default-value: &#39;&#39;) { 
+  $result: null;
+
+  @if (map.has-key($map, $search-key)) {
+    $result: map.get($map, $search-key);
+  } @else {
+    $result: $default-value;
+  }
+
+  @return $result
+ }" data-collapsed="@function get-map-prop-or-default($map, $search-key, $default-value: &#39;&#39;) { ... }"><code>@function get-map-prop-or-default($map, $search-key, $default-value: &#39;&#39;) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Return map value by key-name or default value if key not founded</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc"><p>map with props</p></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$search-key</code></th><td data-label="desc"><p>key which will search in map</p></td><td data-label="type"><code>Any</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$default-value</code></th><td data-label="desc"><p>will returned if key dont found in map</p></td><td data-label="type"><code>Any</code></td><td data-label="default"><code>&#39;&#39;</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>$fade-in-duration: get-map-prop-or-default($settings, animation-duration, .5);</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#animation-mixin-fade-in"><code>fade-in</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#animation-mixin-fade-in"><code>fade-in</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#animation-mixin-fade-out"><code>fade-out</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#animation-mixin-fade-out"><code>fade-out</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#animation-mixin-slide-in-down"><code>slide-in-down</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#animation-mixin-slide-in-down"><code>slide-in-down</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#animation-mixin-slide-in-down"><code>slide-in-down</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#animation-mixin-slide-in-down"><code>slide-in-down</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#animation-mixin-slide-in-up"><code>slide-in-up</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#animation-mixin-slide-in-up"><code>slide-in-up</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#animation-mixin-slide-in-up"><code>slide-in-up</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#animation-mixin-slide-in-up"><code>slide-in-up</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#animation-mixin-slide-out-y"><code>slide-out-y</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#animation-mixin-slide-out-y"><code>slide-out-y</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#animation-mixin-slide-out-y"><code>slide-out-y</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#animation-mixin-slide-out-y"><code>slide-out-y</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#animation-mixin-slide-out-y"><code>slide-out-y</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#animation-mixin-slide-out-y"><code>slide-out-y</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#animation-mixin-slide-in-right"><code>slide-in-right</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#animation-mixin-slide-in-right"><code>slide-in-right</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#animation-mixin-slide-in-right"><code>slide-in-right</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#animation-mixin-slide-in-right"><code>slide-in-right</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#animation-mixin-slide-in-left"><code>slide-in-left</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#animation-mixin-slide-in-left"><code>slide-in-left</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#animation-mixin-slide-in-left"><code>slide-in-left</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#animation-mixin-slide-in-left"><code>slide-in-left</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#animation-mixin-slide-out-x"><code>slide-out-x</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#animation-mixin-slide-out-x"><code>slide-out-x</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#animation-mixin-slide-out-x"><code>slide-out-x</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#animation-mixin-slide-out-x"><code>slide-out-x</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#animation-mixin-slide-out-x"><code>slide-out-x</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#animation-mixin-slide-out-x"><code>slide-out-x</code></a></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="keyframes"><div class="container">keyframes</div></h1><section class="main__sub-section" id="keyframes-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="keyframes-mixin-keyframes-rotate-360-z"><h3 class="item__heading"><a class="item__name" href="#mixin-keyframes-rotate-360-z">keyframes-rotate-360-z</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin keyframes-rotate-360-z() { 
+
+  @if ($duration == null) {
+    @error &quot;mixin keyframes-rotate-360-z must have duration, right or left&quot;;
+  }
+
+  $deg: if-else($duration == right, 360deg, -360deg);
+
+  @keyframes rotate-360-z_#{$duration} {
     0% {
       transform: rotate(0deg);
     }
     100% {
-      transform: rotate(360deg);
+      transform: rotate($deg);
     }
   }
- }" data-collapsed="@mixin keyframes-rotate-360-z_right() { ... }"><code>@mixin keyframes-rotate-360-z_right() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Rotate element 360deg right by z axis</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>//include animation keyframe in common sass file
-//@include keyframes-rotate-360-z_right();
+ }" data-collapsed="@mixin keyframes-rotate-360-z() { ... }"><code>@mixin keyframes-rotate-360-z() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Rotate element 360deg right by z axis</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>//include animation keyframe with need duration in common sass file
+//@include keyframes-rotate-360-z(right);
+//@include keyframes-rotate-360-z(left);
 
-//animation name like mixin name, but with out &#39;keyframes-&#39;
+
+//animation name like mixin name with duration, but with out &#39;keyframes-&#39;
 .preloader {
+  display: inline-block;
+
+  margin: 40px;
+
   width: 40px;
   height: 40px;
   background-color: red;
 
-  animation: rotate-360-y_right 1.5s linear infinite;
-}
-&lt;div class=&quot;preloader&quot;&gt;&lt;/div&gt;</code></pre></div></section><section class="main__item container item" id="keyframes-mixin-keyframes-rotate-360-z_left"><h3 class="item__heading"><a class="item__name" href="#mixin-keyframes-rotate-360-z_left">keyframes-rotate-360-z_left</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin keyframes-rotate-360-z_left() { 
-  @keyframes rotate-360-z_left {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(-360deg);
-    }
+  &amp;_rotate-z-right {
+    animation: rotate-360-z_right 1.5s linear infinite;
   }
- }" data-collapsed="@mixin keyframes-rotate-360-z_left() { ... }"><code>@mixin keyframes-rotate-360-z_left() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Rotate element 360deg left by z axis</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>//include animation keyframe in common sass file
-//@include keyframes-rotate-360-z_left();
 
-//animation name like mixin name, but with out &#39;keyframes-&#39;
-.preloader {
-  width: 40px;
-  height: 40px;
-  background-color: red;
-
-  animation: rotate-360-y_left 1.5s linear infinite;
-}
-&lt;div class=&quot;preloader&quot;&gt;&lt;/div&gt;</code></pre></div></section><section class="main__item container item" id="keyframes-mixin-keyframes-rotate-360-x_right"><h3 class="item__heading"><a class="item__name" href="#mixin-keyframes-rotate-360-x_right">keyframes-rotate-360-x_right</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin keyframes-rotate-360-x_right() { 
-  @keyframes rotate-360-x_right {
-    0% {
-      transform: rotateY(0deg);
-    }
-    100% {
-      transform: rotateY(360deg);
-    }
+  &amp;_rotate-z-left {
+    animation: rotate-360-z_left 1.5s linear infinite;
   }
- }" data-collapsed="@mixin keyframes-rotate-360-x_right() { ... }"><code>@mixin keyframes-rotate-360-x_right() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Rotate element 360deg right by x axis</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>//include animation keyframe in common sass file
-//@include keyframes-rotate-360-x_right();
 
-//animation name like mixin name, but with out &#39;keyframes-&#39;
-.preloader {
-  width: 40px;
-  height: 40px;
-  background-color: red;
-
-  animation: rotate-360-x_right 1.5s linear infinite;
 }
-&lt;div class=&quot;preloader&quot;&gt;&lt;/div&gt;</code></pre></div></section><section class="main__item container item" id="keyframes-mixin-keyframes-rotate-360-x_left"><h3 class="item__heading"><a class="item__name" href="#mixin-keyframes-rotate-360-x_left">keyframes-rotate-360-x_left</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin keyframes-rotate-360-x_left() { 
-  @keyframes rotate-360-x_left {
+
+&lt;div class=&quot;preloader preloader_rotate-z-right&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;preloader preloader_rotate-z-left&quot;&gt;&lt;/div&gt;</code></pre></div><h3 class="item__sub-heading">Throws</h3><ul class="list-unstyled"><li><p>mixin keyframes-rotate-360-z must have duration, right or left</p></li></ul><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#helpers-function-if-else"><code>if-else</code></a></li></ul></section><section class="main__item container item" id="keyframes-mixin-keyframes-rotate-360-x"><h3 class="item__heading"><a class="item__name" href="#mixin-keyframes-rotate-360-x">keyframes-rotate-360-x</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin keyframes-rotate-360-x() { 
+
+  @if ($duration == null) {
+    @error &quot;mixin keyframes-rotate-360-x must have duration, right or left&quot;;
+  }
+
+  $deg: if-else($duration == right, 360deg, -360deg);
+
+
+  @keyframes rotate-360-x_#{$duration} {
     0% {
       transform: rotateY(0deg);
     }
     100% {
-      transform: rotateY(-360deg);
+      transform: rotateY($deg);
     }
   }
- }" data-collapsed="@mixin keyframes-rotate-360-x_left() { ... }"><code>@mixin keyframes-rotate-360-x_left() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Rotate element 360deg left by x axis</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>//include animation keyframe in common sass file
-//@include keyframes-rotate-360-x_left();
+ }" data-collapsed="@mixin keyframes-rotate-360-x() { ... }"><code>@mixin keyframes-rotate-360-x() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Rotate element 360deg right by x axis</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>//include animation keyframe with need duration in common sass file
+//@include keyframes-rotate-360-x(right);
+//@include keyframes-rotate-360-x(left);
 
-//animation name like mixin name, but with out &#39;keyframes-&#39;
+
+//animation name like mixin name with duration, but with out &#39;keyframes-&#39;
 .preloader {
+  display: inline-block;
+
+  margin: 40px;
+
   width: 40px;
   height: 40px;
   background-color: red;
 
-  animation: rotate-360-x_left 1.5s linear infinite;
+  &amp;_rotate-x-right {
+    animation: rotate-360-x_right 1.5s linear infinite;
+  }
+
+  &amp;_rotate-x-left {
+    animation: rotate-360-x_left 1.5s linear infinite;
+  }
+
 }
-&lt;div class=&quot;preloader&quot;&gt;&lt;/div&gt;</code></pre></div></section><section class="main__item container item" id="keyframes-mixin-keyframes-rotate-360-y_forward"><h3 class="item__heading"><a class="item__name" href="#mixin-keyframes-rotate-360-y_forward">keyframes-rotate-360-y_forward</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin keyframes-rotate-360-y_forward() { 
-  @keyframes rotate-360-y_forward {
+
+&lt;div class=&quot;preloader preloader_rotate-x-right&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;preloader preloader_rotate-x-left&quot;&gt;&lt;/div&gt;</code></pre></div><h3 class="item__sub-heading">Throws</h3><ul class="list-unstyled"><li><p>mixin keyframes-rotate-360-x must have duration, right or left</p></li></ul><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#helpers-function-if-else"><code>if-else</code></a></li></ul></section><section class="main__item container item" id="keyframes-mixin-keyframes-rotate-360-y"><h3 class="item__heading"><a class="item__name" href="#mixin-keyframes-rotate-360-y">keyframes-rotate-360-y</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin keyframes-rotate-360-y() { 
+
+  @if ($duration == null) {
+    @error &quot;mixin keyframes-rotate-360-y must have duration, forward or backward&quot;;
+  }
+
+  $deg: if-else($duration == forward, 360deg, -360deg);
+
+  @keyframes rotate-360-y_#{$duration} {
     0% {
       transform: rotateX(0deg);
     }
     100% {
-      transform: rotateX(360deg);
+      transform: rotateX($deg);
     }
   }
- }" data-collapsed="@mixin keyframes-rotate-360-y_forward() { ... }"><code>@mixin keyframes-rotate-360-y_forward() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Rotate element 360deg forward by y axis</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>//include animation keyframe in common sass file
-//@include keyframes-rotate-360-y_forward();
+ }" data-collapsed="@mixin keyframes-rotate-360-y() { ... }"><code>@mixin keyframes-rotate-360-y() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Rotate element 360deg forward by y axis</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>//include animation keyframe with need duration in common sass file
+//@include keyframes-rotate-360-y(forward);
+//@include keyframes-rotate-360-y(backward);
 
-//animation name like mixin name, but with out &#39;keyframes-&#39;
+
+//animation name like mixin name with duration, but with out &#39;keyframes-&#39;
 .preloader {
+  display: inline-block;
+
+  margin: 40px;
+
   width: 40px;
   height: 40px;
   background-color: red;
 
-  animation: rotate-360-y_forward 1.5s linear infinite;
-}
-&lt;div class=&quot;preloader&quot;&gt;&lt;/div&gt;</code></pre></div></section><section class="main__item container item" id="keyframes-mixin-keyframes-rotate-360-y_backward"><h3 class="item__heading"><a class="item__name" href="#mixin-keyframes-rotate-360-y_backward">keyframes-rotate-360-y_backward</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin keyframes-rotate-360-y_backward() { 
-  @keyframes rotate-360-y_backward {
-    0% {
-      transform: rotateX(0deg);
-    }
-    100% {
-      transform: rotateX(-360deg);
-    }
+  &amp;_rotate-y-forward {
+    animation: rotate-360-y_forward 1.5s linear infinite;
   }
- }" data-collapsed="@mixin keyframes-rotate-360-y_backward() { ... }"><code>@mixin keyframes-rotate-360-y_backward() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Rotate element 360deg backward by y axis</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>//include animation keyframe in common sass file
-//@include keyframes-rotate-360-y_backward();
 
-//animation name like mixin name, but with out &#39;keyframes-&#39;
-.preloader {
-  width: 40px;
-  height: 40px;
-  background-color: red;
+  &amp;_rotate-y-backward {
+    animation: rotate-360-y_backward 1.5s linear infinite;
+  }
 
-  animation: rotate-360-y_backward 1.5s linear infinite;
 }
-&lt;div class=&quot;preloader&quot;&gt;&lt;/div&gt;</code></pre></div></section></section></section><section class="main__section"><h1 class="main__heading" id="text"><div class="container">text</div></h1><section class="main__sub-section" id="text-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="text-mixin-ellipsis"><h3 class="item__heading"><a class="item__name" href="#mixin-ellipsis">ellipsis</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin ellipsis() { 
+
+&lt;div class=&quot;preloader preloader_rotate-y-forward&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;preloader preloader_rotate-y-backward&quot;&gt;&lt;/div&gt;</code></pre></div><h3 class="item__sub-heading">Throws</h3><ul class="list-unstyled"><li><p>mixin keyframes-rotate-360-y must have duration, forward or backward</p></li></ul><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#helpers-function-if-else"><code>if-else</code></a></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="text"><div class="container">text</div></h1><section class="main__sub-section" id="text-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="text-mixin-ellipsis"><h3 class="item__heading"><a class="item__name" href="#mixin-ellipsis">ellipsis</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin ellipsis() { 
   display: inline-block;
   width: 100%;
 
@@ -952,4 +1184,46 @@ $block-height: 50px;
 .ellipsis-wrapper span with out my-class // String
                                          // longer
                                          // that
-                                         // container</code></pre></div></section></section></section><footer class="footer" role="contentinfo"><div class="container"><div class="footer__project-info project-info"><!-- Name and URL --> <a class="project-info__name" href="https://github.com/webster6667/scss-coding-helpers#readme">Scss-coding-helpers</a><!-- Version --> <span class="project-info__version">- v0.0.2</span><!-- License --> <span class="project-info__license">, under MIT</span></div><a class="footer__watermark" href="http://sassdoc.com"><img src="assets/images/logo_light_inline.svg" alt="SassDoc Logo"></a></div></footer></article><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script><script src="assets/js/main.min.js"></script></body></html>
+                                         // container</code></pre></div></section></section></section><section class="main__section"><h1 class="main__heading" id="z-layer"><div class="container">z-layer</div></h1><section class="main__sub-section" id="z-layer-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="z-layer-mixin-upp-to-z-layer"><h3 class="item__heading"><a class="item__name" href="#mixin-upp-to-z-layer">upp-to-z-layer</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin upp-to-z-layer($position-value: absolute, $offset-x: 0, $offset-y: 0) { 
+  position: $position-value;
+  top: $offset-y;
+  right: $offset-x;
+  bottom: $offset-y;
+  left: $offset-x;
+  @content
+ }" data-collapsed="@mixin upp-to-z-layer($position-value: absolute, $offset-x: 0, $offset-y: 0) { ... }"><code>@mixin upp-to-z-layer($position-value: absolute, $offset-x: 0, $offset-y: 0) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Mixin up element to Z layer</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$position-value</code></th><td data-label="desc"><p>with which position element will be raised</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>absolute</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$offset-x</code></th><td data-label="desc"><p>which offset will be from x sides</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>0</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$offset-y</code></th><td data-label="desc"><p>which offset will be from y sides</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>0</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.relative-block {
+  position: relative;
+  width: 400px;
+  height: 400px;
+
+  background-color: silver;
+
+  &amp;__z-layer-absolute {
+    background-color: rgba(0, 82, 246, 0.4);
+    @include upp-to-z-layer() {
+      z-index: 1;
+    };
+  }
+
+  &amp;__z-layer-absolute-with-offset {
+    background-color: rgba(0,0,0,.5);
+    @include upp-to-z-layer(absolute, 10px, 10px) {
+      z-index: 2;
+    };
+  }
+
+  &amp;__z-layer-fixed {
+    background-color: rgba(0,0,0,.5);
+    @include upp-to-z-layer(fixed, 100px, 100px) {
+      z-index: 2;
+    };
+  }
+
+}
+&lt;div class=&quot;relative-block&quot;&gt;
+
+  &lt;div class=&quot;relative-block__z-layer-absolute&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;relative-block__z-layer-absolute-with-offset&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;relative-block__z-layer-fixed&quot;&gt;&lt;/div&gt;
+
+&lt;/div&gt;</code></pre></div></section></section></section><footer class="footer" role="contentinfo"><div class="container"><div class="footer__project-info project-info"><!-- Name and URL --> <a class="project-info__name" href="https://github.com/webster6667/scss-coding-helpers#readme">Scss-coding-helpers</a><!-- Version --> <span class="project-info__version">- v0.0.2</span><!-- License --> <span class="project-info__license">, under MIT</span></div><a class="footer__watermark" href="http://sassdoc.com"><img src="assets/images/logo_light_inline.svg" alt="SassDoc Logo"></a></div></footer></article><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script><script src="assets/js/main.min.js"></script></body></html>

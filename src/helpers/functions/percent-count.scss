@@ -1,0 +1,17 @@
+@use "sass:math";
+
+/// Return percent number from number
+///
+/// @group adaptive
+/// @name percent-size-from-size
+///
+/// @param {string|number} $number-need-to-percent - number which need convert to percent from $from-number
+/// @param {string|number} $from-number - number from what will count percent $number-need-to-percent
+///
+/// @example
+/// percent-size-from-size(10, 100) // => 10
+@function percent-size-from-size($number-need-to-percent, $from-number) {
+  $result: math.percentage(math.div($number-need-to-percent, $from-number));
+
+  @return $result;
+}

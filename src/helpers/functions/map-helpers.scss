@@ -1,0 +1,24 @@
+@use "sass:map";
+
+/// Return map value by key-name or default value if key not founded
+///
+/// @group helpers
+/// @name get-map-prop-or-default
+///
+/// @param {map} $map - map with props
+/// @param {any} $search-key - key which will search in map
+/// @param {any} $default-value [''] - will returned if key dont found in map
+///
+/// @example
+/// $fade-in-duration: get-map-prop-or-default($settings, animation-duration, .5);
+@function get-map-prop-or-default($map, $search-key, $default-value: '') {
+  $result: null;
+
+  @if (map.has-key($map, $search-key)) {
+    $result: map.get($map, $search-key);
+  } @else {
+    $result: $default-value;
+  }
+
+  @return $result
+}

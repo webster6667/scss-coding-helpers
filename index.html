@@ -2,15 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Titles</title>
     <link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 </head>
 <body>
 
-<!--side-bar_with-fade-->
-<!--side-bar_with-fade-out-delay-->
-<div class="side-bar side-bar_with-fade-out-delay"></div>
-<div class="open-trigger" onclick="document.querySelector('.side-bar').classList.toggle('side-bar_open-right')">Close/Open</div>
+
+<div class="relative-block">
+    
+    <div class="relative-block__z-layer-absolute"></div>
+    <div class="relative-block__z-layer-absolute-with-offset"></div>
+    <div class="relative-block__z-layer-fixed"></div>
+
+</div>
+
+
+
 
 </body>
 </html>

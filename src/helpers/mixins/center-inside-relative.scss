@@ -88,7 +88,27 @@
 /// @param {string} $additionalTransform [''] - transform values that will be add to center translate values
 ///
 /// @example
-/// .my-class {
+/// .relative-block {
+///   position: relative;
+///   height: 400px;
+///   background-color: silver;
+/// }
+///
+/// .center-block {
+///   $block-width: 50px;
+///   $block-height: 50px;
+///
+///   width: $block-width;
+///   height: $block-height;
+///
+///   font-size: 10px;
+///   line-height: $block-height;
+///   text-align: center;
+///   color: white;
+///
+///   background-color: black;
+///   border-radius: 50%;
+///
 ///
 ///   //centring for x and y inside relative block
 ///   &_transform-center-both {
@@ -111,6 +131,12 @@
 ///   }
 ///
 /// }
+///
+/// <div class="relative-block">
+///   <div class="center-block center-block_transform-center-both">XY</div>
+///   <div class="center-block center-block_transform-center-x">X</div>
+///   <div class="center-block center-block_transform-center-y">Y</div>
+/// </div>
 @mixin transform-center($axis: both, $additional-transform-values: '') {
 
   @if ($axis == y) {

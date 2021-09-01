@@ -1,6 +1,6 @@
 {
   "name": "scss-coding-helpers",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Must have scss coding helper",
   "watch": {
     "build:doc": {
@@ -32,7 +32,7 @@
     "url": "https://github.com/webster6667/scss-coding-helpers/issues"
   },
   "homepage": "https://github.com/webster6667/scss-coding-helpers#readme",
-  "dependencies": {
+  "devDependencies": {
     "browser-sync": "^2.27.5",
     "npm-run-all": "^4.1.5",
     "npm-watch": "^0.11.0",
